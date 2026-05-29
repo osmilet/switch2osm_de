@@ -121,7 +121,7 @@ nav:
   - More: find-out-more.md
 plugins:
   - search:
-      lang: [en, uk, zh-TW]
+      lang: [en, de, uk, zh-TW]
   - macros
   - ezlinks
   - glightbox
@@ -136,7 +136,7 @@ plugins:
       languages:
         - # ISO code of your language
           locale: en
-          # Name of your languge
+          # Name of your language
           name: English
           default: true
           # Day/Night toggle
@@ -185,6 +185,35 @@ plugins:
             Providers: Providers
             # Menu item name for the /find-out-more.md
             More: Find Out More
+        - locale: de
+          name: Deutsch
+          theme:
+            palette:
+              - toggle:
+                  name: Zu hellem Modus wechseln
+              - toggle:
+                  name: Zu dunklem Modus wechseln
+              - toggle:
+                  name: Systemeinstellung verwenden
+          copyright: '© 2013–2025 OpenStreetMap und Mitwirkende, <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.0/deed.de" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/2.0/80x15.png" /></a><br />Diese Arbeit steht unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">Creative Commons Attribution-ShareAlike 2.0 Generic License</a>.'
+          nav_translations:
+            Home: Switch2OSM
+            Why: Warum wechseln?
+            Cases: Fallbeispiele
+            Basics: Die Grundlagen
+            Using: Tiles verwenden
+            Leaflet: Erste Schritte mit Leaflet
+            OpenLayers: Erste Schritte mit OpenLayers
+            MapLibre: Erste Schritte mit MapLibre GL
+            Vector Tiles: Die Macht von Vektor Karten Tiles
+            Serving: Tiles bereitstellen
+            Manually: Einen Tile-Server manuell erstellen
+            Docker: Einen Docker Container verwenden
+            Munin: Monitoring mit Hilfe von Munin
+            Updating: Ihre Datenbank aktualisieren, während Benutzer OpenStreetMap bearbeiten
+            Other: Andere Anwendungen
+            Providers: Anbieter
+            More: Mehr erfahren
         - locale: uk
           name: Українська
           theme:
@@ -195,7 +224,7 @@ plugins:
                   name: Увімкнути темний режим
               - toggle:
                   name: Увімкнути режим системи
-          copyright: "© 2013–2025 Учасники OpenStreetMap, <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/2.0/deed.uk\" target=\"_blank\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/2.0/80x15.png\" /></a><br />Матеріали цього сайту ліцензуються на умовах Ліцензії – <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/2.0/deed.uk\" target=\"_blank\">Creative Commons Attribution-ShareAlike 2.0 Generic License</a>."
+          copyright: '© 2013–2025 Учасники OpenStreetMap, <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.0/deed.uk" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/2.0/80x15.png" /></a><br />Матеріали цього сайту ліцензуються на умовах Ліцензії – <a rel="license" href="https://creativecommons.org/licenses/by-sa/2.0/deed.uk" target="_blank">Creative Commons Attribution-ShareAlike 2.0 Generic License</a>.'
           nav_translations:
             Home: Switch2OSM
             Why: "Навіщо?"
@@ -227,7 +256,7 @@ plugins:
                   name: 切換到深色模式
               - toggle:
                   name: 切換到系統偏好設定
-          copyright: "© 2013–2025 開放街圖與貢獻者。 <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/2.0/80x15.png\" /></a><br />這些資料採用 <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\">創用CC相同方式分享 2.0 未本地化授權條款</a>。"
+          copyright: '© 2013–2025 開放街圖與貢獻者。 <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/2.0/80x15.png" /></a><br />這些資料採用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">創用CC相同方式分享 2.0 未本地化授權條款</a>。'
           nav_translations:
             Home: Switch2OSM
             Why: 為什麼更換？
