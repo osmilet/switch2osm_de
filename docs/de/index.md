@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Switch to OpenStreetMap
+title: Zu OpenStreetMap wechseln
 hide: 
   - toc
   - navigation
@@ -12,11 +12,11 @@ hide:
 
 /// html | div.column.main
 
-Do your maps look like everyone else’s? Are you paying high fees just to include maps on your website?
+Sehen Ihre Karten aus wie die von allen anderen? Zahlen Sie hohe Gebühren nur um Karten auf Ihrer Webseite einzubinden?
 
-Switch to OpenStreetMap and discover how you can build beautiful maps from the world’s best map data.
+Wechseln sie zu OpenStreetMap und entdecken Sie, wie Sie hübsche Karten aus den weltbesten Kartendaten erstellen können.
 
-[Using Tiles](/using-tiles/index.md){ .md-button .md-button--primary } [Serving Tiles](/serving-tiles/index.md){ .md-button }
+[Tiles verwenden](/using-tiles/index.md){ .md-button .md-button--primary } [Tiles bereitstellen](/serving-tiles/index.md){ .md-button }
 
 ///
 
@@ -34,11 +34,11 @@ Switch to OpenStreetMap and discover how you can build beautiful maps from the w
 
 /// html | div.column.main
 
-We give you the data for free; you can make any map you like with it. Or benefit from the expertise of those already using OpenStreetMap.
+Wir geben Ihnen die Daten kostenlos; Sie können mit ihnen jede Karte erstellen, die Sie möchten. Oder Sie können von der Erfahrung derer profitieren, die OpenStreetMap bereits nutzen.
 
-Host it on your hardware, or elsewhere. You have control.
+Stellen Sie sie auf Ihrer Hardware bereit, oder anderswo. Sie haben die Kontrolle.
 
-[Switch2OSM](#) explains how to make the switch – from first principles to technical how‑tos.
+[Switch2OSM](#) erklärt, wie Sie den Umstieg vornehmen – von ersten Grundlagen bis zu technischen Anleitungen.
 ///
 
 ////
@@ -51,12 +51,12 @@ Host it on your hardware, or elsewhere. You have control.
 
 /// html | div.column.main
 
-## What people say about OpenStreetMap
+## Was Menschen über OpenStreetMap sagen
 
-&laquo;Much like Wikipedia challenged Encyclopedia Britannica and Linux took on Microsoft Windows, OpenStreetMap is battling Google Maps, and at least in some cases, it’s winning.&raquo;<br />
-*Read what Wired has to say about [people switching to OpenStreetMap](https://www.wired.com/2012/01/openstreetmap-google/){: target=_blank}.*{: class="quote"}
+&laquo;So wie Wikipedia die Encyclopedia Britannica herausforderte und Linux es mit Microsoft Windows aufnahm, so zieht OpenStreetMap in den Kampf mit Google Maps. Und in einigen Bereichen gewinnt es sogar.&raquo;<br />
+*Lesen sie was Wired über Leute zu sagen hat, die [zu OpenStreetMap wechseln](https://www.wired.com/2012/01/openstreetmap-google/){: target=_blank}.*{: class="quote"}
 
-&laquo;OpenStreetMap is all about people doing their bit, creating an incredible resource for everybody else.&raquo;<br />
-*Tim Berners-Lee, creator of the web, explains [OSM at TED 2009](https://www.ted.com/talks/tim_berners_lee_the_next_web/transcript){: target=_blank}.*{: class="quote"}
+&laquo;OpenStreetMap dreht sich ganz um Menschen die ihren Anteil dazu beitragen, eine unglaubliche Informationsquelle für alle anderen zu erstellen.&raquo;<br />
+*Tim Berners-Lee, Begründer des World Wide Web, erklärt [OSM beim TED 2009](https://www.ted.com/talks/tim_berners_lee_the_next_web/transcript){: target=_blank}.*{: class="quote"}
 ///
 ////
