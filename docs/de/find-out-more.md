@@ -1,47 +1,47 @@
 ---
 layout: page
-title: Find Out More
-lang: en
+title: Mehr erfahren
+lang: de
 ---
 
-## Getting help
+## Hilfe erhalten
 
-OpenStreetMap is a decentralised, volunteer-run project, so there’s no single contact e-mail address for your queries. Instead, our community’s knowledge can help resolve any issues you might have.
+OpenStreetMap ist ein dezentrales, durch Freiwillige betriebenes Projekt. Deshalb gibt es keine einzelne Kontakt-E-Mail-Adresse für Ihre Anfragen. Stattdessen kann das Wissen unserer Community dabei helfen, jedes Ihrer Probleme zu lösen.
 
-* [OpenStreetMap IRC](https://irc.openstreetmap.org/){: target=_blank} (Internet Relay Chat): 24-hour live OSM chat (use channel `#osm` or `#osm-dev`)
-* [Interactive Forum](http://community.openstreetmap.org/){: target=_blank}
-* [Developer FAQ](https://wiki.openstreetmap.org/wiki/Developer_FAQ){: target=_blank}
-* [Main FAQ](https://wiki.openstreetmap.org/wiki/FAQ){: target=_blank}
+* [OpenStreetMap IRC](https://irc.openstreetmap.org/){: target=_blank} (Internet Relay Chat): 24-Stunden live OSM Chat (Kanal `#osm` oder `#osm-dev` benutzen)
+* [Interaktives Forum](http://community.openstreetmap.org/){: target=_blank}
+* [Entwickler FAQ](https://wiki.openstreetmap.org/wiki/Developer_FAQ){: target=_blank}
+* [Haupt-FAQ](https://wiki.openstreetmap.org/wiki/FAQ){: target=_blank}
 
-## Other tutorials on switching to OSM
+## Andere Anleitungen zum Thema "Wechsel zu OSM"
 
-* [Using MapBox and Leaflet](http://developmentseed.org/blog/2012/jan/12/open-source-with-leaflet-and-mapbox/){: target=_blank} (Development Seed)
-* [Kelso Cartography guide](https://github.com/nvkelso/geo-how-to/wiki){: target=_blank}
-* [Build a server using MapServer](http://trac.osgeo.org/mapserver/wiki/RenderingOsmDataUbuntu){: target=_blank}
+* [Verwendung von MapBox und Leaflet](http://developmentseed.org/blog/2012/jan/12/open-source-with-leaflet-and-mapbox/){: target=_blank} (Development Seed)
+* [Kelso Kartographie Anleitung](https://github.com/nvkelso/geo-how-to/wiki){: target=_blank}
+* [Erstelle einen Server mit MapServer](http://trac.osgeo.org/mapserver/wiki/RenderingOsmDataUbuntu){: target=_blank}
 
-## Editing OpenStreetMap
+## Zu OpenStreetMap beitragen
 
-* [LearnOSM.org](http://www.learnosm.org/){: target=_blank} guide for beginners
+* [LearnOSM.org](http://www.learnosm.org/){: target=_blank} Anleitung für Einsteiger
 
-## Books
+## Bücher
 
-* [OpenStreetMap: Using and Enhancing the Free Map of the World](http://openstreetmap.info/){: target=_blank} (English/German)
-* [OpenStreetMap: Be Your Own Cartographer](https://www.packtpub.com/openstreetmap/book){: target=_blank} (English)
-* [OpenStreetMap: A Beginner’s Guide](http://en.flossmanuals.net/openstreetmap/){: target=_blank} (English/French)
-* [OpenLayers 2.10 Beginners Guide](https://www.packtpub.com/openlayers-2-1-javascript-web-mapping-library-beginners-guide/book){: target=_blank} (English)
+* [OpenStreetMap: Using and Enhancing the Free Map of the World](http://openstreetmap.info/){: target=_blank} (Englisch/Deutsch)
+* [OpenStreetMap: Be Your Own Cartographer](https://www.packtpub.com/openstreetmap/book){: target=_blank} (Englisch)
+* [OpenStreetMap: A Beginner’s Guide](http://en.flossmanuals.net/openstreetmap/){: target=_blank} (Englisch/Französisch)
+* [OpenLayers 2.10 Beginners Guide](https://www.packtpub.com/openlayers-2-1-javascript-web-mapping-library-beginners-guide/book){: target=_blank} (Englisch)
 
-## Community resources
+## Community Ressourcen
 
-* [OpenStreetMap Foundation](https://osmfoundation.org/){: target=_blank}
-* [Project wiki](https://wiki.openstreetmap.org/){: target=_blank}
-* [Mailing lists](https://lists.openstreetmap.org/listinfo){: target=_blank} (searchable archive)
+* [OpenStreetMap Stiftung](https://osmfoundation.org/){: target=_blank}
+* [Projekt wiki](https://wiki.openstreetmap.org/){: target=_blank}
+* [Mailing Listen](https://lists.openstreetmap.org/listinfo){: target=_blank} (durchsuchbares Archiv)
 
-## Press enquiries
+## Presse Anfragen
 
-Please contact the OSM Foundation’s [Communications Working Group](https://osmfoundation.org/wiki/Communication_Working_Group#Get_in_touch){: target=_blank}.
+Bitte kontaktieren Sie die [Communications Working Group](https://osmfoundation.org/wiki/Communication_Working_Group#Get_in_touch){: target=_blank} der OSM Stiftung.
 
-# About switch2osm
+# Über switch2osm
 
-Switch2osm is a community driven site coordinated by [Richard Fairhurst](http://www.systemed.net/){: target=_blank} and [Paul Norman](http://www.paulnorman.ca/){: target=_blank} with huge amounts of help from the OpenStreetMap community. You can [get involved on GitHub](https://github.com/switch2osm/switch2osm.github.io){: target=_blank}.
+Switch2osm ist eine gemeinschaftsgetriebe Seite, koordiniert durch [Richard Fairhurst](http://www.systemed.net/){: target=_blank} und [Paul Norman](http://www.paulnorman.ca/){: target=_blank} mit einem riesigem Anteil an Hilfe durch die OpenStreetMap Gemeinschaft. Sie können sich [auf GitHub daran beteiligen](https://github.com/switch2osm/switch2osm.github.io){: target=_blank}.
 
-Comments or suggestions? Please make contact via IRC at the first instance.
+Kommentare oder Vorschläge? Bitte nehmen Sie zu erst über IRC Kontakt auf.
