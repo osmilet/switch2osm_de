@@ -1,93 +1,93 @@
 ---
 layout: page
-title: The Basics
-lang: en
+title: Die Grundlagen
+lang: de
 ---
 
 # {{ title }}
 
-## The challenge
+## Die Herausforderung
 
-Your current map provider gives you two things:
+Ihr aktueller Kartenanbieter gibt Ihnen zwei Dinge:
 
-* A set of `tiles` (square map images) that are placed together to make the map
-* A JavaScript API, or equivalent library for mobile apps, to view them
+* Eine Anzahl von `Tiles` (quadratische Karten-Grafiken), die zusammengefügt eine Karte bilden
+* Eine JavaScript API, oder gleichwertige Bibliothek für Mobile Apps, zur Anzeige der Tiles
 
-To switch to OpenStreetMap, you’ll need to replace both of these.
+Um zu OpenStreetMap zu wechseln, müssen Sie beides ersetzen.
 
-## The tiles
+## Die Tiles
 
 ![Tiles](/assets/img/tiles.webp){ align=left .off-glb }
-The map tiles, images of (usually) 256 x 256 pixels each, are drawn (“rendered”) from a map database.
+Die Karten-Tiles, Grafiken in (üblicherweise) 256 x 256 Pixel Größe, werden aus einer Karten-Datenbank erzeugt (“rendered”).
 
-If you currently use Google Maps, you’ll be using Google’s map tiles, hosted at google.com. Because the OpenStreetMap Foundation is a non-profit organisation with limited resources, you can’t just slot in the tiles from openstreetmap.org as a replacement (see the [Tile Usage Policy](https://operations.osmfoundation.org/policies/tiles/){: target=blank}). Instead, you can:
+Wenn Sie momentan Google Maps nutzen, verwenden Sie Google’s Karten-Tiles, die bei google.com gehosted werden. Da die OpenStreetMap Stiftung eine gemeinnützige Organisation mit begrenzten Ressourcen ist, können Sie nicht einfach die Tiles von openstreetmap.org als Ersatz übernehmen (siehe [Tile Usage Policy](https://operations.osmfoundation.org/policies/tiles/){: target=blank}). Stattdessen können Sie:
 
-* Generate your own tiles, by downloading the free OSM map database and rendering them;
+* Ihre eignen Tiles generieren, indem Sie die freie OSM Karten-Datenbank herunterladen und rendern;
 
-* Or use a third-party supplier (some of whom charge, some are free)
+* Oder einen Drittanbieter verwenden (manche davon gebührenpflichtig, andere kostenlos)
 
-The OSM map database is called planet.osm. The full database and regular update files are both available at [planet.openstreetmap.org](http://planet.openstreetmap.org/){: target=blank}.
+Die OSM-Karten-Datenbank wird planet.osm genannt. Die vollständige Datenbank und regelmäßige Update-Dateien sind beide über [planet.openstreetmap.org](http://planet.openstreetmap.org/){: target=blank} verfügbar.
 
-Rendering your own tiles gives you complete control over their appearance. You can customise the maps to appear any way you like. Alternatively, third-party suppliers have OSM expertise and may have ready-prepared map styles that you can use.
+Das Rendern Ihrer eigenen Tiles gibt Ihnen volle Kontrolle über deren Erscheinungsbild. Sie können die Karten individuell anpassen, um sie aussehen zu lassen wie Sie möchten. Alternativ haben Drittanbieter OSM-Kompetenz und könnten fertig vorbereitete Karten-Stile bereithalten, die Sie nutzen können.
 
-### Raster Tiles or Vector Tiles
+### Raster-Tiles oder Vector-Tiles
 
-Raster tiles and vector tiles are two distinct approaches to representing and serving map data. Each has its own advantages and use cases. Let's explore the differences between raster tiles and vector tiles to understand their strengths and limitations.
+Raster-Tiles und Vector-Tiles sind zwei unterschiedliche Ansätze um Karten-Daten darzustellen und anzubieten. Jeder davon hat seine eigenen Vorteile und Anwendungszwecke. Lassen Sie uns die Unterschiede zwischen Raster-Tiles und Vector-Tiles erkunden um ihre Stärken und Einschränkungen zu verstehen.
 
-**Raster Tiles**
+**Raster-Tiles**
 
-Raster tiles are essentially images or pictures of map data. They are pre-rendered at various zoom levels and stored as discrete image files. Here are some key characteristics of raster tiles:
+Raster-Tiles sind im Wesentlichen Grafiken oder Bilder von Karten-Daten. Sie sind für verschiedene Zoom-Stufen vorgerendert und als eigenständige Grafikdateien gespeichert. Hier sind einige Hauptmerkmale von Raster-Tiles:
 
-* Raster tiles represent map data as a grid of pixels. Each tile is a static image that depicts a portion of the map at a specific zoom level.
-* Raster tiles have a fixed appearance as they are generated with predefined styles. To change the map's visual representation, new tiles need to be rendered, which can be computationally intensive.
-* Raster tiles can have larger file sizes compared to vector tiles because they store pixel-level details for each tile, resulting in higher storage requirements and slower download times.
-* Raster tiles are well-suited for displaying complex cartographic styles, such as topographic maps or satellite imagery, where fine details are important.
-* Raster tiles offer limited interactivity options, primarily limited to basic zooming and panning. Interacting with individual map features or dynamically modifying the map's appearance is challenging.
+* Raster-Tiles stellen Karten-Daten als ein Gitter aus Pixeln dar. Jede Tile ist eine statische Grafik, die einen Abschnitt der Karte bei einer bestimmten Zoom-Stufe abbildet.
+* Raster-Tiles haben ein festgelegtes Erscheinungsbild, da sie mit vordefinierten Stilen erzeugt werden. Um to die visuelle Darstellung der Karte zu ändern, müssen neue Tiles gerendert werden, was rechenintensiv sein kann.
+* Raster-Tiles können höhere Dateigrößen verglichen zu Vector-Tiles haben, weil sie Details auf Pixel-Ebene für jede Tile speichern, was zu höheren Speicher-Anforderungen und langsameren Downloadraten führt.
+* Raster-Tiles eignen sich besonders gut zur Darstellung von komplexen kartographischen Stilen, wie topographischen Karten oder Satellitenaufnahmen, bei denen kleine Details wichtig sind.
+* Raster-Tiles bieten begrenzte interaktive Möglichkeiten, hauptsächlich beschränkt auf einfaches Zoomen und Verschieben. Interaktion mit individuellen Kartenmerkmalen oder dynamische Modifikation der Kartendarstellung ist anspruchsvoll.
 
-**Vector Tiles**
+**Vector-Tiles**
 
-Vector tiles, on the other hand, represent map data as a collection of geometric features, such as points, lines, and polygons. Here are the distinguishing features of vector tiles:
+Vector-Tiles, auf der anderen Seite, stellen Karten-Daten als eine Sammlung geometrischer Eigenschaften dar. Beispielsweise Punkte, Linien und Polygone. Dies sind die Besonderheiten von Vector-Tiles:
 
-* Vector tiles store map data as individual geometries and attributes. These geometries can be scaled, rotated, and restyled in real-time, providing more flexibility and customization options.
-* Vector tiles allow for dynamic styling and modification of map features. Styles can be changed on the fly, including colors, line widths, label placements, and other visual properties.
-* Vector tiles are generally smaller compared to raster tiles. Since they store only geometric data and attributes, they require less storage space and result in faster transfer times.
-* Vector tiles require less bandwidth for transfer, since only the necessary map data is sent to the client. This is particularly advantageous for mobile applications or areas with limited internet connectivity.
-* Vector tiles enable rich interactivity and real-time rendering. Users can interact with individual map features, perform dynamic queries, and apply custom styles based on attributes, offering a more interactive and personalized map experience.
+* Vector-Tiles speichern Karten-Daten als individuelle Geometrien und Attribute. Diese Geometrien können in Echtzeit skaliert, rotiert und umgestaltet werden, wodurch sie mehr Flexibilität und Anpassungsmöglichkeiten bieten.
+* Vector-Tiles erlauben dynamische Gestaltung und Modifikation von Karten Eigenschaften. Stile können on-the-fly gewechselt werden, einschließlich Farben, Linienbreiten, Platzierung von Beschriftungen und andere visuelle Eigenschaften.
+* Vector-Tiles sind üblicherweise kleiner, verglichen zu Raster-Tiles. Da sie nur Geometrien, Daten und Attribute speichern, benötigen sie weniger Speicherplatz und führen so zu kürzeren Übertragungszeiten.
+* Vector-Tiles benötigen weniger Bandbreite zur Übertragung, weil nur die notwendigen Kartendaten zum Empfänger gesendet werden. Dies ist insbesondere für mobile Anwendungen oder Regionen mit eingeschränkter Internetversorgung vorteilhaft.
+* Vector-Tiles ermöglichen umfangreiche Interaktivität und Echtzeit-Rendering. Anwender können mit individuellen Karten Elementen interagieren, dynamische Abfragen ausführen und Eigenschafts-basierte benutzerdefinierte Gestaltungsstile anwenden. Dadurch ermöglicht sich ein interaktiveres und personalisiertes Kartenerlebnis.
 
-### Use Cases
+### Anwendungsfälle
 
-The choice between raster tiles and vector tiles depends on the specific use case and requirements. Here are some scenarios where each type excels:
+Die Entscheidung zwischen Raster-Tiles und Vector-Tiles hängt von spezifischem Anwendungsfall und Anforderungen ab. Hier sind einige Szenarien für die sich eine von beiden Varianten besonders eignet:
 
-**Raster Tiles**
+**Raster-Tiles**
 
-* Aesthetically detailed maps, such as topographic maps or satellite imagery.
-* Static maps that don't require real-time interactivity or frequent updates.
-* Cases where map data is relatively stable and doesn't need frequent modifications or styling changes.
+* Ästhetisch detaillierte Karten, wie topographische Karten oder Satellitenaufnahmen.
+* Statische Karten, die keine Echtzeit-Interaktivität oder oder häufige Aktualisierungen benötigen.
+* Fälle in denen die Karten-Daten relativ beständig sind und keine häufigen Modifikationen oder Gestaltungsänderungen benötigen.
 
-**Vector Tiles**
+**Vector-Tiles**
 
-* Dynamic maps that require real-time customization and interactivity, such as user-driven styling or filtering.
-* Mobile applications or areas with limited bandwidth or storage capacity.
-* Maps with frequently changing data, where updates need to be reflected in real-time.
+* Dynamische Karten die Echtzeit-Anpassung und Interaktivität erfordern, wie etwa anwendergesteuerte Gestaltung oder Filterung.
+* Mobile Anwendungen oder Bereiche mit eingeschränkter Bandbreite oder Speicherkapazität.
+* Karten mit sich häufig ändernden Daten, bei denen Updates in Echtzeit wiedergegeben müssen.
 
-Both raster tiles and vector tiles have their merits depending on the use case. Raster tiles are suitable for detailed visualization and static map styles, while vector tiles excel in dynamic styling, interactivity, and efficient data transfer. By understanding the differences between these tile types, you can make an informed decision when choosing the most appropriate tile format for your specific mapping needs.
+Sowohl Raster-Tiles als auch Vector-Tiles haben ihre Vorzüge, abhängig vom Anwendungsfall. Raster-Tiles eignen sich für detaillierte Darstellungen und statische Karten-Stile, während Vector-Tiles bei dynamischer Gestaltung, Interaktivität und effizienter Datenübertragung herausragen. Mit dem Wissen über die Unterschiede dieser Tile-Typen, können Sie eine fundierte Entscheidung bei der Auswahl des passenden Tile-Formats für Ihre spezifischen Kartierungsanforderungen treffen.
 
-## The API/library
+## Die API/Library
 
-There is no single canonical library: you can choose whichever suits your needs best. The two most popular JavaScript libraries for displaying OSM tiles are:
+Es gibt keine einzelne universelle Library: Sie können auswählen, welche Ihren Anforderungen am besten entspricht. Die zwei beliebtesten JavaScript-Bibliotheken zur Darstellung von OSM-Tiles sind:
 
-* OpenLayers – powerful and long-established
+* OpenLayers – leistungsfähig und bewährt
 
-* Leaflet – lightweight and easy-to-learn
+* Leaflet – leichtgewichtig und einfach zu erlernen
 
-APIs are also available for mobile platforms, such as [Route-Me](https://github.com/route-me/route-me){: target=blank} (iOS) and [osmdroid](https://github.com/osmdroid/osmdroid){: target=blank} (Android).
+APIs sind ebenfalls für mobile Plattformen erhältlich. Zum Beispiel [Route-Me](https://github.com/route-me/route-me){: target=blank} (iOS) und [osmdroid](https://github.com/osmdroid/osmdroid){: target=blank} (Android).
 
-## The licence
+## Die Lizenz
 
-Unlike commercial providers’ data, OpenStreetMap is ‘open data’. The map data is available to you free-of-charge, with the freedom to copy and modify. OSM’s licence is the [Open Database Licence](http://opendatacommons.org/licenses/odbl/summary/){: target=blank}.
+Im Gegensatz zu Daten kommerzieller Anbieter, ist OpenStreetMap ‘Open Data’. Die Karten-Daten stehen Ihnen kostenlos zur Verfügung, mit der Freiheit sie zu kopieren und zu modifizieren. OSM’s Lizenz ist die [Open Database Licence](http://opendatacommons.org/licenses/odbl/summary/){: target=blank}.
 
-Your obligations are:
+Ihre Verpflichtungen sind:
 
-* Attribution. You must credit OpenStreetMap with the same prominence that would be expected if you were using a commercial provider. See [OSM’s copyright guidelines](http://www.openstreetmap.org/copyright){: target=blank}.
+* Namensnennung. Sie müssen OpenStreetMap als Urheber mit der gleichen Sichtbarkeit angeben, die man auch bei der Verwendung eines kommerziellen Anbieters erwarten würde. Siehe [OSM’s copyright guidelines](http://www.openstreetmap.org/copyright){: target=blank}.
 
-* Share-Alike. When you use any adapted version of OSM’s map data, or works produced with it, you must also offer that adapted database under the ODbL.
+* Weitergabe unter gleichen Bedingungen (Share-Alike). Wenn Sie jegliche angepasste Version von OSM’s Karten-Daten verwenden, oder damit erstellte Arbeiten, dürfen Sie diese angepasste Datenbank ebenfalls nur unter der ODbL anbieten.
