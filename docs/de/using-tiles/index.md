@@ -1,31 +1,31 @@
 ---
 layout: docs
-title: Using Tiles
-lang: en
+title: Tiles verwenden
+lang: de
 ---
 
 # {{ title }}
 
-You can switch a website to OpenStreetMap in under an hour. Choose a JavaScript API and a tile provider, and you’re ready to go. Then, as your needs increase, you can consider custom tiles, either from a specialist provider or generated yourself.
+Sie können eine Website in weniger als einer Stunde auf OpenStreetMap umstellen. Wählen Sie eine JavaScript API und Tile-Anbieter, und Sie sind startklar. Dann, wenn sich Ihre Anforderungen erhöhen, können Sie über benutzerdefinierte Tiles nachdenken. Entweder von einem spezialisierten Anbieter oder von Ihnen selbst erzeugt.
 
-## Choosing an API/library
+## Eine API/Library auswählen
 
-Unlike commercial online map providers, OpenStreetMap does not provide an “official” JavaScript library which you are required to use. Rather, you can use any library that meets your needs. The most popular is Leaflet, an open-source library. OpenLayers 3, another well-known library, can also be a good fit.
+Anders als kommerzielle Online-Karten-Anbieter, bietet OpenStreetMap keine “offizielle” JavaScript-Library die Sie nutzen müssen. Stattdessen können Sie jede Library verwenden, die Ihren Anforderungen entspricht. Die beliebteste ist Leaflet, eine Open-Source Library. OpenLayers 3, eine weitere sehr bekannte Library, kann ebenfalls gut geeignet sein.
 
-[Getting started with Leaflet – a light web maps library](/using-tiles/getting-started-with-leaflet.md)
+[Erste Schritte mit Leaflet – eine leichtgewichtige Web-Karten-Library](/using-tiles/getting-started-with-leaflet.md)
 
-[Getting started with Openlayers – a full feature library for web maps](/using-tiles/getting-started-with-openlayers.md)
+[Erste Schritte mit Openlayers – eine Funktions-vollständige Library für Web-Karten](/using-tiles/getting-started-with-openlayers.md)
 
-[Getting started with Maplibre](/using-tiles/getting-started-with-maplibre.md)
+[Erste Schritte mit Maplibre](/using-tiles/getting-started-with-maplibre.md)
 
-## Choosing a tile provider
+## Einen Tile-Anbieter auswählen
 
-Apart from very limited testing purposes, you should not use the tiles supplied by OpenStreetMap.org itself. OpenStreetMap is a volunteer-run non-profit body and cannot supply tiles for large-scale commercial use. Rather, you should use a third party provider that makes tiles from OSM data, or generate your own.
+Von streng begrenzten Testzwecken abgesehen, sollten Sie die von OpenStreetMap.org selbst bereitgestellten Tiles nicht verwenden. OpenStreetMap ist eine Freiwilligen-betriebene, gemeinnützige Einrichtung und kann Tiles für eine umfangreiche kommerzielle Nutzung nicht bereitstellen. Stattdessen sollten Sie einen Drittanbieter verwenden, der Tiles aus OSM-Daten erstellt, oder Ihre eigenen erstellen.
 
-### Free providers
+### Kostenlose Anbieter
 
-You can get a list using the project [Leaflet-provider](http://leaflet-extras.github.io/leaflet-providers/preview/) preview although some of them are not free (require an API key).
+Sie können eine Liste über die Vorschau des Projekts [Leaflet-provider](http://leaflet-extras.github.io/leaflet-providers/preview/) erhalten. Einige davon sind jedoch nicht frei verfügbar (benötigen einen API-Schlüssel).
 
-### Paid-for providers
+### Kostenpflichtige Anbieter
 
-See [list](/providers.md). Or go on to find out how to generate and serve your own tiles.
+Siehe [Liste](/providers.md). Oder lesen Sie weiter, um herauszufinden wie Sie ihre eigenen Tiles erzeugen und anbieten.

@@ -1,32 +1,32 @@
 ---
 layout: docs
-title: Getting started with Leaflet
+title: Erste Schritte mit Leaflet
 ---
 
 # {{ title }}
 
-## Introduction
+## Einleitung
 
-[Leaflet](http://leafletjs.com/){: target=blank} is a lightweight JavaScript library for embedding maps. It uses a permissive BSD open-source license so can be incorporated into any site without legal worries. Its source code is available on [GitHub](http://github.com/Leaflet/Leaflet){: target=blank}.
+[Leaflet](http://leafletjs.com/){: target=blank} ist eine leichtgewichtige JavaScript-Library zur Einbindung von Karten. Es verwendet eine freizügige BSD Open-Source Lizenz - kann also ohne Bedenken legal in jede Seite integriert werden. Der Quellcode ist auf [GitHub](http://github.com/Leaflet/Leaflet){: target=blank} verfügbar.
 
-Here, we restrict ourselves to a small, self-contained example and refer to the official [tutorials](http://leafletjs.com/examples.html){: target=blank} and [documentation](http://leafletjs.com/reference.html){: target=blank} for elaborate usages.
+Wir beschränken uns hier auf ein kleines, eigenständiges Beispiel und verweisen für komplexere Anwendungen auf die offiziellen [Tutorials](http://leafletjs.com/examples.html){: target=blank} und die [Dokumentation](http://leafletjs.com/reference.html){: target=blank}.
 
-## Getting started
+## Erste Schritte
 
-Copy the following content to a file [leaflet.html](leaflet.html){: target=_blank} and open it in your browser:
+Kopieren Sie den folgenden Inhalt in eine Datei [leaflet.html](leaflet.html){: target=_blank} und öffnen Sie sie in Ihrem Browser:
 
 ``` html title="leaflet.html"
 --8<-- "docs/en/using-tiles/leaflet.html"
 ```
 
-See the official website for a detailed explanation of the code. [^1]
+Für eine detaillierte Erklärung des Codes, besuchen Sie die offizielle Webseite. [^1]
 
 [^1]: Quick Start&nbsp;– <https://leafletjs.com/examples/quick-start/>{: target=blank}
 
-## Further links
+## Weitere Links
 
-You want to …
+Sie möchten …
 
-* use a different background? → Leaflet natively supports [TMS](https://en.wikipedia.org/wiki/Tile_Map_Service{: target=blank}) and [WMS](https://en.wikipedia.org/wiki/Web_Map_Service){: target=blank}. See [there](http://leafletjs.com/reference.html#tilelayer){: target=blank} which options are supported in Leaflet.
-* add all of your company's locations? → Provide them as [GeoJSON](http://geojson.org/){: target=blank} and [include them](http://leafletjs.com/examples/geojson.html){: target=blank} in the map.
-* use a different map projection? → Use the [Proj4Leaflet](https://github.com/kartena/Proj4Leaflet){: target=blank} plugin.
+* einen anderen Hintergrund verwenden? → Leaflet unterstützt standardmäßig [TMS](https://de.wikipedia.org/wiki/Tile_Map_Service){: target=blank} und [WMS](https://de.wikipedia.org/wiki/Web_Map_Service){: target=blank}. Siehe [hier](http://leafletjs.com/reference.html#tilelayer){: target=blank} welche Optionen in Leaflet unterstütz werden.
+* alle Standorte Ihres Unternehmens hinzufügen? → Stellen Sie sie als [GeoJSON](http://geojson.org/){: target=blank} bereit und [integrieren](http://leafletjs.com/examples/geojson.html){: target=blank} Sie sie in die Karte.
+* eine andere Kartenprojektion verwenden? → Verwenden Sie das [Proj4Leaflet](https://github.com/kartena/Proj4Leaflet){: target=blank} Plugin.

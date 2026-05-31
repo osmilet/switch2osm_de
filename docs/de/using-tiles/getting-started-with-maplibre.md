@@ -1,43 +1,43 @@
 ---
 layout: docs
-title: Getting started with MapLibre GL
+title: Erste Schritte mit MapLibre GL
 ---
 
 # {{ title }}
 
-## Introduction
+## Einleitung
 
-[MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/){: target=blank} is a TypeScript library that uses WebGL for embedding maps. It uses a permissive BSD open-source license so can be incorporated into any site without legal worries. Its source code is available on [GitHub](https://github.com/maplibre/maplibre-gl-js/){: target=blank}.
+[MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/){: target=blank} ist eine TypeScript-Library, die WebGL zur Einbindung von Karten nutzt. Es verwendet eine freizügige BSD Open-Source Lizenz - kann also ohne Bedenken legal in jede Seite integriert werden. Der Quellcode ist auf [GitHub](https://github.com/maplibre/maplibre-gl-js/){: target=blank} verfügbar.
 
-Here, we restrict ourselves to a small, self-contained example and refer to the official [tutorials](https://maplibre.org/maplibre-gl-js/docs/examples/){: target=blank} and [documentation](https://maplibre.org/maplibre-gl-js/docs/API/){: target=blank} for elaborate usages.
+Wir beschränken uns hier auf ein kleines, eigenständiges Beispiel und verweisen für komplexere Anwendungen auf die offiziellen [Tutorials](https://maplibre.org/maplibre-gl-js/docs/examples/){: target=blank} und die [Dokumentation](https://maplibre.org/maplibre-gl-js/docs/API/){: target=blank}.
 
-## Getting started
+## Erste Schritte
 
-Displaying a map requires three things: a data source, map style, and site to host them all. We're going to use the OpenStreetMap Foundation Shortbread tiles, the Versatiles Colorful style, and a website you'll run.
+Eine Karte darzustellen erfordert drei Dinge: Eine Datenquelle, ein Karten-Stil und eine Seite um alles zu hosten. Wir werden die Shortbread-Tiles der OpenStreetMap Stiftung verwenden, den Versatiles Colorful Stil und eine Webseite, die Sie betreiben.
 
 !!! info "Hosting"
-    Some browser features require a page is served from a secure location. This is a website with HTTPS or your local computer. We're assuming you have a web host for "example.com" that lets you serve files from disk and that you know how to copy files to the web host.
+    Manche Browser-Funktionen erwarten, dass eine Seite von einem sicheren Speicherort ausgeliefert wird. Dies kann eine Webseite mit HTTPS oder Ihr lokaler Computer sein. Wir nehmen an, dass Sie einen Webhoster für "example.com" haben, der es Ihnen erlaubt Dateien von einem Datenträger auszuliefern, und dass Sie wissen wie man Dateien zu diesem Webhoster kopiert.
 
 ## Software Installation
 
-We need Node.js 18 or later. If you have Ubuntu 24.04 or later or Debian 12 or later, you can install these with
+Wir benötigen Node.js 18 oder höher. Wenn Sie Ubuntu 24.04 (oder höher) oder Debian 12 (oder höher) verwenden, dann können Sie dies mit folgendem Kommando installieren
 
 ```sh
 sudo apt-get install nodejs
 ```
 
-For other operating systems consult their documentation. You can check the version of Node.js you have with `node --version`. If it's below 18 you will need to install your own version of Node. One way to do this is with [nvm](https://github.com/nvm-sh/nvm).
+Für andere Betriebssysteme schlagen Sie in deren Dokumentation nach. Sie können ihre Version von Node.js mit `node --version` überprüfen. Wenn es niedriger als 18 ist, müssen Sie ihre eigene Version von Node installieren. Eine Möglichkeit dies zu tun ist mittels [nvm](https://github.com/nvm-sh/nvm).
 
-## Building the style
+## Den Stil erstellen
 
-We're going to be using the VersaTiles colorful style, a basic style which uses Shortbread tiles. The Shortbread vector tile schema is a general-purpose vector tile schema for OpenStreetMap data. To get the tiles we're going to use the OpenStreetMap Foundation's Shortbread tile service.
+Wir werden den VersaTiles Colorful Style benutzen - ein grundlegender Stil, der Shortbread-Tiles verwendet. Das Shortbread Vector-Tile-Schema ist ein universelles Vector-Tile-Schema für OpenStreetMap Daten. Um die Tiles zu erhalten, werden wir den Shortbread Tile-Dienst der OpenStreetMap Stiftung benutzen.
 
 !!! info ""
-    Usage of the vector tiles is governed by the [vector tile usage policy](https://operations.osmfoundation.org/policies/vector/). This web page will meet the requirements, but there is no SLA or guarantee with the vector tile service. If you need these you should host them yourself or use a commercial host.
+    Die Verwendung der Vector-Tiles wird durch die [Vector Tile Usage Policy](https://operations.osmfoundation.org/policies/vector/) geregelt. Diese Webseite wird die Anforderungen erfüllen, aber es gibt keine Dienstleistungsvereinbarung oder Garantie für den Vector-Tile-Dienst. Wenn Sie diese benötigen, dann sollten Sie Ihre eigenen Tiles bereitstellen oder einen kommerziellen Anbieter verwenden.
 
-A style requires a style definition and sprite files for any icons. We're going to build the style definition to point to our own sprites.
+Ein Stil benötigt eine Stil-Definition und Sprite-Dateien für jedes Icon. Wir werden die Stil-Definition erstellen um zu unseren eigenen Sprite-Dateien zu verweisen.
 
-Start by making a new directory to store the files you'll be creating. We'll call it "style" in the documentation, but it can be whatever you want. Inside this directory we're going to build all the files we need and place them in a "release" subdirectory
+Starten Sie damit, ein neues Verzeichnis zu erstellen, um die Dateien zu speichern, die Sie erzeugen werden. Wir werden es in der Dokumentation "style" nennen, aber es kann heißen wie Sie wollen. Innerhalb dieses Verzeichnisses werden wir alle benötigten Dateien erstellen und in ein "release" Unterverzeichnis ablegen
 
 ```sh
 mkdir style
@@ -45,7 +45,7 @@ cd style
 mkdir release
 ```
 
-Building sprites can be a complicated process, but because we don't need to modify them we're going to use pre-built ones
+Sprites zu erzeugen kann ein komplizierter Prozess sein, aber da wir sie nicht modifizieren müssen, werden wir vorgefertigte verwenden
 
 ```sh
 curl -OL https://github.com/versatiles-org/versatiles-style/releases/download/v5.10.0/sprites.tar.gz
@@ -53,37 +53,37 @@ mkdir -p release/sprites
 tar -C release/sprites -xzf sprites.tar.gz
 ```
 
-We now need to build the style so it uses our new copy of the sprites and the OSMF vector tile service.
+Jetzt müssen wir den Stil erstellen, sodass er unsere neue Kopie der Sprites und den OSM Vektor-Tile-Dienst verwendet.
 
-Copy the following content to a file [build.ts](build.ts){: target=_blank}, but change "example.com" to the URL that you will serve the tiles from, including your domain name
+Kopieren Sie den folgenden Inhalt in eine Datei [build.ts](build.ts){: target=_blank}, aber ändern Sie "example.com" in die URL von der Sie die Tiles anbieten werden, einschließlich Ihres Domain-Namen
 
 ```ts title="build.ts"
 --8<-- "docs/assets/using-tiles/build.ts"
 ```
 
-In the same directory install TypeScript and the VersaTiles styles, then run the script above to build your style.
+Im gleichen Verzeichnis installieren Sie TypeScript und die VersaTiles-Stile und führen dann obiges Script aus, um Ihre Stile zu erstellen.
 
 ```sh
 npm install tsx @versatiles/style@~5.10.0
 node_modules/.bin/tsx build.ts
 ```
 
-Copy the following content to a file [maplibre.html](maplibre.html){: target=_blank} and put it in the release directory
+Kopieren Sie den folgenden Inhalt in eine Datei [maplibre.html](maplibre.html){: target=_blank} und legen Sie sie im release Verzeichnis ab
 
 ```html title="maplibre.html"
 --8<-- "docs/en/using-tiles/maplibre.html"
 ```
 
-## Releasing the style
+## Den Stil freigeben
 
-Copy the contents of the "release" directory to the location that you chose earlier, that you will serve the files from. Common ways of doing this are with a scp or rsync command, or through a web interface.
+Kopieren Sie den Inhalt des "release" Verzeichnisses an den vorher gewählten Ort, von dem aus Sie die Tiles ausliefern wollen. Übliche Arten dies zu tun sind mit einem scp oder rsync Kommando oder über eine Web-Oberfläche.
 
-## Common problems
+## Häufige Probleme
 
-### `node_modules/.bin/tsx build.ts` fails to run
+### `node_modules/.bin/tsx build.ts` lässt sich nicht ausführen
 
-If you have an outdated version of node, this command will fail to run. You can fix this by installing an up-to-date version with nvm as described earlier.
+Wenn Sie eine veraltete Version von node verwenden, wird dieses Kommando fehlschlagen. Sie können dies beheben, indem Sie, wie oben beschrieben, eine aktuelle Version mit nvm installieren.
 
-### Nothing loads on the web page
+### Auf der Webseite wird nichts geladen
 
-Open your browser's Developer Tools and look at the console. The most common cause of nothing displaying is incorrect URLs.
+Öffnen Sie die Entwickler-Werkzeuge Ihres Browsers und sehen Sie sich die Konsole an. Die häufigste Ursache für fehlende Darstellung, sind falsche URLs.
