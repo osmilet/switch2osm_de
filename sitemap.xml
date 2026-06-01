@@ -5,6 +5,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/"/>
     </url>
@@ -13,6 +14,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/case-studies/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/case-studies/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/case-studies/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/case-studies/"/>
     </url>
@@ -21,6 +23,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/find-out-more/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/find-out-more/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/find-out-more/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/find-out-more/"/>
     </url>
@@ -29,6 +32,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/other-uses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/other-uses/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/other-uses/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/other-uses/"/>
     </url>
@@ -37,6 +41,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/providers/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/providers/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/providers/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/providers/"/>
     </url>
@@ -45,6 +50,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/the-basics/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/the-basics/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/the-basics/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/the-basics/"/>
     </url>
@@ -53,6 +59,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/why-switch/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/why-switch/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/why-switch/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/why-switch/"/>
     </url>
@@ -61,6 +68,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/"/>
     </url>
@@ -69,6 +77,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
     </url>
@@ -77,6 +86,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
     </url>
@@ -85,6 +95,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
     </url>
@@ -93,6 +104,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
     </url>
@@ -101,6 +113,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-11/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-11/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-11/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-11/"/>
     </url>
@@ -109,6 +122,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-12/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-12/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-12/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-12/"/>
     </url>
@@ -117,6 +131,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-13/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-13/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-13/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-13/"/>
     </url>
@@ -125,6 +140,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
     </url>
@@ -133,6 +149,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
     </url>
@@ -141,6 +158,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
     </url>
@@ -149,6 +167,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
     </url>
@@ -157,6 +176,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/monitoring-using-munin/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/monitoring-using-munin/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/monitoring-using-munin/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/monitoring-using-munin/"/>
     </url>
@@ -165,6 +185,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
     </url>
@@ -173,6 +194,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-osmosis/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osmosis/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-osmosis/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-osmosis/"/>
     </url>
@@ -181,6 +203,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-pyosmium/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-pyosmium/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-pyosmium/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-pyosmium/"/>
     </url>
@@ -189,6 +212,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/using-a-docker-container/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/using-a-docker-container/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/using-a-docker-container/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/using-a-docker-container/"/>
     </url>
@@ -197,6 +221,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/"/>
     </url>
@@ -205,6 +230,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-leaflet/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-leaflet/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-leaflet/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-leaflet/"/>
     </url>
@@ -213,6 +239,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-maplibre/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-maplibre/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-maplibre/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-maplibre/"/>
     </url>
@@ -220,6 +247,259 @@
         <loc>https://switch2osm.org/using-tiles/getting-started-with-openlayers/</loc>
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-openlayers/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-openlayers/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-openlayers/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-openlayers/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/case-studies/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/case-studies/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/case-studies/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/case-studies/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/case-studies/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/find-out-more/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/find-out-more/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/find-out-more/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/find-out-more/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/find-out-more/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/other-uses/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/other-uses/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/other-uses/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/other-uses/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/other-uses/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/providers/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/providers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/providers/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/providers/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/providers/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/the-basics/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/the-basics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/the-basics/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/the-basics/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/the-basics/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/why-switch/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/why-switch/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/why-switch/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/why-switch/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/why-switch/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-18-04-lts/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-20-04-lts/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-22-04-lts/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-24-04-lts/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-11/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-11/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-11/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-11/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-11/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-12/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-12/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-12/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-12/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-12/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-13/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-13/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-13/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-13/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-13/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/monitoring-using-munin/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/monitoring-using-munin/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/monitoring-using-munin/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/monitoring-using-munin/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/monitoring-using-munin/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osm2pgsql-replication/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osmosis/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osmosis/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-osmosis/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-osmosis/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-osmosis/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/updating-as-people-edit-pyosmium/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-pyosmium/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-pyosmium/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-pyosmium/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-pyosmium/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/serving-tiles/using-a-docker-container/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/using-a-docker-container/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/using-a-docker-container/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/using-a-docker-container/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/using-a-docker-container/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/using-tiles/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/using-tiles/getting-started-with-leaflet/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-leaflet/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-leaflet/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-leaflet/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-leaflet/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/using-tiles/getting-started-with-maplibre/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-maplibre/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-maplibre/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-maplibre/"/>
+        <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-maplibre/"/>
+    </url>
+    <url>
+        <loc>https://switch2osm.org/de/using-tiles/getting-started-with-openlayers/</loc>
+        <lastmod>2026-06-01</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-openlayers/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-openlayers/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-openlayers/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-openlayers/"/>
@@ -229,6 +509,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/"/>
     </url>
@@ -237,6 +518,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/case-studies/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/case-studies/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/case-studies/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/case-studies/"/>
     </url>
@@ -245,6 +527,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/find-out-more/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/find-out-more/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/find-out-more/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/find-out-more/"/>
     </url>
@@ -253,6 +536,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/other-uses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/other-uses/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/other-uses/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/other-uses/"/>
     </url>
@@ -261,6 +545,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/providers/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/providers/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/providers/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/providers/"/>
     </url>
@@ -269,6 +554,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/the-basics/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/the-basics/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/the-basics/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/the-basics/"/>
     </url>
@@ -277,6 +563,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/why-switch/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/why-switch/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/why-switch/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/why-switch/"/>
     </url>
@@ -285,6 +572,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/"/>
     </url>
@@ -293,6 +581,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
     </url>
@@ -301,6 +590,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
     </url>
@@ -309,6 +599,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
     </url>
@@ -317,6 +608,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
     </url>
@@ -325,6 +617,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-11/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-11/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-11/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-11/"/>
     </url>
@@ -333,6 +626,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-12/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-12/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-12/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-12/"/>
     </url>
@@ -341,6 +635,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-13/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-13/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-13/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-13/"/>
     </url>
@@ -349,6 +644,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
     </url>
@@ -357,6 +653,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
     </url>
@@ -365,6 +662,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
     </url>
@@ -373,6 +671,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
     </url>
@@ -381,6 +680,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/monitoring-using-munin/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/monitoring-using-munin/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/monitoring-using-munin/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/monitoring-using-munin/"/>
     </url>
@@ -389,6 +689,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
     </url>
@@ -397,6 +698,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-osmosis/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osmosis/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-osmosis/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-osmosis/"/>
     </url>
@@ -405,6 +707,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-pyosmium/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-pyosmium/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-pyosmium/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-pyosmium/"/>
     </url>
@@ -413,6 +716,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/using-a-docker-container/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/using-a-docker-container/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/using-a-docker-container/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/using-a-docker-container/"/>
     </url>
@@ -421,6 +725,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/"/>
     </url>
@@ -429,6 +734,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-leaflet/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-leaflet/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-leaflet/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-leaflet/"/>
     </url>
@@ -437,6 +743,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-maplibre/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-maplibre/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-maplibre/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-maplibre/"/>
     </url>
@@ -445,6 +752,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-openlayers/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-openlayers/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-openlayers/"/>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-openlayers/"/>
     </url>
@@ -453,6 +761,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/"/>
     </url>
@@ -461,6 +770,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/case-studies/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/case-studies/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/case-studies/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/case-studies/"/>
     </url>
@@ -469,6 +779,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/find-out-more/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/find-out-more/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/find-out-more/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/find-out-more/"/>
     </url>
@@ -477,6 +788,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/other-uses/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/other-uses/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/other-uses/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/other-uses/"/>
     </url>
@@ -485,6 +797,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/providers/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/providers/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/providers/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/providers/"/>
     </url>
@@ -493,6 +806,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/the-basics/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/the-basics/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/the-basics/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/the-basics/"/>
     </url>
@@ -501,6 +815,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/why-switch/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/why-switch/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/why-switch/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/why-switch/"/>
     </url>
@@ -509,6 +824,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/"/>
     </url>
@@ -517,6 +833,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-18-04-lts/"/>
     </url>
@@ -525,6 +842,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-20-04-lts/"/>
     </url>
@@ -533,6 +851,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-22-04-lts/"/>
     </url>
@@ -541,6 +860,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-24-04-lts/"/>
     </url>
@@ -549,6 +869,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-11/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-11/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-11/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-11/"/>
     </url>
@@ -557,6 +878,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-12/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-12/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-12/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-12/"/>
     </url>
@@ -565,6 +887,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-debian-13/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-debian-13/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-debian-13/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-debian-13/"/>
     </url>
@@ -573,6 +896,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-18-04-lts/"/>
     </url>
@@ -581,6 +905,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-20-04-lts/"/>
     </url>
@@ -589,6 +914,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts/"/>
     </url>
@@ -597,6 +923,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/manually-building-a-tile-server-ubuntu-24-04-lts/"/>
     </url>
@@ -605,6 +932,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/monitoring-using-munin/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/monitoring-using-munin/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/monitoring-using-munin/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/monitoring-using-munin/"/>
     </url>
@@ -613,6 +941,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-osm2pgsql-replication/"/>
     </url>
@@ -621,6 +950,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-osmosis/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-osmosis/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-osmosis/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-osmosis/"/>
     </url>
@@ -629,6 +959,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/updating-as-people-edit-pyosmium/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/updating-as-people-edit-pyosmium/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/updating-as-people-edit-pyosmium/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/updating-as-people-edit-pyosmium/"/>
     </url>
@@ -637,6 +968,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/serving-tiles/using-a-docker-container/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/serving-tiles/using-a-docker-container/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/serving-tiles/using-a-docker-container/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/serving-tiles/using-a-docker-container/"/>
     </url>
@@ -645,6 +977,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/"/>
     </url>
@@ -653,6 +986,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-leaflet/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-leaflet/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-leaflet/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-leaflet/"/>
     </url>
@@ -661,6 +995,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-maplibre/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-maplibre/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-maplibre/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-maplibre/"/>
     </url>
@@ -669,6 +1004,7 @@
         <lastmod>2026-06-01</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh-TW" href="https://switch2osm.org/zh-TW/using-tiles/getting-started-with-openlayers/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://switch2osm.org/de/using-tiles/getting-started-with-openlayers/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://switch2osm.org/using-tiles/getting-started-with-openlayers/"/>
         <xhtml:link rel="alternate" hreflang="uk" href="https://switch2osm.org/uk/using-tiles/getting-started-with-openlayers/"/>
     </url>

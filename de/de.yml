@@ -1,0 +1,54 @@
+de:
+  plugins:
+    - i18n:
+        languages:
+          - # ISO code of your language
+            locale: de
+            # Name of your languge
+            name: Deutsch
+            # Day/Night toggle
+            theme:
+              palette:
+                - toggle:
+                    name: Zu hellem Modus wechseln
+                - toggle:
+                    name: Zu dunklem Modus wechseln
+                - toggle:
+                    name: Systemeinstellung verwenden
+            # Translate copyright statement
+            copyright: © 2013–2025 OpenStreetMap und Mitwirkende, <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/2.0/80x15.png" /></a><br />Diese Arbeit steht unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">Creative Commons Attribution-ShareAlike 2.0 Generic License</a>.
+            nav_translations:
+              # Menu item name for the /index.md
+              Home: Switch2OSM
+              # Menu item name for the /why-switch.md
+              Why: Warum wechseln?
+              # Menu item name for the /case-studies.md
+              Cases: Fallbeispiele
+              # Menu item name for the /the-basics.md
+              Basics: Die Grundlagen
+              # Menu item name for the "Using Tiles" tab
+              Using: Tiles verwenden
+              # Menu item name for the side menu
+              Leaflet: Erste Schritte mit Leaflet
+              # Menu item name for the side menu
+              OpenLayers: Erste Schritte mit OpenLayers
+              # Menu item name for the side menu
+              MapLibre: Erste Schritte mit MapLibre GL
+              # Menu item name for the side menu
+              Vector Tiles: Die Macht von Vektor Karten Tiles
+              # Menu item name for the "Serving Tiles" tab
+              Serving: Tiles bereitstellen
+              # Serving tiles: Manually building a tile server
+              Manually: Einen Tile-Server manuell erstellen
+              # Serving tiles: Using a Docker container
+              Docker: Einen Docker Container verwenden
+              # Serving tiles: Monitoring using Munin
+              Munin: Monitoring mit Hilfe von Munin
+              # Serving tiles: Updating your database as people edit OpenStreetMap
+              Updating: Ihre Datenbank aktualisieren, während Benutzer OpenStreetMap bearbeiten
+              # Menu item name for the /other-uses.md
+              Other: Andere Anwendungen
+              # Menu item name for the /providers.md
+              Providers: Anbieter
+              # Menu item name for the /find-out-more.md
+              More: Mehr erfahren
