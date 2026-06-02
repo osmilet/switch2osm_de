@@ -1,7 +1,7 @@
 site_name: Switch2OSM
-site_url: https://switch2osm.org/
-repo_url: https://github.com/switch2osm/switch2osm
-repo_name: switch2osm/switch2osm
+site_url: https://osmilet.github.io/switch2osm_de/
+repo_url: https://github.com/osmilet/switch2osm_de
+repo_name: osmilet/switch2osm_de
 edit_uri: edit/main/docs/
 dev_addr: 127.0.0.1:8080
 copyright: © 2013–2025 OpenStreetMap and contributors, <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/2.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">Creative Commons Attribution-ShareAlike 2.0 Generic License</a>.
