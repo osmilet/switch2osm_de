@@ -1,52 +1,52 @@
 ---
 layout: docs
-title: Manually building a tile server (Debian 11)
+title: Einen Tile-Server manuell erstellen (Debian 11)
 dist: Debian 11
 dl_timestamp: "2020-11-13T21:42:03Z"
-lang: en
+lang: de
 ---
 
 # {{ title }}
 
 !!! info ""
-    This page describes how to install, setup and configure all the necessary software to operate your own tile server. These step-by-step instructions were written for [Debian Linux](https://www.debian.org/){: target=_blank} 11 (bullseye), and were tested in November 2020.
+    Diese Seite beschreibt die Installation, Einrichtung und Konfiguration aller notwendigen Software, um einen eigenen Tile-Server zu betreiben. Diese Schritt-für-Schritt-Anleitungen wurden für [Debian Linux](https://www.debian.org/){: target=_blank} 11 (bullseye), und wurden im November 2020 getestet.
 
-## Software installation
+## Software Installation
 
-The OSM tile server stack is a collection of programs and libraries that work together to create a tile server. As so often with OpenStreetMap, there are many ways to achieve this goal, and nearly all of the components have alternatives that have various specific advantages and disadvantages. This tutorial describes the most standard version that is similar to that used on the main OpenStreetMap.org tile servers.
+Der OSM Tile-Server-Stack ist eine Sammlung von Programmen und Bibliotheken, die zusammenarbeiten um einen Tile-Server zu erstellen. Wie so oft bei OpenStreetMap gibt es viele verschiedene Wege, dieses Ziel zu erreichen und fast alle Komponenten besitzen Alternativen mit verschiedenen speziellen Vor- und Nachteilen. Diese Anleitung beschreibt die üblichste Variante, die der auf den Haupt-OpenStreetMap.org-Tile-Servern eingesetzten ähnlich ist.
 
-It consists of 5 main components: `mod_tile`, `renderd`, `mapnik`, `osm2pgsql` and a `postgresql/postgis` database. Mod_tile is an apache module that serves cached tiles and decides which tiles need re-rendering&nbsp;– either because they are not yet cached or because they are outdated. Renderd provides a priority queueing system for different sorts of requests to manage and smooth out the load from rendering requests. Mapnik is the software library that does the actual rendering and is used by `renderd`.
+Sie besteht aus 5 Haupt-Komponenten: `mod_tile`, `renderd`, `mapnik`, `osm2pgsql` und einer `postgresql/postgis` Datenbank. Mod_tile ist ein Apache-Modul, dass zwischengespeicherte Tiles verteilt und entscheidet, welche Tiles erneut gerendert werden  müssen&nbsp;– entweder, weil sie noch gar nicht zwischengespeichert sind, oder weil sie nicht mehr aktuell sind. Renderd stellt ein Prioritäts-Warteschlangensystem für unterschiedliche Arten von Anfragen zur Verfügung, um die Last durch die Rendering-Anfragen zu managen und zu glätten. Mapnik wird von `renderd` verwendet und ist die Software-Bibliothek, die das tatsächliche Rendern durchführt.
 
-Thanks to the work done by the Debian maintainers to incorporate the latest versions of these packages into {{ dist }}, these instructions are somewhat shorter than previous versions.
+Dank der Arbeit der Debian-Maintainer, die aktuellsten Versionen dieser Pakete in {{ dist }} zu integrieren, sind diese Anleitungen etwas kürzer als die vorherigen Versionen.
 
-These instructions are have been written and tested against a newly-installed {{ dist }} server. If you have got other versions of some software already installed (perhaps you upgraded from an earlier version, or you set up some PPAs to load from) then you may need to make some adjustments.
+Diese Anleitungen wurden geschrieben und getestet für einen frisch installierten {{ dist }} Server. Falls Sie bereits andere Versionen mancher Programme installiert haben (weil Sie vielleicht von einer früheren Version aktualisiert haben oder einige PPAs eingerichtet haben, von denen geladen wird), müssen Sie eventuell einige Anpassungen vornehmen.
 
-In order to build these components, a variety of dependencies need to be installed first.
+Um diese Komponenten zu bauen, muss zunächst eine Auswahl von Abhängigkeiten installiert werden.
 
-Debian doesn't come with `sudo` by default, so we'll need to log on as `root` to do the first part:
+Debian kommt standardmäßig nicht mit `sudo`, deshalb müssen wir uns als `root` einloggen um den ersten Teil durchzuführen:
 
 ```sh
 --8<-- "docs/assets/serving-tiles/debian-deps.txt"
 ```
 
-While still logged on as root we'll ensure that the main user account that we are using can `sudo` to root. You'll want to change `youruseraccount` to whatever account you are using in the line below. Don't try and do everything below as `root`; it won't work.
+Während wir noch als root eingeloggt sind, stellen wir sicher, dass unser verwendetes Haupt-Nutzerkonto `sudo` zu root durchführen kann. Tauschen Sie in der Zeile unten `youruseraccount` gegen Ihr verwendetes Nutzerkonto aus. Versuchen sie nicht, alles folgenden als `root` auszuführen; Es wird nicht funktionieren.
 
 ```sh
 usermod -aG sudo youruseraccount
 exit
 ```
 
-That returns to your user account. Logoff and logon again, and then:
+Das wechselt wieder zu Ihrem Nutzerkonto. Melden Sie sich ab und wieder an, und dann:
 
 ```sh
 sudo whoami
 ```
 
-That should return `root`.
+Das sollte `root` ausgeben.
 
-At this point, a couple of new accounts have been added. You can see them with `tail /etc/passwd`. `postgres` is used for managing the databases that we use to hold data for rendering. `_renderd` is used for the `renderd` daemon, and we'll need to make sure lots of the commands below are run as that user.
+An diesem Punkt wurden ein paar neue Konten hinzugefügt. Mit `tail /etc/passwd` können Sie sie anzeigen. `postgres` wird zum Verwalten der Datenbank benutzt, in der wir die Daten zum Rendern bereithalten. `_renderd` wird für den `renderd`-Daemon gebraucht. Und wir müssen sicherstellen, dass viele der folgenden Kommandos mit diesem Benutzer ausgeführt werden.
 
-Now you need to create a postgis database. The defaults of various programs assume the database is called `gis` and we will use the same convention in this tutorial, although this is not necessary. Note that `_renderd` below matches the user that the `renderd` daemon will run from.
+Jetzt müssen Sie eine postgis-Datenbank erzeugen. Die Standardeinstellungen vieler Programme nehmen an, dass die Datenbank `gis` genannt wird und wir werden in dieser Anleitung die gleiche Konvention verwenden, obwohl dies nicht notwendig ist. Beachten Sie, dass `_renderd` im Folgenden mit dem Benutzer übereinstimmt, von dem aus der `renderd`-Daemon laufen wird.
 
 ```sh
 sudo -u postgres -i
@@ -54,59 +54,59 @@ createuser _renderd
 createdb -E UTF8 -O _renderd gis
 ```
 
-While still working as the `postgres` user, set up PostGIS on the PostgreSQL database:
+Noch während Sie als Benutzer `postgres` arbeiten, richten Sie PostGIS auf der PostgreSQL Datenbank ein:
 
 ```sh
 psql
 ```
 
-(that'll put you at a `postgres=#` prompt)
+(das wird Sie zu einem `postgres=#` Prompt bringen)
 
 ```sh
 \c gis
 ```
 
-(it'll answer "You are now connected to database 'gis' as user 'postgres'".)
+(es wird ausgeben "You are now connected to database 'gis' as user 'postgres'".)
 
 ```sql
 CREATE EXTENSION postgis;
 ```
 
-(it'll answer CREATE EXTENSION)
+(es wird ausgeben CREATE EXTENSION)
 
 ```sql
 CREATE EXTENSION hstore;
 ```
 
-(it'll answer CREATE EXTENSION)
+(es wird ausgeben CREATE EXTENSION)
 
 ```sql
 ALTER TABLE geometry_columns OWNER TO _renderd;
 ```
 
-(it'll answer ALTER TABLE)
+(es wird ausgeben ALTER TABLE)
 
 ```sql
 ALTER TABLE spatial_ref_sys OWNER TO _renderd;
 ```
 
-(it'll answer ALTER TABLE)
+(es wird ausgeben ALTER TABLE)
 
 ```sh
 \q
 ```
 
-(it'll exit psql and go back to a normal Linux prompt)
+(es wird psql beenden und zu einem normalen Linux Prompt zurückkehren)
 
 ```sh
 exit
 ```
 
-(to exit back to be the user that we were before we did `sudo -u postgres -i` above)
+(um zu dem Benutzer zurück zu kehren, der wir waren bevor wir `sudo -u postgres -i` weiter oben ausgeführt haben)
 
 ## Mapnik
 
-Mapnik was installed above. We'll check that it has been installed correctly by doing this:
+Mapnik wurde oben installiert. Wir werden prüfen, dass es korrekt installiert wurde, indem wir folgendes ausführen:
 
 ```py
 python3
@@ -115,6 +115,7 @@ python3
 ```
 
 If python replies with the second chevron prompt `>>>` and without errors, then Mapnik library was found by Python. Congratulations! You can leave Python with this command:
+Wenn Python mit dem zweiten Chevron Prompt `>>>` und ohne Fehlermeldungen antwortet, dann wurde die Mapnik-Bibliothek von Python gefunden. Glückwunsch! Sie können Python mit diesem Kommando verlassen:
 
 ```py
 >>> quit()

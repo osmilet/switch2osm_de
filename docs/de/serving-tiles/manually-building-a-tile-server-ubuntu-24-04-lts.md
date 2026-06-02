@@ -1,9 +1,9 @@
 ---
 layout: docs
-title: Manually building a tile server (Ubuntu 24.04)
+title: Einen Tile-Server manuell erstellen (Ubuntu 24.04)
 dist: Ubuntu 24.04
 dl_timestamp: "2024-04-24T20:21:40Z"
-lang: en
+lang: de
 ---
 
 # {{ title }}

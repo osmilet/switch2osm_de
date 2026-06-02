@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Monitoring using Munin
-lang: en
+title: Monitoring mit Hilfe von Munin
+lang: de
 ---
 
 # {{ title }}
