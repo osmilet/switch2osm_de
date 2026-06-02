@@ -138,7 +138,7 @@ plugins:
           locale: en
           # Name of your language
           name: English
-          #default: true
+          default: true
           # Day/Night toggle
           theme:
             palette:
@@ -248,7 +248,6 @@ plugins:
             More: Отримання допомоги
         - locale: zh-TW
           name: 台灣華語
-          default: true
           theme:
             palette:
               - toggle:
