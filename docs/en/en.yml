@@ -6,7 +6,6 @@ en:
             locale: en
             # Name of your language
             name: English
-            #default: true
             # Day/Night toggle
             theme:
               palette:
