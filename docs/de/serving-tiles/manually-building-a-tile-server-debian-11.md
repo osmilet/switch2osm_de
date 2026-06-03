@@ -114,22 +114,21 @@ python3
 >>>
 ```
 
-If python replies with the second chevron prompt `>>>` and without errors, then Mapnik library was found by Python. Congratulations! You can leave Python with this command:
 Wenn Python mit dem zweiten Chevron Prompt `>>>` und ohne Fehlermeldungen antwortet, dann wurde die Mapnik-Bibliothek von Python gefunden. Glückwunsch! Sie können Python mit diesem Kommando verlassen:
 
 ```py
 >>> quit()
 ```
 
-## Stylesheet configuration
+## Stylesheet-Konfiguration
 
-Now that all of the necessary software is installed, you will need to download and configure a stylesheet.
+Jetzt, da alle notwendige Software installiert ist, müssen sie ein Stylesheet (Formatvorlage) herunterladen und konfigurieren.
 
-The style we'll use here is the one that use by the "standard" map on the openstreetmap.org website. It's chosen because it's well documented, and should work anywhere in the world (including in places with non-latin placenames). There are a couple of downsides though - it's very much a compromise designed to work globally, and it's quite complicated to understand and modify, should you need to do that.
+Der Stil, den wir hier verwenden werden, ist derjenige, der auch von der "Standard"-Karte auf der openstreetmap.org Website verwendet wird. Er wird gewählt, da er gut dokumentiert ist und überall auf der Welt funktionieren sollte (inklusive an Orten mit nicht-lateinischen Ortsnamen). Es gibt jedoch auch einige Nachteile - es ist ein Kompromiss mit dem Ziel global zu funktionieren und es ist ziemlich kompliziert zu verstehen und zu modifizieren, sollten Sie den Bedarf haben dies zu tun.
 
-The home of "OpenStreetMap Carto" on the web is <https://github.com/gravitystorm/openstreetmap-carto/>{: target=_blank}, and it has its own installation instructions at <https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md>{: target=_blank}, although we'll cover everything that needs to be done here.
+Das Zuhause von "OpenStreetMap Carto" im Internet ist <https://github.com/gravitystorm/openstreetmap-carto/>{: target=_blank} und es hat seine eigene Installationsanleitung bei <https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md>{: target=_blank}, obwohl wir alles notwendige hier behandeln werden.
 
-Here we're assuming that we're storing the stylesheet details in a directory below `~/src` below the home directory of the whichever non-root account you are using:
+Hier nehmen wir an, dass wir die Stylesheet-Details in einem Verzeichnis unterhalb von `~/src` unterhalb des Home-Verzeichnis Ihres verwendeten nicht-root Benutzers speichern:
 
 ```sh
 mkdir ~/src
@@ -140,34 +139,34 @@ git pull --all
 git switch --detach v5.9.0
 ```
 
-The "git switch" is needed because that's the latest release that you can see at OpenStreetMap, but OSM Carto is in the process of moving to a different database format. See OSM Carto's [INSTALL.md](https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md) for the newer version.
+Das "git switch" wird benötigt, weil dies das neueste Release ist, dass man auf OpenStreetMap sehen kann. Allerdings befindet sich OSM Carto im Prozess zum Wechsel auf ein anderes Datenbankformat. Siehe OSM Carto's [INSTALL.md](https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md) für die neuere Version.
 
-Next, we'll install a suitable version of the `carto` compiler.
+Als nächstes werden wir eine passende Version des `carto` Compilers installieren.
 
 ```sh
 sudo npm install -g carto
 carto -v
 ```
 
-That should respond with a number that is at least as high as:
+Dies solte mit einer Nummer antworten, die mindestens so hoch ist wie:
 
 ```sh
 1.2.0
 ```
 
-Then we convert the carto project into something that Mapnik can understand:
+Dann konvertieren wir das carto-Projekt in etwas das Mapnik verstehen kann:
 
 ```sh
 carto project.mml > mapnik.xml
 ```
 
-You now have a Mapnik XML stylesheet at `/home/youraccountname/src/openstreetmap-carto/mapnik.xml`.
+Sie haben jetzt ein Mapnik XML Stylesheet in `/home/youraccountname/src/openstreetmap-carto/mapnik.xml`.
 
-## Loading data
+## Daten laden
 
-Initially, we'll load only a small amount of test data. Other download locations are available, but `download.geofabrik.de` has a wide range of options. In this example we'll download the data for Azerbaijan, which is currently about 32Mb.
+Initial laden wir nur eine kleine Menge von Test-Daten. Andere Download-Quellen sind auch verfügbar, aber `download.geofabrik.de` hat eine große Auswahl an Optionen. In diesem Beispiel werden wir die Daten für Aserbaidschan herunterladen, was zur Zeit etwa 32Mb sind.
 
-Browse to <https://download.geofabrik.de/asia/azerbaijan.html>{: target=_blank} and note the "This file was last modified" date (e.g. "{{ dl_timestamp }}"). We'll need that later if we want to update the database with people's subsequent changes to OpenStreetMap. Download it as follows:
+Navigieren Sie zu <https://download.geofabrik.de/asia/azerbaijan.html>{: target=_blank} und notieren sich das Datum von "This file was last modified" (z.B. "{{ dl_timestamp }}"). Wir werden es später benötigen, wenn wir die Datenbank mit Änderungen aktualisieren wollen, die Menschen später an OpenStreetMap vorgenommen haben. Laden Sie es folgendermaßen herunter:
 
 ```sh
 mkdir ~/data
