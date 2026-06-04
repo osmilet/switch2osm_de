@@ -1,10 +1,10 @@
 ---
 layout: docs
-title: Updating your database as people edit OpenStreetMap
-lang: en
+title: Ihre Datenbank aktualisieren, während Benutzer OpenStreetMap bearbeiten
+lang: de
 ---
 
-# Updating your database as people edit OpenStreetMap using osm2pgsql
+# Ihre Datenbank mit osm2pgsql aktualisieren, während Benutzer OpenStreetMap bearbeiten
 
 Every day there are millions of new map updates so to prevent a map becoming "stale" you can refresh the data used to create map tiles regularly.
 
