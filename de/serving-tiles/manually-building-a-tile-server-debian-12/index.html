@@ -32,7 +32,7 @@
     
     
       
-        <title>Manually building a tile server (Debian 12) - Switch2OSM</title>
+        <title>Einen Tile-Server manuell erstellen (Debian 12) - Switch2OSM</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#Manually-building-a-tile-server-Debian-12" class="md-skip">
+        <a href="#Einen-Tile-Server-manuell-erstellen-Debian-12" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Manually building a tile server (Debian 12)
+              Einen Tile-Server manuell erstellen (Debian 12)
             
           </span>
         </div>
@@ -975,10 +975,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#Software-installation" class="md-nav__link">
+  <a href="#Software-Installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Software installation
+        Software Installation
       
     </span>
   </a>
@@ -1605,10 +1605,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#Software-installation" class="md-nav__link">
+  <a href="#Software-Installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Software installation
+        Software Installation
       
     </span>
   </a>
@@ -1798,16 +1798,16 @@
   
 
 
-<h1 id="Manually-building-a-tile-server-Debian-12">Manually building a tile server (Debian 12)<a class="headerlink" href="#Manually-building-a-tile-server-Debian-12" title="Permanent link">⚓︎</a></h1>
+<h1 id="Einen-Tile-Server-manuell-erstellen-Debian-12">Einen Tile-Server manuell erstellen (Debian 12)<a class="headerlink" href="#Einen-Tile-Server-manuell-erstellen-Debian-12" title="Permanent link">⚓︎</a></h1>
 <div class="admonition info">
-<p>This page describes how to install, setup and configure all the necessary software to operate your own tile server. These step-by-step instructions were written for <a href="https://www.debian.org/" target="_blank" rel="noopener">Debian Linux</a> 12 (bookworm), and were tested in July 2023.</p>
+<p>Diese Seite beschreibt die Installation, Einrichtung und Konfiguration aller notwendigen Software, um einen eigenen Tile-Server zu betreiben. Diese Schritt-für-Schritt-Anleitungen wurden für <a href="https://www.debian.org/" target="_blank" rel="noopener">Debian Linux</a> 12 (bookworm) und wurden im July 2023 getestet.</p>
 </div>
-<h2 id="Software-installation">Software installation<a class="headerlink" href="#Software-installation" title="Permanent link">⚓︎</a></h2>
-<p>The OSM tile server stack is a collection of programs and libraries that work together to create a tile server. As so often with OpenStreetMap, there are many ways to achieve this goal, and nearly all of the components have alternatives that have various specific advantages and disadvantages. This tutorial describes the most standard version that is similar to that used on the main OpenStreetMap.org tile servers.</p>
-<p>It consists of 5 main components: <code>mod_tile</code>, <code>renderd</code>, <code>mapnik</code>, <code>osm2pgsql</code> and a <code>postgresql/postgis</code> database. Mod_tile is an apache module that serves cached tiles and decides which tiles need re-rendering&nbsp;– either because they are not yet cached or because they are outdated. Renderd provides a priority queueing system for different sorts of requests to manage and smooth out the load from rendering requests. Mapnik is the software library that does the actual rendering and is used by <code>renderd</code>.</p>
-<p>These instructions are have been written and tested against a newly-installed Debian 12 server. If you have got other versions of some software already installed (perhaps you upgraded from an earlier version, or you set up some PPAs to load from) then you may need to make some adjustments.</p>
-<p>In order to build these components, a variety of dependencies need to be installed first.</p>
-<p>Debian doesn't come with <code>sudo</code> by default, so we'll need to log on as <code>root</code> to do the first part:</p>
+<h2 id="Software-Installation">Software Installation<a class="headerlink" href="#Software-Installation" title="Permanent link">⚓︎</a></h2>
+<p>Der OSM Tile-Server-Stack ist eine Sammlung von Programmen und Bibliotheken, die zusammenarbeiten um einen Tile-Server zu erstellen. Wie so oft bei OpenStreetMap gibt es viele verschiedene Wege, dieses Ziel zu erreichen und fast alle Komponenten besitzen Alternativen mit verschiedenen speziellen Vor- und Nachteilen. Diese Anleitung beschreibt die üblichste Variante, die der auf den Haupt-OpenStreetMap.org-Tile-Servern eingesetzten ähnlich ist.</p>
+<p>Sie besteht aus 5 Haupt-Komponenten: <code>mod_tile</code>, <code>renderd</code>, <code>mapnik</code>, <code>osm2pgsql</code> und einer <code>postgresql/postgis</code> Datenbank. Mod_tile ist ein Apache-Modul, dass zwischengespeicherte Tiles verteilt und entscheidet, welche Tiles erneut gerendert werden  müssen&nbsp;– entweder, weil sie noch gar nicht zwischengespeichert sind, oder weil sie nicht mehr aktuell sind. Renderd stellt ein Prioritäts-Warteschlangensystem für unterschiedliche Arten von Anfragen zur Verfügung, um die Last durch die Rendering-Anfragen zu managen und zu glätten. Mapnik wird von <code>renderd</code> verwendet und ist die Software-Bibliothek, die das tatsächliche Rendern durchführt.</p>
+<p>Diese Anleitungen wurden geschrieben und getestet für einen frisch installierten Debian 12 Server. Falls Sie bereits andere Versionen mancher Programme installiert haben (weil Sie vielleicht von einer früheren Version aktualisiert haben oder einige PPAs eingerichtet haben, von denen geladen wird), müssen Sie eventuell einige Anpassungen vornehmen.</p>
+<p>Um diese Komponenten zu bauen, muss zunächst eine Auswahl von Abhängigkeiten installiert werden.</p>
+<p>Debian kommt standardmäßig nicht mit <code>sudo</code>, deshalb müssen wir uns als <code>root</code> einloggen um den ersten Teil durchzuführen:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>su<span class="w"> </span>-
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>apt<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>sudo<span class="w"> </span>screen<span class="w"> </span>locate<span class="w"> </span>libapache2-mod-tile<span class="w"> </span><span class="se">\</span>
@@ -1819,16 +1819,16 @@
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span>postgresql-15-postgis-3-scripts<span class="w"> </span>osm2pgsql<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span>net-tools<span class="w"> </span>curl
 </span></code></pre></div>
-<p>While still logged on as root we'll ensure that the main user account that we are using can <code>sudo</code> to root. You'll want to change <code>youruseraccount</code> to whatever account you are using in the line below. Don't try and do everything below as <code>root</code>; it won't work.</p>
+<p>Während wir noch als root eingeloggt sind, stellen wir sicher, dass unser verwendetes Haupt-Nutzerkonto <code>sudo</code> zu root durchführen kann. Tauschen Sie in der Zeile unten <code>youruseraccount</code> gegen Ihr verwendetes Nutzerkonto aus. Versuchen sie nicht, alles folgenden als <code>root</code> auszuführen; Es wird nicht funktionieren.</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>youruseraccount
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">exit</span>
 </span></code></pre></div>
-<p>That returns to your user account. Logoff and logon again, and then:</p>
+<p>Das wechselt wieder zu Ihrem Nutzerkonto. Melden Sie sich ab und wieder an, und dann:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>whoami
 </span></code></pre></div>
-<p>That should return <code>root</code>.</p>
-<p>At this point, a couple of new accounts have been added. You can see them with <code>tail /etc/passwd</code>. <code>postgres</code> is used for managing the databases that we use to hold data for rendering. <code>_renderd</code> is used for the <code>renderd</code> daemon, and we'll need to make sure lots of the commands below are run as that user.</p>
-<p>Now you need to create a postgis database. The defaults of various programs assume the database is called <code>gis</code> and we will use the same convention in this tutorial, although this is not necessary. Note that <code>_renderd</code> below matches the user that the <code>renderd</code> daemon will run from.</p>
+<p>Das sollte <code>root</code> ausgeben.</p>
+<p>An diesem Punkt wurden ein paar neue Konten hinzugefügt. Mit <code>tail /etc/passwd</code> können Sie sie anzeigen. <code>postgres</code> wird zum Verwalten der Datenbank benutzt, in der wir die Daten zum Rendern bereithalten. <code>_renderd</code> wird für den <code>renderd</code> Daemon gebraucht. Und wir müssen sicherstellen, dass viele der folgenden Kommandos mit diesem Benutzer ausgeführt werden</p>
+<p>Jetzt müssen Sie eine postgis-Datenbank erzeugen. Die Standardeinstellungen vieler Programme nehmen an, dass die Datenbank <code>gis</code> genannt wird und wir werden in dieser Anleitung die gleiche Konvention verwenden, obwohl dies nicht notwendig ist. Beachten Sie, dass <code>_renderd</code> im Folgenden mit dem Benutzer übereinstimmt, von dem aus der <code>renderd</code>-Daemon laufen wird.</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>-i
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>createuser<span class="w"> </span>_renderd
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>createdb<span class="w"> </span>-E<span class="w"> </span>UTF8<span class="w"> </span>-O<span class="w"> </span>_renderd<span class="w"> </span>gis

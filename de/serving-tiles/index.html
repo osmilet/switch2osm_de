@@ -32,7 +32,7 @@
     
     
       
-        <title>Serving your own tiles - Switch2OSM</title>
+        <title>Eigene Tiles bereitstellen - Switch2OSM</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#Serving-your-own-tiles" class="md-skip">
+        <a href="#Eigene-Tiles-bereitstellen" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Serving your own tiles
+              Eigene Tiles bereitstellen
             
           </span>
         </div>
@@ -1395,10 +1395,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#Is-it-for-you" class="md-nav__link">
+  <a href="#Passt-es-zu-Ihnen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Is it for you?
+        Passt es zu Ihnen?
       
     </span>
   </a>
@@ -1406,10 +1406,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#The-options" class="md-nav__link">
+  <a href="#Die-Optionen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The options
+        Die Optionen
       
     </span>
   </a>
@@ -1417,10 +1417,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#System-requirements" class="md-nav__link">
+  <a href="#Systemanforderungen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        System requirements
+        Systemanforderungen
       
     </span>
   </a>
@@ -1428,10 +1428,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#The-toolchain" class="md-nav__link">
+  <a href="#Die-Toolchain" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The toolchain
+        Die Toolchain
       
     </span>
   </a>
@@ -1471,50 +1471,50 @@
   
 
 
-<h1 id="Serving-your-own-tiles">Serving your own tiles<a class="headerlink" href="#Serving-your-own-tiles" title="Permanent link">⚓︎</a></h1>
-<p>Tiles from a third-party provider are the simplest way to make the switch to OpenStreetMap, and offer clarity of cost. However, if you’d like to take full control of your destiny, you can render and serve your own tiles. This section explains how.</p>
+<h1 id="Eigene-Tiles-bereitstellen">Eigene Tiles bereitstellen<a class="headerlink" href="#Eigene-Tiles-bereitstellen" title="Permanent link">⚓︎</a></h1>
+<p>Tiles von einem Drittanbieter sind der einfachste Weg den Wechsel zu OpenStreetMap umzusetzen und bieten Kostentransparenz. Wenn Sie jedoch gerne die volle Kontrolle über Ihr Schicksal übernehmen wollen, können Sie Ihre eigenen Tiles rendern und ausliefern. Dieser Abschnitt erklärt wie.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-title="Raw OSM data" data-description="Raw OpenStreetMap data with the default map paint style in JOSM, retrieved via OSM API for editing. https://www.openstreetmap.org/#map=16/18.0253/-63.0485" data-desc-position="bottom"><img alt="raw osm data" data-description="Raw OpenStreetMap data with the default map paint style in JOSM, retrieved via OSM API for editing. https://www.openstreetmap.org/#map=16/18.0253/-63.0485" data-title="Raw OSM data" src="../../assets/img/raw-osm-data.webp"></a></th>
-<th style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-title="Map tiles pyramid" data-description="Each zoom level of the map is cut into small parts called tiles. Usually, the size of one tile is 256×256 pixels." data-desc-position="bottom"><img alt="tile server" data-description="Each zoom level of the map is cut into small parts called tiles. Usually, the size of one tile is 256×256 pixels." data-title="Map tiles pyramid" src="../../assets/img/vector_tiles_pyramid_structure_window.webp"></a></th>
-<th style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-title="Tiles are served in your website" data-description="The tiles prepared by your tile server are then displayed in the client's web browser or other application." data-desc-position="bottom"><img alt="map usage" data-description="The tiles prepared by your tile server are then displayed in the client's web browser or other application." data-title="Tiles are served in your website" src="../../assets/img/map-usage.webp"></a></th>
+<th style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-title="OSM Roh-Daten" data-description="Raw OpenStreetMap data with the default map paint style in JOSM, retrieved via OSM API for editing. https://www.openstreetmap.org/#map=16/18.0253/-63.0485" data-desc-position="bottom"><img alt="raw osm data" data-description="Raw OpenStreetMap data with the default map paint style in JOSM, retrieved via OSM API for editing. https://www.openstreetmap.org/#map=16/18.0253/-63.0485" data-title="OSM Roh-Daten" src="../../assets/img/raw-osm-data.webp"></a></th>
+<th style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-title="Karten-Tiles-Pyramide" data-description="Jede Zoom-Ebene der Karte ist in kleine Stücke, sogenannte Tiles, unterteilt. Die Größe eines Tiles liegt üblicherweise bei 256×256 Pixel." data-desc-position="bottom"><img alt="tile server" data-description="Jede Zoom-Ebene der Karte ist in kleine Stücke, sogenannte Tiles, unterteilt. Die Größe eines Tiles liegt üblicherweise bei 256×256 Pixel." data-title="Karten-Tiles-Pyramide" src="../../assets/img/vector_tiles_pyramid_structure_window.webp"></a></th>
+<th style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-title="Tiles werden von Ihrer Webseite angeboten" data-description="Die von Ihrem Tile-Server vorbereiteten Tiles werden im Web-Browser des Clients, oder einer anderen Anwendung, angezeigt." data-desc-position="bottom"><img alt="map usage" data-description="Die von Ihrem Tile-Server vorbereiteten Tiles werden im Web-Browser des Clients, oder einer anderen Anwendung, angezeigt." data-title="Tiles werden von Ihrer Webseite angeboten" src="../../assets/img/map-usage.webp"></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.672 23.969c-.352-.089-.534-.234-1.471-1.168C.085 21.688.014 21.579.018 20.999c0-.645-.196-.414 3.368-3.986 3.6-3.608 3.415-3.451 4.064-3.449.302 0 .378.016.62.14l.277.14 1.744-1.744-.218-.343c-.425-.662-.825-1.629-1.006-2.429a7.66 7.66 0 0 1 1.479-6.44c2.49-3.12 6.959-3.812 10.26-1.588 1.812 1.218 2.99 3.099 3.328 5.314.07.467.07 1.579 0 2.074a7.55 7.55 0 0 1-2.205 4.402 6.7 6.7 0 0 1-1.943 1.401c-.959.483-1.775.71-2.881.803-1.573.131-3.32-.305-4.656-1.163l-.343-.218-1.744 1.744.14.28c.125.241.14.316.14.617.003.651.156.467-3.426 4.049-2.761 2.756-3.186 3.164-3.398 3.261-.271.125-.69.171-.945.106zM17.485 13.95a6.43 6.43 0 0 0 4.603-3.51c1.391-2.899.455-6.306-2.227-8.108-.638-.43-1.529-.794-2.367-.962-.581-.117-1.809-.104-2.414.025a6.6 6.6 0 0 0-2.452 1.064c-.444.315-1.177 1.048-1.487 1.487a6.384 6.384 0 0 0 .38 7.907 6.4 6.4 0 0 0 3.901 2.136c.509.078 1.542.058 2.065-.037zm-3.738 7.376a81 81 0 0 1-2.196-.651c-.025-.028 1.207-4.396 1.257-4.449.023-.026 4.242 1.152 4.414 1.236.062.026-.003.288-.525 2.102a399 399 0 0 0-.635 2.236c-.025.087-.069.156-.097.156-.028-.003-1.028-.287-2.219-.631zm2.912.524c0-.053 1.227-4.333 1.246-4.347.047-.034 4.324-1.23 4.341-1.211.019.019-1.199 4.337-1.23 4.36-.02.019-4.126 1.191-4.259 1.218-.054.011-.098 0-.098-.019zm-7.105-1.911c.846-.852 1.599-1.627 1.674-1.728.171-.218.405-.732.472-1.015.026-.118.053-.352.058-.522l.011-.307.182-.051c.103-.028.193-.044.202-.034.023.025-1.207 4.321-1.246 4.36-.02.016-.677.213-1.464.436l-1.425.405 1.537-1.542zm8.289-3.06a1.4 1.4 0 0 1-.059-.187l-.044-.156.156-.028c1.339-.227 2.776-.856 3.908-1.713.16-.125.252-.171.265-.134.054.165.272.95.265.959-.034.034-4.48 1.282-4.492 1.261zm-15.083-1.3c-.05-.039-1.179-3.866-1.264-4.29-.016-.084.146-.044 2.174.536 2.121.604 2.192.629 2.222.74.028.098.011.129-.125.223-.084.059-.769.724-1.523 1.479a64 64 0 0 1-1.39 1.367c-.016 0-.056-.025-.093-.054zm.821-4.378c-1.188-.343-2.164-.623-2.167-.626-.016-.012 1.261-4.433 1.285-4.46.022-.022 4.422 1.211 4.469 1.252.009.009-.269 1.017-.618 2.239-.576 2.02-.643 2.224-.723 2.22-.05-.003-1.059-.285-2.247-.626zm2.959.538c.012-.031.212-.723.444-1.534l.42-1.476.056.321c.093.556.265 1.188.464 1.741.106.296.187.539.181.545-.008.006-.332.101-.719.212-.389.109-.741.21-.786.224q-.085.025-.059-.034zM4.905 6.112c-1.187-.339-2.167-.635-2.18-.654-.04-.062-1.246-4.321-1.23-4.338.026-.025 4.31 1.204 4.351 1.246.047.051 1.28 4.379 1.246 4.376L4.91 6.113zm2.148-1.713-.519-1.806-.078-.28 1.693-.483c.934-.265 1.724-.495 1.76-.508.034-.016-.083.14-.26.336A8.7 8.7 0 0 0 7.69 5.23a4 4 0 0 0-.132.561c0 .293-.115-.025-.505-1.39z"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C8.59 3 5.69 4.07 4.54 5.57l5.25 5.25c.71.11 1.43.18 2.21.18 4.42 0 8-1.79 8-4s-3.58-4-8-4M3.92 7.08 2.5 8.5 5 11H0v2h5l-2.5 2.5 1.42 1.42L8.84 12M20 9c0 2.21-3.58 4-8 4-.66 0-1.3-.05-1.91-.13l-2.47 2.47c1.26.41 2.76.66 4.38.66 4.42 0 8-1.79 8-4m0 2c0 2.21-3.58 4-8 4-2.28 0-4.33-.5-5.79-1.25l-1.68 1.68C5.68 19.93 8.59 21 12 21c4.42 0 8-1.79 8-4"></path></svg></span> OpenStreetMap raw data</td>
-<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 17h3v2h-3v3h-2v-3h-3v-2h3v-3h2zM8 16h4v-4H8zm4-4h4V8h-4zM2 2v20h11.54c-.54-.58-.91-1.26-1.18-2H8v-4H4v-4h4V8H4V4h4v4h4V4h4v4h4v4.36c.74.27 1.42.64 2 1.18V2z"></path></svg></span> Your own tile server</td>
-<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M320 16a104 104 0 1 1 0 208 104 104 0 1 1 0-208M96 88a72 72 0 1 1 0 144 72 72 0 1 1 0-144M0 416c0-70.7 57.3-128 128-128 12.8 0 25.2 1.9 36.9 5.4C132 330.2 112 378.8 112 432v16c0 11.4 2.4 22.2 6.7 32H32c-17.7 0-32-14.3-32-32zm521.3 64c4.3-9.8 6.7-20.6 6.7-32v-16c0-53.2-20-101.8-52.9-138.6 11.7-3.5 24.1-5.4 36.9-5.4 70.7 0 128 57.3 128 128v32c0 17.7-14.3 32-32 32zM472 160a72 72 0 1 1 144 0 72 72 0 1 1-144 0M160 432c0-88.4 71.6-160 160-160s160 71.6 160 160v16c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32z"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25ZM14.5 6h-13v7.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Zm-6-3.5v2h6V2.75a.25.25 0 0 0-.25-.25ZM5 2.5v2h2v-2Zm-3.25 0a.25.25 0 0 0-.25.25V4.5h2v-2Z"></path></svg></span> Users browsing your website</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.672 23.969c-.352-.089-.534-.234-1.471-1.168C.085 21.688.014 21.579.018 20.999c0-.645-.196-.414 3.368-3.986 3.6-3.608 3.415-3.451 4.064-3.449.302 0 .378.016.62.14l.277.14 1.744-1.744-.218-.343c-.425-.662-.825-1.629-1.006-2.429a7.66 7.66 0 0 1 1.479-6.44c2.49-3.12 6.959-3.812 10.26-1.588 1.812 1.218 2.99 3.099 3.328 5.314.07.467.07 1.579 0 2.074a7.55 7.55 0 0 1-2.205 4.402 6.7 6.7 0 0 1-1.943 1.401c-.959.483-1.775.71-2.881.803-1.573.131-3.32-.305-4.656-1.163l-.343-.218-1.744 1.744.14.28c.125.241.14.316.14.617.003.651.156.467-3.426 4.049-2.761 2.756-3.186 3.164-3.398 3.261-.271.125-.69.171-.945.106zM17.485 13.95a6.43 6.43 0 0 0 4.603-3.51c1.391-2.899.455-6.306-2.227-8.108-.638-.43-1.529-.794-2.367-.962-.581-.117-1.809-.104-2.414.025a6.6 6.6 0 0 0-2.452 1.064c-.444.315-1.177 1.048-1.487 1.487a6.384 6.384 0 0 0 .38 7.907 6.4 6.4 0 0 0 3.901 2.136c.509.078 1.542.058 2.065-.037zm-3.738 7.376a81 81 0 0 1-2.196-.651c-.025-.028 1.207-4.396 1.257-4.449.023-.026 4.242 1.152 4.414 1.236.062.026-.003.288-.525 2.102a399 399 0 0 0-.635 2.236c-.025.087-.069.156-.097.156-.028-.003-1.028-.287-2.219-.631zm2.912.524c0-.053 1.227-4.333 1.246-4.347.047-.034 4.324-1.23 4.341-1.211.019.019-1.199 4.337-1.23 4.36-.02.019-4.126 1.191-4.259 1.218-.054.011-.098 0-.098-.019zm-7.105-1.911c.846-.852 1.599-1.627 1.674-1.728.171-.218.405-.732.472-1.015.026-.118.053-.352.058-.522l.011-.307.182-.051c.103-.028.193-.044.202-.034.023.025-1.207 4.321-1.246 4.36-.02.016-.677.213-1.464.436l-1.425.405 1.537-1.542zm8.289-3.06a1.4 1.4 0 0 1-.059-.187l-.044-.156.156-.028c1.339-.227 2.776-.856 3.908-1.713.16-.125.252-.171.265-.134.054.165.272.95.265.959-.034.034-4.48 1.282-4.492 1.261zm-15.083-1.3c-.05-.039-1.179-3.866-1.264-4.29-.016-.084.146-.044 2.174.536 2.121.604 2.192.629 2.222.74.028.098.011.129-.125.223-.084.059-.769.724-1.523 1.479a64 64 0 0 1-1.39 1.367c-.016 0-.056-.025-.093-.054zm.821-4.378c-1.188-.343-2.164-.623-2.167-.626-.016-.012 1.261-4.433 1.285-4.46.022-.022 4.422 1.211 4.469 1.252.009.009-.269 1.017-.618 2.239-.576 2.02-.643 2.224-.723 2.22-.05-.003-1.059-.285-2.247-.626zm2.959.538c.012-.031.212-.723.444-1.534l.42-1.476.056.321c.093.556.265 1.188.464 1.741.106.296.187.539.181.545-.008.006-.332.101-.719.212-.389.109-.741.21-.786.224q-.085.025-.059-.034zM4.905 6.112c-1.187-.339-2.167-.635-2.18-.654-.04-.062-1.246-4.321-1.23-4.338.026-.025 4.31 1.204 4.351 1.246.047.051 1.28 4.379 1.246 4.376L4.91 6.113zm2.148-1.713-.519-1.806-.078-.28 1.693-.483c.934-.265 1.724-.495 1.76-.508.034-.016-.083.14-.26.336A8.7 8.7 0 0 0 7.69 5.23a4 4 0 0 0-.132.561c0 .293-.115-.025-.505-1.39z"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C8.59 3 5.69 4.07 4.54 5.57l5.25 5.25c.71.11 1.43.18 2.21.18 4.42 0 8-1.79 8-4s-3.58-4-8-4M3.92 7.08 2.5 8.5 5 11H0v2h5l-2.5 2.5 1.42 1.42L8.84 12M20 9c0 2.21-3.58 4-8 4-.66 0-1.3-.05-1.91-.13l-2.47 2.47c1.26.41 2.76.66 4.38.66 4.42 0 8-1.79 8-4m0 2c0 2.21-3.58 4-8 4-2.28 0-4.33-.5-5.79-1.25l-1.68 1.68C5.68 19.93 8.59 21 12 21c4.42 0 8-1.79 8-4"></path></svg></span> OpenStreetMap Roh-Daten</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 17h3v2h-3v3h-2v-3h-3v-2h3v-3h2zM8 16h4v-4H8zm4-4h4V8h-4zM2 2v20h11.54c-.54-.58-.91-1.26-1.18-2H8v-4H4v-4h4V8H4V4h4v4h4V4h4v4h4v4.36c.74.27 1.42.64 2 1.18V2z"></path></svg></span> Ihr eigenen Tile-Server</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M320 16a104 104 0 1 1 0 208 104 104 0 1 1 0-208M96 88a72 72 0 1 1 0 144 72 72 0 1 1 0-144M0 416c0-70.7 57.3-128 128-128 12.8 0 25.2 1.9 36.9 5.4C132 330.2 112 378.8 112 432v16c0 11.4 2.4 22.2 6.7 32H32c-17.7 0-32-14.3-32-32zm521.3 64c4.3-9.8 6.7-20.6 6.7-32v-16c0-53.2-20-101.8-52.9-138.6 11.7-3.5 24.1-5.4 36.9-5.4 70.7 0 128 57.3 128 128v32c0 17.7-14.3 32-32 32zM472 160a72 72 0 1 1 144 0 72 72 0 1 1-144 0M160 432c0-88.4 71.6-160 160-160s160 71.6 160 160v16c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32z"></path></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25ZM14.5 6h-13v7.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Zm-6-3.5v2h6V2.75a.25.25 0 0 0-.25-.25ZM5 2.5v2h2v-2Zm-3.25 0a.25.25 0 0 0-.25.25V4.5h2v-2Z"></path></svg></span> Nutzer, die Ihre Webseite besuchen</td>
 </tr>
 </tbody>
 </table>
-<h2 id="Is-it-for-you">Is it for you?<a class="headerlink" href="#Is-it-for-you" title="Permanent link">⚓︎</a></h2>
-<p>Both generating and serving tiles incur significant hardware requirements, especially if you need global coverage and regular updates.</p>
-<p>If you are setting up your own tile server, we recommend that you use <a href="https://ubuntu.com/" target="_blank" rel="noopener">Ubuntu Linux</a> or <a href="https://www.debian.org/releases/" target="_blank" rel="noopener">Debian</a>.</p>
-<h2 id="The-options">The options<a class="headerlink" href="#The-options" title="Permanent link">⚓︎</a></h2>
+<h2 id="Passt-es-zu-Ihnen">Passt es zu Ihnen?<a class="headerlink" href="#Passt-es-zu-Ihnen" title="Permanent link">⚓︎</a></h2>
+<p>Erzeugen und Anbieten von Tiles verursacht erhebliche Hardware-Anforderungen, insbesondere wenn globale Abdeckung und regelmäßige Aktualisierungen benötigen werden.</p>
+<p>Wenn Sie Ihren eigenen Tile-Server einrichten, empfehlen wir Ihnen <a href="https://ubuntu.com/" target="_blank" rel="noopener">Ubuntu Linux</a> oder <a href="https://www.debian.org/releases/" target="_blank" rel="noopener">Debian</a> zu nutzen.</p>
+<h2 id="Die-Optionen">Die Optionen<a class="headerlink" href="#Die-Optionen" title="Permanent link">⚓︎</a></h2>
 <ol>
 <li>
-<p>Install locally on <a href="manually-building-a-tile-server-debian-13/">Debian 13</a>, <a href="manually-building-a-tile-server-debian-12/">Debian 12</a>, <a href="manually-building-a-tile-server-ubuntu-24-04-lts/">Ubuntu 24.04</a>, or <a href="manually-building-a-tile-server-debian-11/">Debian 11</a>.</p>
+<p>Lokal installieren auf <a href="manually-building-a-tile-server-debian-13/">Debian 13</a>, <a href="manually-building-a-tile-server-debian-12/">Debian 12</a>, <a href="manually-building-a-tile-server-ubuntu-24-04-lts/">Ubuntu 24.04</a>, oder <a href="manually-building-a-tile-server-debian-11/">Debian 11</a>.</p>
 </li>
 <li>
-<p>Use <a href="using-a-docker-container/">docker</a>.</p>
+<p><a href="using-a-docker-container/">Docker</a> verwenden.</p>
 </li>
 </ol>
-<h2 id="System-requirements">System requirements<a class="headerlink" href="#System-requirements" title="Permanent link">⚓︎</a></h2>
-<p>Serving your own maps is a fairly intensive task. Depending on the size of the area you’re interested in serving and the traffic you expect the system requirements will vary. In general, requirements will range from 10-20GB of storage, 4GB of memory, and a modern dual-core processor for a city-sized region to 1TB of fast storage, 24GB of memory, and a quad-core processor for the entire planet.</p>
-<p>We would recommend that you begin with extracts of OpenStreetMap data – for example, a city, county or small country – rather than spending a week importing the whole world (planet.osm) and then having to restart because of a configuration mistake! You can download extracts from:</p>
+<h2 id="Systemanforderungen">Systemanforderungen<a class="headerlink" href="#Systemanforderungen" title="Permanent link">⚓︎</a></h2>
+<p>Ihre eigenen Karten anzubieten stellt eine ziemlich anspruchsvolle Aufgabe dar. Abhängig von der Größe des zu verteilenden Gebiets und des zu erwartenden Datenverkehrs, unterscheiden sich die System-Anforderungen. Im Allgemeinen liegen die Anforderungen im Bereich von 10-20GB Speicherplatz, 4GB Arbeitsspeicher und einem modernen Dual-Core-Prozessor für ein Gebiet der Größe einer Stadt bis zu 1TB schnellem Speicherplatz, 24GB Arbeitsspeicher und einem Quad-Core-Prozessor für den gesamten Planeten.</p>
+<p>Wir würden empfehlen, dass Sie mit Extrakten von OpenStreetMap-Daten starten – zum Beispiel eine Stadt, ein Landkreis oder eine kleine Stadt – anstatt eine Woche damit zu verbringen die ganze Welt (planet.osm) zu importieren und dann auf Grund eines Konfigurations-Fehlers neu beginnen zu müssen! Sie können Extrakte herunterladen von:</p>
 <ul>
-<li><a href="https://download.geofabrik.de/" target="_blank" rel="noopener">Geofabrik</a> (countries and provinces)</li>
-<li><a href="https://slice.openstreetmap.us" target="_blank" rel="noopener">slice.openstreetmap.us</a> (minutely-updated cities and small countries)</li>
+<li><a href="https://download.geofabrik.de/" target="_blank" rel="noopener">Geofabrik</a> (Länder und Regionen)</li>
+<li><a href="https://slice.openstreetmap.us" target="_blank" rel="noopener">slice.openstreetmap.us</a> (minütlich aktualisierte Städte und kleine Länder)</li>
 <li><a href="https://download.openstreetmap.fr/" target="_blank" rel="noopener">download.openstreetmap.fr</a></li>
 </ul>
-<h2 id="The-toolchain">The toolchain<a class="headerlink" href="#The-toolchain" title="Permanent link">⚓︎</a></h2>
-<p>We use a series of tools for generating and serving map tiles.</p>
-<p><strong>Apache</strong> provides the front end server that handles requests from your web browser and passes the request to mod_tile. The Apache web server can also be used to serve static web content like the HTML, JavaScript, or CSS for your map webpage.</p>
-<p>Once Apache handles the request from the web user, it passes the request to mod_tile to deal with. Mod_tile checks if the tile has already been created and is ready for use or whether it needs to be updated due to not being in the cache already. If it is already available and doesn’t need to be rendered, then it immediately sends the tile back to the client. If it does need to be rendered, then it will add it to a “render request” queue, and when it gets to the top of the queue, a tile renderer will render it and send the tile back to the client.</p>
-<p>We use a tool called <strong>Mapnik</strong> to render tiles. It pulls requests from the work queue as fast as possible, extracts data from various data sources according to the style information, and renders the tile. This tile is passed back to the client and moves on to the next item in the queue.</p>
-<p>For rendering, OpenStreetMap data is stored in a <strong>PostgreSQL</strong> database created by a tool called <strong>osm2pgsql</strong>. These two pieces work together to allow efficient access to the OpenStreetMap geographic data. It is possible to keep the data in the PostgreSQL database up to date using a stream of diff files produced every 60 seconds on the main OpenStreetMap server.</p>
+<h2 id="Die-Toolchain">Die Toolchain<a class="headerlink" href="#Die-Toolchain" title="Permanent link">⚓︎</a></h2>
+<p>Wir benutzen eine Reihe an Werkzeugen zum Generieren und Anbieten von Karten-Tiles.</p>
+<p><strong>Apache</strong> liefert den Front-End-Server, der Anfragen von Ihrem Webbrowser verarbeitet und die Anfragen an mod_tile weiterleitet. Der Apache Web-Server kann ebenfalls verwendet werden um statische Web-Inhalte wie HTML, JavaScript oder CSS für Ihre Web auszuliefern.</p>
+<p>Sobald Apache die Anfrage vom Web-Nutzer verarbeitet, übergibt es die Anfrage an mod_tile damit dieses sich darum kümmert. Mod_tile überprüft, ob der Tile bereits erzeugt wurde und zur Verwendung bereit ist oder ob er aktualisiert werden muss, weil er sich noch nicht im Cache befindet. Wenn er bereits verfügbar ist und nicht erst noch gerendert werden muss, dann wird er umgehend an den Client zurück gesendet. Wenn er zunächst noch gerendert werden muss, dann wird er zur “Render Request”-Warteschlange hinzugefügt. Und wenn er das Ende der Warteschlange erreicht, wird ein Tile-Renderer ihn rendern und den Tile an den Client zurück senden.</p>
+<p>Wir verwenden ein Werkzeug namens <strong>Mapnik</strong> um Tiles zu rendern. Es entnimmt so schnell wie möglich Anfragen aus der Arbeits-Warteschlange, extrahiert Daten aus verschiedenen Datenquellen gemäß den Stil-Informationen und rendert den Tile. Dieser wird an den Client zurückgegeben und dann mit dem nächsten in der Warteschlange begonnen.</p>
+<p>Für den Rendering-Prozess werden OpenStreetMap-Daten in einer <strong>PostgreSQL</strong> Datenbank gespeichert, die durch ein Werkzeug namens <strong>osm2pgsql</strong> erstellt wird. Diese zwei Teile arbeiten zusammen um einen effizienten Zugriff auf die geographischen OpenStreetMap-Data zu erlauben. Es ist möglich die Daten in der PostgreSQL-Datenbank aktuell zu halten, indem ein Stream mit Diff-Files verwendet wird, der alle 60 Sekunden auf dem OpenStreetMap-Hauptserver generiert wird.</p>
 
 
 

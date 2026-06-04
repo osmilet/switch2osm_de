@@ -32,7 +32,7 @@
     
     
       
-        <title>Updating your database as people edit OpenStreetMap - Switch2OSM</title>
+        <title>Ihre Datenbank aktualisieren, während Benutzer OpenStreetMap bearbeiten - Switch2OSM</title>
       
     
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#Updating-your-database-as-people-edit-OpenStreetMap-using-osm2pgsql" class="md-skip">
+        <a href="#Ihre-Datenbank-mit-osm2pgsql-aktualisieren-während-Benutzer-OpenStreetMap-bearbeiten" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Updating your database as people edit OpenStreetMap
+              Ihre Datenbank aktualisieren, während Benutzer OpenStreetMap bearbeiten
             
           </span>
         </div>
@@ -1620,7 +1620,7 @@
   
 
 
-<h1 id="Updating-your-database-as-people-edit-OpenStreetMap-using-osm2pgsql">Updating your database as people edit OpenStreetMap using osm2pgsql<a class="headerlink" href="#Updating-your-database-as-people-edit-OpenStreetMap-using-osm2pgsql" title="Permanent link">⚓︎</a></h1>
+<h1 id="Ihre-Datenbank-mit-osm2pgsql-aktualisieren-während-Benutzer-OpenStreetMap-bearbeiten">Ihre Datenbank mit osm2pgsql aktualisieren, während Benutzer OpenStreetMap bearbeiten<a class="headerlink" href="#Ihre-Datenbank-mit-osm2pgsql-aktualisieren-während-Benutzer-OpenStreetMap-bearbeiten" title="Permanent link">⚓︎</a></h1>
 <p>Every day there are millions of new map updates so to prevent a map becoming "stale" you can refresh the data used to create map tiles regularly.</p>
 <p>Using osm2pgsql (version 1.4.2 or above) it's now much easier to do this than it was previously.  Version 1.6.0 is distributed as part of Ubuntu 22.04; version 1.8.0 as part of Debian 12, and it can also be obtained by following <a href="https://osm2pgsql.org/doc/install.html" target="_blank" rel="noopener">these instructions</a>. With osm2pgsql comes <a href="https://osm2pgsql.org/doc/manual.html#updating-an-existing-database" target="_blank" rel="noopener">osm2pgsql-replication</a> - that provides a relatively simple way to keep a database up to date.  A more flexible approach is to call PyOsmium directly - see <a href="../updating-as-people-edit-pyosmium/">this guide</a> for how to do that.</p>
 <p>It's possible to set up replication from many different sources.  OpenStreetMap itself provides minutely, hourly and daily updates, and other sources such as Geofabrik can provide daily updates that match the regional data extracts available at <a href="http://download.geofabrik.de/index.html" target="_blank" rel="noopener">download.geofabrik.de</a>.</p>
