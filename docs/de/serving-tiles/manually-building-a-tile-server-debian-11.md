@@ -286,56 +286,56 @@ TILESIZE=256
 MAXZOOM=20
 ```
 
-Der Speicherort der XML Datei `/home/accountname/src/openstreetmap-carto/mapnik.xml` wird an den tatsächlichen Speicherort auf Ihrem System angepasst werden müssen. Sie können `[s2o]` und `URI=/hot/` ebenfalls anpassen, wenn Sie möchten. Falls Sie mehr als einen Satz an Tiles von einem Server render möchten, können Sie einfach einen weiteren Abschnitt wie `[s2o]` ergänzen, mit einem anderen Namen, der zu einem anderen Karten-Stil verweist. If you want it to refer to a different database to the default `gis` you can, but that's out of the scope of this document. If you've only got 2Gb or so of memory, you'll also want to reduce `num_threads` to 2. `URI=/hot/` was chosen so that the tiles generated here can more easily be used in place of the HOT tile layer at OpenStreetMap.org. You can use something else here, but `/hot/` is as good as anything.
+Der Speicherort der XML Datei `/home/accountname/src/openstreetmap-carto/mapnik.xml` wird an den tatsächlichen Speicherort auf Ihrem System angepasst werden müssen. Sie können `[s2o]` und `URI=/hot/` ebenfalls anpassen, wenn Sie möchten. Falls Sie mehr als einen Satz an Tiles von einem Server render möchten, können Sie einfach einen weiteren Abschnitt wie `[s2o]` ergänzen, mit einem anderen Namen, der zu einem anderen Karten-Stil verweist. Wenn Sie wollen, dass es auf eine andere Datenbank als das standardmäßige `gis` veweist, dann können Sie das tun, aber das ist nicht mehr im Fokus dieses Dokuments. Wenn Sie nur ungefähr 2Gb Speicher zur Verfügung haben, dann werden Sie auch  `num_threads` auf 2 reduzieren wollen. `URI=/hot/` wurde gewählt, so dass die hier erzeugten Tiles einfacher an der Stelle der HOT Tile-Ebene auf OpenStreetMap.org verwendet werden können. Sie können hier etwas beliebiges anderes wählen, aber `/hot/` ist genauso gut wie alles andere.
 
-When this guide was first written, the version of Mapnik provided by Debian was 3.0, and the `plugins_dir` setting in the `[mapnik]` part of the file was `/usr/lib/mapnik/3.0/input`. At the time of writing that's changed to 3.1, and so the relevant value is `/usr/lib/mapnik/3.1/input`. It may change again in the future. If an error occurs when trying to render tiles such as this:
+Als diese Anleitung das erste mal geschrieben wurde, stand die von Debian bereitgestellte Version von Mapnik bei 3.0 und die `plugins_dir` Einstellung im `[mapnik]`-Teil der Datei war `/usr/lib/mapnik/3.0/input`. Zur Zeit des Verfassens hat sich dies zu 3.1 geändert und damit ist der relevante Wert `/usr/lib/mapnik/3.1/input`. Es könnte sich in der Zukunft erneut ändern. Falls beim Versuch die Tiles zu rendern eine Fehlermeldung wie diese erscheint:
 
 !!! warning ""
     An error occurred while loading the map layer 's2o': Could not create datasource for type: 'postgis' (no datasource plugin directories have been successfully registered) encountered during parsing of layer 'landcover-low-zoom'
 
-then look in `/usr/lib/mapnik` and see what version directories there are, and also look in `/usr/lib/mapnik/(version)/input` to make sure that a file `postgis.input` exists there.
+dann schauen Sie in `/usr/lib/mapnik` nach, welche Versions-Verzeichnisse dort vorhanden sind. Schauen Sie ebenfalls in `/usr/lib/mapnik/(version)/input` nach um sicherzustellen, dass eine Datei `postgis.input` dort existiert.
 
-### Configuring Apache
+### Apache konfigurieren
 
 ```sh
 sudo mkdir /var/lib/mod_tile
 sudo chown _renderd /var/lib/mod_tile
 ```
 
-After doing so, restart `renderd`:
+Nachdem Sie dies getan haben, starten Sie `renderd` neu:
 
 ```sh
 sudo /etc/init.d/renderd restart
 ```
 
-If you look at `/var/log/syslog`, you should see messages from the `renderd` service. There will initially be some font errors - don't worry about those for now. Next:
+Wenn Sie sich `/var/log/syslog` ansehen, sollten Sie Benachrichtigungen vom `renderd` Dienst sehen. Zu Beginn wird es einige Schriftarten-Fehler geben - machen Sie sich darüber vorerst keine Gedanken. Als nächstes:
 
 ```sh
 sudo /etc/init.d/apache2 restart
 ```
 
-In `syslog` you should see a message like:
+In `syslog` sollten Sie eine Benachrichtigung sehen wie:
 
 ```log
 Nov 14 14:24:55 servername apachectl[19119]: [Sat Nov 14 14:24:55.526717 2020] [tile:notice] [pid 19119:tid 140525098995008] Loading tile config s2o at /hot/ for zooms 0 - 20 from tile directory /var/lib/mod_tile with extension .png and mime type image/png
 ```
 
-Next, point a web browser at `http://your.server.ip.address/index.html` (change `your.server.ip.address` to your actual server address). You should see "Apache2 Debian Default Page".
+Als nächstes besuchen Sie mit einem Webbrowser `http://your.server.ip.address/index.html` (ändern Sie `your.server.ip.address` zu Ihrer tatsächlichen Server-Adresse). Sie sollten "Apache2 Debian Default Page" sehen.
 
 !!! tip
-    If you don't know what IP address it will have been assigned, you can likely use `ifconfig` to find out – if the network configuration is not too complicated it'll probably be the `inet addr` that is not `127.0.0.1`.
+    Falls Sie nicht wissen, welcher IP-Adresse es zugewiesen wurde, dann können Sie voraussichtlich `ifconfig` benutzen, um es herauszufinden – wenn die Netzwerkkonfiguration nicht zu kompliziert ist, dann ist es wahrscheinlich die `inet addr`, die nicht `127.0.0.1` ist.
 
-If you're using a server at a hosting provider then it's likely that your server's internal address will be different to the external address that has been allocated to you, but that external IP address will have already been sent to you, and it'll probably be the one that you're accessing the server on currently.
+Wenn Sie einen Server bei einem Hosting-Anbieter verwenden, dann ist es wahrscheinlich, dass die interne Adresse Ihres Servers sich von der externen Adresse unterscheidet, die Ihnen zugewiesen wurde. Aber diese externe Adresse wird Ihnen bereits übermittelt worden sein und wird vermutlich die sein, über die Sie bereits auf den Server zugreifen.
 
-Note that this is just the `http` (port 80) site – you'll need to do a little bit more Apache configuration if you want to enable `https`, but that's out of the scope of these instructions. However, if you use "Let's Encrypt" to issue certificates, then the process of setting that up can also configure the Apache HTTPS site as well.
+Beachten Sie, dass dies nur die `http`-Seite (Port 80) ist – Sie werden etwas mehr Apache Konfiguration betreiben müssen, wenn sie `https` aktivieren wollen, aber das ist nicht mehr Teil dieser Anleitung. Wenn Sie jedoch "Let's Encrypt" zur Ausstellung von Zertifikaten benutzen, dann kann der Prozess dies einzurichten auch die Konfiguration der Apache HTTPS-Seite beinhalten.
 
-Next, point a web browser at: `http://your.server.ip.address/hot/0/0/0.png`
+Als nächstes besuchen Sie mit einem Webbrowser: `http://your.server.ip.address/hot/0/0/0.png`
 
-You'll need to edit that of course if you changed `URI=/hot/` above. You should see a small map of the world. If you don't, investigate the errors that it displays. These will most likely be permissions errors, or perhaps related to accidentally missing some steps from the instructions above. If you don't get a tile and get other errors again, save the full output in a Pastebin and ask a question about the problem somewhere like [`community.openstreetmap.org`](https://community.openstreetmap.org){: target=_blank}.
+Falls Sie oben `URI=/hot/` geändert haben, müssen Sie dies hier natürlich ebenfalls anpassen. Sie sollten eine kleine Karte der Welt sehen. Falls nicht, untersuchen Sie die angezeigten Fehlermeldungen. Dies werden höchstwahrscheinlich Berechtigungsfehler sein oder vielleicht damit im Zusammenhang stehen, dass versehentlich Schritten aus der obigen Anleitung ausgelassenen wurden. Wenn Sie kein Tile erhalten und andere Fehler bekommen,speichern Sie die komplette Ausgabe in einen Pastebin und stellen eine Fragen zu den Problem an einem Ort wie [`community.openstreetmap.org`](https://community.openstreetmap.org){: target=_blank}.
 
-## Viewing tiles
+## Tiles anzeigen
 
-In order to see tiles, we’ll cheat and use an html file `sample_leaflet.html` that allows you to view a very simple map. To obtain this:
+Um Tiles zu sehen werden wir schummeln und eine html-Datei `sample_leaflet.html` verwenden, die es Ihnen erlaubt eine sehr einfache Karte anzuzeigen. Um sie zu erhalten:
 
 ```sh
 cd /var/www/html
@@ -343,10 +343,10 @@ sudo wget https://raw.githubusercontent.com/SomeoneElseOSM/mod_tile/switch2osm/e
 sudo nano sample_leaflet.html
 ```
 
-Edit so that the IP address matches `your.server.address` rather than just saying `127.0.0.1`. That should allow you to access this server from others. Then browse to `http://your.server.address/sample_leaflet.html`.
+Passen Sie es so an, dass die IP Adresse `your.server.address` entspricht, statt einfach nur `127.0.0.1`. Damit sollte es Ihnen möglich sein, diesen Server von anderen zu erreichen. Dann navigieren Sie zu `http://your.server.address/sample_leaflet.html`.
 
-The initial map display will take a little while. You'll be able to zoom in and out, but depending on server speed some tiles may initially display as grey because they can't be rendered in time for the browser. However, once done they’ll be ready for the next time that they are needed. If you look in `/var/log/syslog` you should see requests for tiles.
+Die erstmalige Kartendarstellung wird einen kleinen Moment dauern. Sie werden rein- und rauszoomen können, aber abhängig von der Server-Geschwindigkeit werden einige Tiles zuerst grau dargestellt, weil sie für den Browser nicht rechtzeitig gerendert werden können. Sobald sie jedoch fertig sind, werden sie für das nächsten mal, wenn sie benötigt werden, bereit sein. Wenn Sie in `/var/log/syslog` schauen, sollten Sie Anfragen für Tiles sehen.
 
-If desired, you can increase the setting `ModTileMissingRequestTimeout` in `/etc/apache2/conf-available/renderd.conf` from 10 seconds to perhaps 30 or 60, in order to wait longer for tiles to be rendered in the background before a grey tile is given to the user. Make sure you `#!sh sudo service renderd restart` and `#!sh sudo service apache2 restart` after changing it.
+Wenn gewünscht, können Sie die Einstellung `ModTileMissingRequestTimeout` in `/etc/apache2/conf-available/renderd.conf` von 10 Sekunden auf vielleicht 30 oder 60 erhöhen, um länger darauf zu warten, bis im Hintergrund Tiles gerendert werden, bevor eine graue Tile an den Benutzer gegeben wird. Stellen Sie sicher, dass Sie `#!sh sudo service renderd restart` und `#!sh sudo service apache2 restart` ausführen, nachdem Sie es geändert haben.
 
-Congratulations. Head over to the [using tiles](/using-tiles/index.md) section to create a map that uses your new tile server.
+Glückwunsch! Schauen Sie in die [Tiles verwenden](/using-tiles/index.md)-Bereich um eine Karte zu erstellen, die Ihren neuen Tile-Server verwendet.
