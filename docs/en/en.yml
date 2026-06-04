@@ -4,7 +4,7 @@ en:
         languages:
           - # ISO code of your language
             locale: en
-            # Name of your languge
+            # Name of your language
             name: English
             # Day/Night toggle
             theme:
