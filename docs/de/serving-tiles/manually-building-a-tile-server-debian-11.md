@@ -274,7 +274,7 @@ Die Konfigurations-Datei für `renderd` auf {{ dist }} ist `/etc/renderd.conf`. 
 sudo nano /etc/renderd.conf
 ```
 
-Add a section like the following at the end:
+Fügen Sie am Ende einen Abschnitt wie den folgenden hinzu:
 
 ```ini
 [s2o]
@@ -286,7 +286,7 @@ TILESIZE=256
 MAXZOOM=20
 ```
 
-The location of the XML file `/home/accountname/src/openstreetmap-carto/mapnik.xml` will need to be changed to the actual location on your system. You can change `[s2o]` and `URI=/hot/` as well if you like. If you want to render more than one set of tiles from one server you can - just add another section like `[s2o]` with a different name referring to a different map style. If you want it to refer to a different database to the default `gis` you can, but that's out of the scope of this document. If you've only got 2Gb or so of memory, you'll also want to reduce `num_threads` to 2. `URI=/hot/` was chosen so that the tiles generated here can more easily be used in place of the HOT tile layer at OpenStreetMap.org. You can use something else here, but `/hot/` is as good as anything.
+Der Speicherort der XML Datei `/home/accountname/src/openstreetmap-carto/mapnik.xml` wird an den tatsächlichen Speicherort auf Ihrem System angepasst werden müssen. Sie können `[s2o]` und `URI=/hot/` ebenfalls anpassen, wenn Sie möchten. Falls Sie mehr als einen Satz an Tiles von einem Server render möchten, können Sie einfach einen weiteren Abschnitt wie `[s2o]` ergänzen, mit einem anderen Namen, der zu einem anderen Karten-Stil verweist. If you want it to refer to a different database to the default `gis` you can, but that's out of the scope of this document. If you've only got 2Gb or so of memory, you'll also want to reduce `num_threads` to 2. `URI=/hot/` was chosen so that the tiles generated here can more easily be used in place of the HOT tile layer at OpenStreetMap.org. You can use something else here, but `/hot/` is as good as anything.
 
 When this guide was first written, the version of Mapnik provided by Debian was 3.0, and the `plugins_dir` setting in the `[mapnik]` part of the file was `/usr/lib/mapnik/3.0/input`. At the time of writing that's changed to 3.1, and so the relevant value is `/usr/lib/mapnik/3.1/input`. It may change again in the future. If an error occurs when trying to render tiles such as this:
 
