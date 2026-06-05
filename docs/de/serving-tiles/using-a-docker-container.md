@@ -6,30 +6,30 @@ lang: de
 
 # {{ title }}
 
-If you just want to try things out or you're using an OS other than Ubuntu, and you're using Docker for containerisation, you can try [this](https://github.com/Overv/openstreetmap-tile-server){: target=_blank} (thanks to all the contributors there).  It's based on the instructions [here](/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts.md), but is a pre-built container you can install.
+Wenn Sie nur etwas ausprobieren wollen oder ein anderes OS als Ubuntu verwenden, und Sie benutzen Docker zur Containerisierung, dann können Sie [dies](https://github.com/Overv/openstreetmap-tile-server){: target=_blank} versuchen (Danke an alle dortigen Mitwirkenden). Es basiert auf der Anleitung [hier](/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts.md), stellt aber einen vorgefertigten Container dar, den Sie installieren können.
 
 ## Docker
 
-If you don't already have Docker installed, there are lots of "how-tos" around - see for example [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-debian-10){: target=_blank}.
+Falls Die Docker nicht bereits installiert haben, gibt es eine Menge von "How-Tos" - beispielsweise [hier](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-debian-10){: target=_blank}.
 
-You'll need around 30GB of disk space for even a small data extract, because the worldwide boundary data that is added to the database is quite large.
+Sie werden ungefähr 30GB Speicherplatz selbst für ein kleines Daten-Extrakt benötigen, da die weltweiten Grenz-Daten, die zur Datenbank hinzugefügt werden, bereits ziemlich groß sind.
 
-## OpenStreetmap Data
+## OpenStreetmap Daten
 
-In this example run-through I’ll download data for Zambia and import it, but any OSM .pbf file should work.  For testing, try a small .pbf first.  When logged in as the non-root user that you run Docker from, download the data for Zambia:
+In diesem Beispiel-Durchlauf werde ich Daten für Sambia herunterladen und importieren, aber jede OSM .pbf-Datei sollte funktionieren. Zum Testen probieren Sie zu erst ein kleines .pbf. Eingeloggt als der nicht-root-Benutzer, mit dem Sie Docker betreiben, laden Sie die Daten für Sambia herunter:
 
 ```sh
 cd
 wget https://download.geofabrik.de/africa/zambia-latest.osm.pbf
 ```
 
-Create a docker volume for the data:
+Erzeugen Sie ein Volume für die Daten:
 
 ```sh
 docker volume create osm-data
 ```
 
-And install it and import the data:
+Installieren und importieren Sie die Daten:
 
 ```sh 
 time \
@@ -39,33 +39,33 @@ time \
     overv/openstreetmap-tile-server import
 ```
 
-The path to the data file needs to be the absolute path to the data file - it can't be a relative path.  In this example it's in the root directory of the "renderaccount" user.  Also, if something goes wrong, you'll need to "docker volume rm osm-data" and restart from "docker volume create osm-data" above.  At the end of the process you should see:
+Der Pfad zur Daten-Datei muss der absolute Pfad zur Daten-Datei sein - es darf kein relativer Pfad sein. In diesem Beispiel befindet sie sich im root-Verzeichnis des Benutzers "renderaccount".  Wenn etwas fehlschlägt, werden Sie "docker volume rm osm-data" ausführen und ab "docker volume create osm-data" oben neu beginnen müssen. Am Ende des Vorgangs sollten Sie dies sehen:
 
 ```sh
 INFO:root: Import complete
 ```
 
-If you see something like:
+Falls Sie etwas sehen wie:
 
 ```sh
 /data/region.osm.pbf: Is a directory
 ```
 
-or
+oder
 
 ```sh
 createuser: error: creation of new role failed: ERROR: role "renderer" already exists
 ```
 
-then something has gone wrong; you'll need to use "docker ps -a" to identify the failed container; "docker rm" (followed by the container id) to delete it, and then delete and recreate "osm-data" as described above.
+dann ist etwas schief gelaufen; Sie werden "docker ps -a" benutzen müssen, um den fehlgeschlagenen Container zu identifizieren; "docker rm" (gefolgt von der Cointainer-ID) um ihn zu löschen. Und dann löschen und erzeugen Sie "osm-data" wie oben beschrieben neu.
 
-How long this takes depends very much on the local network speed and the size of the area that you are loading. Zambia, used in this example, is relatively small.
+Wie lange dies dauert hängt stark von der lokalen Netzwerkgeschwindigkeit und der Größe des Gebiets ab, das Sie laden. Das in diesem Beispiel verwendete Sambia ist vergleichsweise klein.
 
-Note that if something goes wrong the error messages may be somewhat cryptic, and unfortunately the import process can't be restarted after failure.  Also, note that newer versions of the Docker container might use newer versions of postgres, so an “osm-data” created with an earlier version might not work - you may need to remove it with “docker volume rm osm-data” and recreate.
+Beachten Sie, dass die Fehlermeldungen etwas kryptisch sein können, wenn etwas fehlschlägt, und unglücklicherweise kann der Import-Vorgang nach einem Fehler nicht fortgesetzt werden. Beachten Sie ebenfalls, dass neuere Versionen des Docker-Containers neuere Versionen von postgres verwenden könnten, somit könnte ein “osm-data”, das mit einer früheren Version erstellt wurde, nicht funktionieren - Möglicherweise müssen Sie es mit “docker volume rm osm-data” löschen und neu erstellen.
 
-For more details about what it’s actually doing, have a look at [this file](https://github.com/Overv/openstreetmap-tile-server/blob/master/Dockerfile){: target=_blank}. You’ll see that it closely matches the “manually building a tile server” instructions [here](/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts.md), with some minor changes such as the tile URL and the internal account used. Internally you can see that it’s using Ubuntu 22.04.  You don’t need to interact with that directly, but you can (via "docker exec -it mycontainernumber bash") if you want to.
+Für mehr Details, was es tatsächlich tut, sehen Sie sich [diese Datei](https://github.com/Overv/openstreetmap-tile-server/blob/master/Dockerfile){: target=_blank} an. Sie werden feststellen, dass es sehr ähnlich zu “Einen Tile-Server manuell erstellen”-Anleitung [hier](/serving-tiles/manually-building-a-tile-server-ubuntu-22-04-lts.md) ist, mit einigen kleineren Änderungen wie der Tile-URL und dem intern verwendeten Benutzerkonto. Wie Sie sehen, benutzt es im Inneren Ubuntu 22.04. Sie brauchen nicht direkt damit interagieren, aber Sie könnten, falls Sie wollten (via "docker exec -it mycontainernumber bash").
 
-To start the tile server running:
+Um den Tile-Server ans Laufen zu bringen:
 
 ```sh
 docker run \
@@ -75,22 +75,22 @@ docker run \
     run
 ```
 
-and to check that it’s working, from a new incognito window browse to:
+und um zu prüfen, dass es funktioniert, navigieren Sie aus einem Inkognito-Fenster zu:
 
 `http://your.server.ip.address:8080/tile/0/0/0.png`
 
-You should see a map of the world in your browser.  Then try:
+Sie sollten eine Karte der Welt in Ihrem Browser sehen. Dann versuchen Sie:
 
 `http://your.server.ip.address:8080`
 
-for a map that you can zoom in and out of.  Tiles (especially at low zoom levels) will take a short period of time to appear.
+für eine Karte bei der Sie rein- und rauszoomen können. Tiles (insbesondere bei niedriger Zoom-Stufe) werden einen kurzen Moment zum erscheinen benötigen.
 
-### More Information
+### Mehr Informationen
 
-This docker container actually supports a lot more than the simple example here - see the [readme](https://github.com/Overv/openstreetmap-tile-server/blob/master/README.md){: target=_blank} for more details about updates, performance tweaks, etc.
+Tatsächlich unterstützt dieser Docker-Container eine Menge mehr als dieses einfache Beispiel hier - sehen Sie sich die [readme](https://github.com/Overv/openstreetmap-tile-server/blob/master/README.md){: target=_blank} an für mehr Details über Updates, Leistungsoptimierungen, etc.
 
-### Viewing tiles
+### Tiles anzeigen
 
-For a simple “slippy map” that you can modify, you can use an html file “sample_leaflet.html” which is [here](https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/extra/sample_leaflet.html){: target=_blank} in mod_tile’s “extra” folder. Edit “hot” in the URL in that file to read “tile”, and then just open that file in a web browser on the machine where you installed the docker container. If that isn’t possible because you’re installing on a server without a local web browser, you’ll also need to edit it to replace “127.0.0.1” with the IP address of the server and copy it to below “/var/www/html” on that server.
+Für eine einfache “slippy map”, die Sie modifizieren können, können Sie eine html-Datei “sample_leaflet.html” verwenden, welche sich [hier](https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/extra/sample_leaflet.html){: target=_blank} im “extra” Ordner von mod_tile befindet. Ändern Sie “hot” in der URL innderhalb der Datei zu “tile” und öffnen Sie die Datei dann einfach in einem Webbrowser auf Ihrem Rechner auf dem Sie den Docker-Container installiert haben. Falls das nicht möglich ist, weil Sie auf einem Server ohne lokalen Webbrowser installieren, dann müssen Sie in der Datei “127.0.0.1” mit der IP-Adresse des Servers ersetzen und die Datei unterhalb von “/var/www/html” auf diesen Server kopieren.
 
-If you want to load a different area, just repeat the process from “wget” above. Unfortunately it is necesary to delete and recreate "osm-data" every time you want to load some new data.
+Wenn Sie ein anderes Gebiet laden möchten, wiederholen Sie den Prozess einfach ab “wget” oben. Leider ist es notwendig, jedesmal wenn Sie neue Daten laden wollen, "osm-data" zu löschen und neu zu erstellen.
