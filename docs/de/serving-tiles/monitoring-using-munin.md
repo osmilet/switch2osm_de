@@ -6,19 +6,19 @@ lang: de
 
 # {{ title }}
 
-"Munin" can be used to monitor the activity of "renderd" and "mod_tile" on a server.  Munin is available on a number of platforms; these instructions were tested on  Ubuntu Linux 22.04 in June 2022.
+"Munin" kann verwendet werden, um die Aktivitäten von "renderd" und "mod_tile" auf einem Server zu monitoren. Munin ist auf einer Reihe von Plattformen verfügbar; diese Anleitung wurde auf Ubuntu Linux 22.04 im Juni 2022 getestet.
 
-First, install the necessary software:
+Als erstes installieren Sie die notwendige Software:
 
 ```sh
 sudo apt install munin-node munin libcgi-fast-perl libapache2-mod-fcgid
 ```
 
-If you look at `/etc/apache2/conf-available` you should see that `munin.conf` is a symbolic link to `../../munin/apache24.conf`, which is `/etc/munin/apache24.conf`.
+Wenn Sie sich `/etc/apache2/conf-available` ansehen, sollten Sie, dass `munin.conf` ein symbolischer Link zu `../../munin/apache24.conf` ist, was `/etc/munin/apache24.conf` entspricht.
 
-The file `/etc/munin/apache24.conf` is Apache's `munin` configuration file. In that file, if you want `munin` to be accessed globally rather than just locally change both instances of `Require local` to `Require all granted`.
+Die Datei `/etc/munin/apache24.conf` ist Apaches `munin` Konfigurations-Datei. Wenn Sie wollen, dass auf `munin` global statt nur lokal zugeriffen wird, dann ändern Sie in dieser Datei beide Vorkommen von `Require local` zu `Require all granted`.
 
-Next edit `/etc/munin/munin.conf`. Uncomment these lines:
+Als nächstes editieren Sie `/etc/munin/munin.conf`. Kommetieren Sie diese Zeilen ein:
 
 ```conf
 dbdir /var/lib/munin
@@ -27,35 +27,35 @@ logdir /var/log/munin
 rundir /var/run/munin
 ```
 
-Restart munin and apache:
+Starten Sie munin und apache neu:
 
 ```sh
 sudo /etc/init.d/munin-node restart
 sudo /etc/init.d/apache2 restart
 ```
 
-Browse to `http://yourserveripaddress/munin`. You should see a page showing "apache", "disk", "munin", etc.
+Navigieren Sie zu `http://yourserveripaddress/munin`. Sie sollten eine Seite sehen, die "apache", "disk", "munin", etc. anzeigt.
 
-To add the plugins from mod_tile and renderd to munin:
+Um die Plugins von mod_tile und renderd zu munin hinzuzufügen:
 
 ```sh
 sudo ln -s /usr/share/munin/plugins/mod_tile* /etc/munin/plugins/
 sudo ln -s /usr/share/munin/plugins/renderd* /etc/munin/plugins/
 ```
 
-There should be 4 mod_tile plugins and 5 renderd ones.  Run munin's cron job manually once:
+Es sollten 4 mod_tile-Plugins und 5 renderd-Plugins sein. Starten Sie munins cron-Job einmalig manuell:
 
 ```sh
 sudo -u munin munin-cron
 ```
 
-Restart munin and apache again:
+Starten Sie munin und apache ein weiteres mal neu:
 
 ```sh
 sudo /etc/init.d/munin-node restart
 sudo /etc/init.d/apache2 restart
 ```
 
-After a short delay, refreshing `http://yourserveripaddress/munin/` should now show entries for "mod_tile" and "renderd".
+Nach einer kurzen Verzögerung sollte jetzt eine Aktualisierung von `http://yourserveripaddress/munin/` Einträge für "mod_tile" und "renderd" zeigen.
 
-Munin updates its graphs every 5 minutes, as configured by the cron file `/etc/cron.d/munin`.
+Munin aktualisiert seine Diagramme alle 5 Minuten, so wie es durch die cron-Datei `/etc/cron.d/munin` konfiguriert ist.
