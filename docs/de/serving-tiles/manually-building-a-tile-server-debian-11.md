@@ -189,7 +189,7 @@ sudo -u _renderd \
 Es lohnt sich ein wenig zu erklären, was diese Optionen bedeuten:
 
 `-d gis`
-: Die Datenbank, mit der gearbeitet werden soll (`gis` wurde in der Vergangenheit standardmäßig verwendet; jetzt muss es explizit spezifiziert weden).
+: Die Datenbank, mit der gearbeitet werden soll (`gis` wurde in der Vergangenheit standardmäßig verwendet; jetzt muss es explizit spezifiziert werden).
 
 `--create`
 : Lade Daten in eine leere Datenbank anstatt zu versuchen sie an eine existierende anzuhängen.

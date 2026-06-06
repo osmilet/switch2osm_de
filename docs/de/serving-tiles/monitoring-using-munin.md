@@ -16,9 +16,9 @@ sudo apt install munin-node munin libcgi-fast-perl libapache2-mod-fcgid
 
 Wenn Sie sich `/etc/apache2/conf-available` ansehen, sollten Sie, dass `munin.conf` ein symbolischer Link zu `../../munin/apache24.conf` ist, was `/etc/munin/apache24.conf` entspricht.
 
-Die Datei `/etc/munin/apache24.conf` ist Apaches `munin` Konfigurations-Datei. Wenn Sie wollen, dass auf `munin` global statt nur lokal zugeriffen wird, dann ändern Sie in dieser Datei beide Vorkommen von `Require local` zu `Require all granted`.
+Die Datei `/etc/munin/apache24.conf` ist Apaches `munin` Konfigurations-Datei. Wenn Sie wollen, dass auf `munin` global statt nur lokal zugegriffen wird, dann ändern Sie in dieser Datei beide Vorkommen von `Require local` zu `Require all granted`.
 
-Als nächstes editieren Sie `/etc/munin/munin.conf`. Kommetieren Sie diese Zeilen ein:
+Als nächstes editieren Sie `/etc/munin/munin.conf`. Kommentieren Sie diese Zeilen ein:
 
 ```conf
 dbdir /var/lib/munin

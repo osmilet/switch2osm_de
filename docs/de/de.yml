@@ -4,7 +4,7 @@ de:
         languages:
           - # ISO code of your language
             locale: de
-            # Name of your languge
+            # Name of your langauge
             name: Deutsch
             # Day/Night toggle
             theme:

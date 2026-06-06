@@ -14,7 +14,7 @@ Falls Die Docker nicht bereits installiert haben, gibt es eine Menge von "How-To
 
 Sie werden ungefähr 30GB Speicherplatz selbst für ein kleines Daten-Extrakt benötigen, da die weltweiten Grenz-Daten, die zur Datenbank hinzugefügt werden, bereits ziemlich groß sind.
 
-## OpenStreetmap Daten
+## OpenStreetMap Daten
 
 In diesem Beispiel-Durchlauf werde ich Daten für Sambia herunterladen und importieren, aber jede OSM .pbf-Datei sollte funktionieren. Zum Testen probieren Sie zu erst ein kleines .pbf. Eingeloggt als der nicht-root-Benutzer, mit dem Sie Docker betreiben, laden Sie die Daten für Sambia herunter:
 
@@ -57,7 +57,7 @@ oder
 createuser: error: creation of new role failed: ERROR: role "renderer" already exists
 ```
 
-dann ist etwas schief gelaufen; Sie werden "docker ps -a" benutzen müssen, um den fehlgeschlagenen Container zu identifizieren; "docker rm" (gefolgt von der Cointainer-ID) um ihn zu löschen. Und dann löschen und erzeugen Sie "osm-data" wie oben beschrieben neu.
+dann ist etwas schief gelaufen; Sie werden "docker ps -a" benutzen müssen, um den fehlgeschlagenen Container zu identifizieren; "docker rm" (gefolgt von der Container-ID) um ihn zu löschen. Und dann löschen und erzeugen Sie "osm-data" wie oben beschrieben neu.
 
 Wie lange dies dauert hängt stark von der lokalen Netzwerkgeschwindigkeit und der Größe des Gebiets ab, das Sie laden. Das in diesem Beispiel verwendete Sambia ist vergleichsweise klein.
 
@@ -91,6 +91,6 @@ Tatsächlich unterstützt dieser Docker-Container eine Menge mehr als dieses ein
 
 ### Tiles anzeigen
 
-Für eine einfache “slippy map”, die Sie modifizieren können, können Sie eine html-Datei “sample_leaflet.html” verwenden, welche sich [hier](https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/extra/sample_leaflet.html){: target=_blank} im “extra” Ordner von mod_tile befindet. Ändern Sie “hot” in der URL innderhalb der Datei zu “tile” und öffnen Sie die Datei dann einfach in einem Webbrowser auf Ihrem Rechner auf dem Sie den Docker-Container installiert haben. Falls das nicht möglich ist, weil Sie auf einem Server ohne lokalen Webbrowser installieren, dann müssen Sie in der Datei “127.0.0.1” mit der IP-Adresse des Servers ersetzen und die Datei unterhalb von “/var/www/html” auf diesen Server kopieren.
+Für eine einfache “slippy map”, die Sie modifizieren können, können Sie eine html-Datei “sample_leaflet.html” verwenden, welche sich [hier](https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/extra/sample_leaflet.html){: target=_blank} im “extra” Ordner von mod_tile befindet. Ändern Sie “hot” in der URL innerhalb der Datei zu “tile” und öffnen Sie die Datei dann einfach in einem Webbrowser auf Ihrem Rechner auf dem Sie den Docker-Container installiert haben. Falls das nicht möglich ist, weil Sie auf einem Server ohne lokalen Webbrowser installieren, dann müssen Sie in der Datei “127.0.0.1” mit der IP-Adresse des Servers ersetzen und die Datei unterhalb von “/var/www/html” auf diesen Server kopieren.
 
-Wenn Sie ein anderes Gebiet laden möchten, wiederholen Sie den Prozess einfach ab “wget” oben. Leider ist es notwendig, jedesmal wenn Sie neue Daten laden wollen, "osm-data" zu löschen und neu zu erstellen.
+Wenn Sie ein anderes Gebiet laden möchten, wiederholen Sie den Prozess einfach ab “wget” oben. Leider ist es notwendig, jedes mal wenn Sie neue Daten laden wollen, "osm-data" zu löschen und neu zu erstellen.

@@ -66,7 +66,7 @@ Die Entscheidung zwischen Raster-Tiles und Vector-Tiles hängt von spezifischem 
 
 **Vector-Tiles**
 
-* Dynamische Karten die Echtzeit-Anpassung und Interaktivität erfordern, wie etwa anwendergesteuerte Gestaltung oder Filterung.
+* Dynamische Karten die Echtzeit-Anpassung und Interaktivität erfordern, wie etwa Anwender-gesteuerte Gestaltung oder Filterung.
 * Mobile Anwendungen oder Bereiche mit eingeschränkter Bandbreite oder Speicherkapazität.
 * Karten mit sich häufig ändernden Daten, bei denen Updates in Echtzeit wiedergegeben müssen.
 
