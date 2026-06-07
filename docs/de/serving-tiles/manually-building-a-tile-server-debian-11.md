@@ -9,7 +9,7 @@ lang: de
 # {{ title }}
 
 !!! info ""
-    Diese Seite beschreibt die Installation, Einrichtung und Konfiguration aller notwendigen Software, um einen eigenen Tile-Server zu betreiben. Diese Schritt-für-Schritt-Anleitungen wurden für [Debian Linux](https://www.debian.org/){: target=_blank} 11 (bullseye), und wurden im November 2020 getestet.
+    Diese Seite beschreibt die Installation, Einrichtung und Konfiguration aller notwendigen Software, um einen eigenen Tile-Server zu betreiben. Diese Schritt-für-Schritt-Anleitungen wurden für [Debian Linux](https://www.debian.org/){: target=_blank} 11 (bullseye) geschrieben und wurden im November 2020 getestet.
 
 ## Software Installation
 
@@ -222,7 +222,7 @@ Dieses Kommando wird mit etwas wie "Osm2pgsql took 238s overall" abschließen.
 
 ### Indizes erstellen
 
-Seit Version v5.3.0 müssen einige Extra-Indizes [manuell angewendet](https://github.com/gravitystorm/openstreetmap-carto/blob/master/CHANGELOG.md#v530---2021-01-28){: target=_blank}: werden.
+Seit Version v5.3.0 müssen einige Extra-Indizes [manuell angewendet](https://github.com/gravitystorm/openstreetmap-carto/blob/master/CHANGELOG.md#v530---2021-01-28){: target=_blank} werden:
 
 ```sh
 cd ~/src/openstreetmap-carto/
@@ -251,7 +251,7 @@ sudo chown _renderd data
 sudo -u _renderd scripts/get-external-data.py
 ```
 
-Dieser Prozess beinhaltet einen beträchtlich Download und könnte einige Zeit dauern - während es läuft, wird auf dem Bildschirm nicht viel erscheinen. Einige Daten werden direkt in die Datenbank gehen und andere werden in einem “data” Verzeichnis unterhalb von “openstreetmap-carto” landen. Sollte hier ein Problem auftreten, dann könnten die Natural Earth Daten umgezogen sein - für mehr Details siehe [this issue](https://github.com/nvkelso/natural-earth-vector/issues/581#issuecomment-913988101){: target=_blank} und andere Issues bei Natural Earth. Wenn Sie die Natural Earth Download-Adresse ändern müssen, dann ist Ihre Kopie [dieser Datei](https://github.com/gravitystorm/openstreetmap-carto/blob/master/external-data.yml){: target=_blank} der richtige Ort zum Editieren.
+Dieser Prozess beinhaltet einen beträchtlich Download und könnte einige Zeit dauern - während es läuft, wird auf dem Bildschirm nicht viel erscheinen. Einige Daten werden direkt in die Datenbank gehen und andere werden in einem “data” Verzeichnis unterhalb von “openstreetmap-carto” landen. Sollte hier ein Problem auftreten, dann könnten die Natural Earth Daten umgezogen sein - für mehr Details siehe [dieses Issue](https://github.com/nvkelso/natural-earth-vector/issues/581#issuecomment-913988101){: target=_blank} und andere Issues bei Natural Earth. Wenn Sie die Natural Earth Download-Adresse ändern müssen, dann ist Ihre Kopie [dieser Datei](https://github.com/gravitystorm/openstreetmap-carto/blob/master/external-data.yml){: target=_blank} der richtige Ort zum Editieren.
 
 ### Schriftarten
 
@@ -286,7 +286,7 @@ TILESIZE=256
 MAXZOOM=20
 ```
 
-Der Speicherort der XML Datei `/home/accountname/src/openstreetmap-carto/mapnik.xml` wird an den tatsächlichen Speicherort auf Ihrem System angepasst werden müssen. Sie können `[s2o]` und `URI=/hot/` ebenfalls anpassen, wenn Sie möchten. Falls Sie mehr als einen Satz an Tiles von einem Server render möchten, können Sie einfach einen weiteren Abschnitt wie `[s2o]` ergänzen, mit einem anderen Namen, der zu einem anderen Karten-Stil verweist. Wenn Sie wollen, dass es auf eine andere Datenbank als das standardmäßige `gis` veweist, dann können Sie das tun, aber das ist nicht mehr im Fokus dieses Dokuments. Wenn Sie nur ungefähr 2Gb Speicher zur Verfügung haben, dann werden Sie auch  `num_threads` auf 2 reduzieren wollen. `URI=/hot/` wurde gewählt, so dass die hier erzeugten Tiles einfacher an der Stelle der HOT Tile-Ebene auf OpenStreetMap.org verwendet werden können. Sie können hier etwas beliebiges anderes wählen, aber `/hot/` ist genauso gut wie alles andere.
+Der Speicherort der XML Datei `/home/accountname/src/openstreetmap-carto/mapnik.xml` wird an den tatsächlichen Speicherort auf Ihrem System angepasst werden müssen. Sie können `[s2o]` und `URI=/hot/` ebenfalls anpassen, wenn Sie möchten. Falls Sie mehr als einen Satz an Tiles von einem Server render möchten, können Sie einfach einen weiteren Abschnitt wie `[s2o]` ergänzen, mit einem anderen Namen, der zu einem anderen Karten-Stil verweist. Wenn Sie wollen, dass es auf eine andere Datenbank als das standardmäßige `gis` veweist, dann können Sie das tun, aber das ist nicht mehr im Fokus dieses Dokuments. Wenn Sie nur ungefähr 2Gb Speicher zur Verfügung haben, dann werden Sie auch `num_threads` auf 2 reduzieren wollen. `URI=/hot/` wurde gewählt, so dass die hier erzeugten Tiles einfacher an der Stelle der HOT Tile-Ebene auf OpenStreetMap.org verwendet werden können. Sie können hier etwas beliebiges anderes wählen, aber `/hot/` ist genauso gut wie alles andere.
 
 Als diese Anleitung das erste mal geschrieben wurde, stand die von Debian bereitgestellte Version von Mapnik bei 3.0 und die `plugins_dir` Einstellung im `[mapnik]`-Teil der Datei war `/usr/lib/mapnik/3.0/input`. Zur Zeit des Verfassens hat sich dies zu 3.1 geändert und damit ist der relevante Wert `/usr/lib/mapnik/3.1/input`. Es könnte sich in der Zukunft erneut ändern. Falls beim Versuch die Tiles zu rendern eine Fehlermeldung wie diese erscheint:
 
