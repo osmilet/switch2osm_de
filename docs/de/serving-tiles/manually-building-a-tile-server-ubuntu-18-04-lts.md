@@ -9,17 +9,17 @@ lang: de
 # {{ title }}
 
 !!! info ""
-    This page describes how to install, setup and configure all the necessary software to operate your own tile server. These step-by-step instructions are written for [Ubuntu Linux](https://ubuntu.com/){: target=_blank} 18.04 LTS (Bionic Beaver), and were tested in May 2020.
+    Diese Seite beschreibt die Installation, Einrichtung und Konfiguration aller notwendigen Software, um einen eigenen Tile-Server zu betreiben. Diese Schritt-für-Schritt-Anleitungen wurden für [Ubuntu Linux](https://ubuntu.com/){: target=_blank} 18.04 LTS (Bionic Beaver) geschrieben, und wurden im Mai 2020 getestet.
 
-## Software installation
+## Software Installation
 
-The OSM tile server stack is a collection of programs and libraries that work together to create a tile server. As so often with OpenStreetMap, there are many ways to achieve this goal and nearly all of the components have alternatives that have various specific advantages and disadvantages. This tutorial describes the most standard version that is similar to that used on the main OpenStreetMap.org tile servers.
+Der OSM Tile-Server-Stack ist eine Sammlung von Programmen und Bibliotheken, die zusammenarbeiten um einen Tile-Server zu erstellen. Wie so oft bei OpenStreetMap gibt es viele verschiedene Wege, dieses Ziel zu erreichen und fast alle Komponenten besitzen Alternativen mit verschiedenen speziellen Vor- und Nachteilen. Diese Anleitung beschreibt die üblichste Variante, die der auf den Haupt-OpenStreetMap.org-Tile-Servern eingesetzten ähnlich ist.
 
-It consists of 5 main components: `mod_tile`, `renderd`, `mapnik`, `osm2pgsql` and a `postgresql/postgis` database. Mod_tile is an apache module that serves cached tiles and decides which tiles need re-rendering&nbsp;– either because they are not yet cached or because they are outdated. Renderd provides a priority queueing system for different sorts of requests to manage and smooth out the load from rendering requests. Mapnik is the software library that does the actual rendering and is used by renderd.
+Sie besteht aus 5 Haupt-Komponenten: `mod_tile`, `renderd`, `mapnik`, `osm2pgsql` und einer `postgresql/postgis` Datenbank. Mod_tile ist ein Apache-Modul, dass zwischengespeicherte Tiles verteilt und entscheidet, welche Tiles erneut gerendert werden  müssen&nbsp;– entweder, weil sie noch gar nicht zwischengespeichert sind, oder weil sie nicht mehr aktuell sind. Renderd stellt ein Priorität-Warteschlangensystem für unterschiedliche Arten von Anfragen zur Verfügung, um die Last durch die Rendering-Anfragen zu managen und zu glätten. Mapnik wird von `renderd` verwendet und ist die Software-Bibliothek, die das tatsächliche Rendern durchführt.
 
-Note that these instructions are have been written and tested against a newly-installed {{ dist }} server. If you have got other versions of some software already installed (perhaps you upgraded from an earlier Ubuntu version, or you set up some PPAs to load from) then you may need to make some adjustments.
+Beachten Sie, dass diese Anleitungen für einen frisch installierten {{ dist }} Server geschrieben und getestet wurden. Falls Sie bereits andere Versionen mancher Programme installiert haben (weil Sie vielleicht von einer früheren Ubuntu Version aktualisiert haben oder einige PPAs eingerichtet haben, von denen geladen wird) müssen Sie eventuell einige Anpassungen vornehmen.
 
-This guide assumes that you run everything from a non-root user via `sudo`.  The non-root username used by default below is `renderaccount` - you can create that locally if you want, or edit scripts to refer to a different username if you want.  If you do create the `renderaccount` user you'll need to add it to the group of users that can `sudo` to root.  From your normal non-root user account:
+Diese Anleitung nimmt an, dass Sie alles mit einem nicht-root Benutzer via `sudo` ausführen. Der nicht-root Benutzername, der unten standardmäßig verwendet wird, lautet `renderaccount` - Sie können diesen lokal erstellen, wenn Sie möchten, oder Skripte so anpassen, dass sie auf einen anderen Benutzernamen verweisen. Falls Sie den `renderaccount`-Benutzer erstellen, müssen Sie ihn zur Gruppe von Benutzern hinzufügen, die `sudo` zu root ausführen dürfen. Von Ihrem normalen nicht-root Benutzerkonto:
 
 ```sh
 sudo -i
@@ -27,17 +27,17 @@ usermod -aG sudo renderaccount
 exit
 ```
 
-In order to build these components, a variety of dependencies need to be installed first:
+Um diese Komponenten zu bauen, muss zunächst eine Auswahl von Abhängigkeiten installiert werden:
 
 ```sh
 --8<-- "docs/assets/serving-tiles/ubuntu-18-04-deps.txt"
 ```
 
-Say yes to install. This will take a while, so go and have a cup of tea. This list includes various utilities and libraries, the Apache web server, and "carto" which is used to convert Carto-CSS stylesheets into something that "mapnik" the map renderer can understand. When that is complete, install the second set of prerequisites:
+Antworten Sie yes zum installieren. Das wird eine Weile dauern, also holen Sie sich eine Tasse Tee. Diese Liste enthält verschiedene Hilfsmittel und Bibliotheken, den Apache Webserver und "carto", welches benutzt wird um Carto-CSS Stylesheets in etwas zu konvertieren, das "mapnik", der Karten-Renderer, verstehen kann. Wenn dies fertig ist, installieren Sie den zweiten Satz von Voraussetzungen:
 
-## Installing postgresql / postgis
+## postgresql / postgis installieren
 
-On Ubuntu there are pre-packaged versions of both `postgis` and `postgresql`, so these can simply be installed via the Ubuntu package manager.
+Auf Ubuntu gibt es vor-gepackte Versionen von sowohl `postgis` als auch `postgresql`. Damit können sie einfach mit dem mit dem Ubuntu Paketmanager installiert werden.
 
 ```sh
 sudo apt-get install \
