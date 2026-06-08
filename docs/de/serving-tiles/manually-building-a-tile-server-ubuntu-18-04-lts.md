@@ -37,7 +37,7 @@ Antworten Sie yes zum installieren. Das wird eine Weile dauern, also holen Sie s
 
 ## postgresql / postgis installieren
 
-Auf Ubuntu gibt es vor-gepackte Versionen von sowohl `postgis` als auch `postgresql`. Damit können sie einfach mit dem mit dem Ubuntu Paketmanager installiert werden.
+Auf Ubuntu gibt es vor-gepackte Versionen von sowohl `postgis` als auch `postgresql`. Damit können sie einfach mit dem Ubuntu Paketmanager installiert werden.
 
 ```sh
 sudo apt-get install \
@@ -48,9 +48,9 @@ sudo apt-get install \
     postgresql-10-postgis-scripts
 ```
 
-Here `postgresql` is the database we're going to store map data and `postgis` adds some extra graphical support to it. Again, say yes to install.
+`postgresql` stellt hier die Datenbank dar, in der wir die Karten-Daten speichern werden und `postgis` fügt etwas zusätzliche grafische Unterstützung hinzu. Antworten Sie erneut mit yes zum installieren.
 
-Now you need to create a postgis database. The defaults of various programs assume the database is called `gis` and we will use the same convention in this tutorial, although this is not necessary. Substitute your username for `renderaccount` where it is used below. This should be the username that will render maps with Mapnik.
+Jetzt müssen Sie eine postgis-Datenbank erzeugen. Die Standardeinstellungen verschiedener Programme gehen davon aus, dass die Datenbank `gis` genannt wird und wir werden die gleiche Konvention in dieser Anleitung verwenden, obwohl es nicht notwendig ist. Setzen Sie ihren Benutzernamen für `renderaccount` ein, wo es im Folgenden verwendet wird. Dies sollte der Benutzername sein, der Karten mit Mapnik rendern wird.
 
 ```sh
 sudo -u postgres -i
@@ -58,68 +58,68 @@ createuser renderaccount
 createdb -E UTF8 -O renderaccount gis
 ```
 
-While still working as the `postgres` user, set up PostGIS on the PostgreSQL database (again, substitute your username for `renderaccount` below):
+Noch während Sie als Benutzer `postgres` arbeiten, richten Sie PostGIS auf der PostgreSQL Datenbank ein (setzen Sie wieder Ihren Benutzernamen für `renderaccount` unten ein):
 
 ```sh
 psql
 ```
 
-(that'll put you at a `postgres=#` prompt)
+(das wird Sie zu einem `postgres=#` Prompt bringen)
 
 ```sh
 \c gis
 ```
 
-(it'll answer "You are now connected to database 'gis' as user 'postgres'".)
+(es wird ausgeben "You are now connected to database 'gis' as user 'postgres'".)
 
 ```sql
 CREATE EXTENSION postgis;
 ```
 
-(it'll answer CREATE EXTENSION)
+(es wird ausgeben CREATE EXTENSION)
 
 ```sql
 CREATE EXTENSION hstore;
 ```
 
-(it'll answer CREATE EXTENSION)
+(es wird ausgeben CREATE EXTENSION)
 
 ```sql
 ALTER TABLE geometry_columns OWNER TO renderaccount;
 ```
 
-(it'll answer ALTER TABLE)
+(es wird ausgeben ALTER TABLE)
 
 ```sql
 ALTER TABLE spatial_ref_sys OWNER TO renderaccount;
 ```
 
-(it'll answer ALTER TABLE)
+(es wird ausgeben ALTER TABLE)
 
 ```sh
 \q
 ```
 
-(it'll exit psql and go back to a normal Linux prompt)
+(es wird psql beenden und zu einem normalen Linux Prompt zurückkehren)
 
 ```sh
 exit
 ```
 
-(to exit back to be the user that we were before we did `sudo -u postgres -i` above)
+(um zu dem Benutzer zurück zu kehren, der wir waren bevor wir `sudo -u postgres -i` weiter oben ausgeführt haben)
 
-If you haven't already created one create a Unix user for this user, too, choosing a password when prompted:
+Wenn Sie nicht bereits einen erstellt haben, erstellen Sie jetzt auch einen Unix-Benutzer für diesen Benutzer. Ein Passwort wählen, wenn dazu aufgefordert wird:
 
 ```sh
 sudo useradd -m renderaccount
 sudo passwd renderaccount
 ```
 
-Again, above replace `renderaccount` with the non-root username that you chose.
+Ersetzen Sie obeb wieder `renderaccount` mit dem nicht-root Benutzer, den Sie gewählt haben.
 
-### Installing osm2pgsql
+### osm2pgsql installieren
 
-We will need to install various bits of software from source. The first of this is `osm2pgsql`. Various tools to import and manage OpenStreetMap data into a database exist. Here we'll use `osm2pgsql`, which is probably the most popular.
+Wir müssen ein paar Software-Teile aus ihren Quellen installieren. Das erste davon ist `osm2pgsql`. Es gibt verschiedene Tools für Import und Verwaltung von OpenStreetMap Daten in einer Datenbank. Hier werden wir `osm2pgsql` benutzen, welches vermutlich am beliebtesten ist.
 
 ```sh
 mkdir ~/src
@@ -128,26 +128,26 @@ git clone https://github.com/openstreetmap/osm2pgsql
 cd osm2pgsql
 ```
 
-The build mechanism used by osm2pgsql has changed since older versions, so we'll need to install some more prerequisites for that:
+Der von osm2pgsql verwendete Build-Mechanismus hat sich seit älteren Versionen verändert, daher werden wir dafür ein paar weitere Voraussetzungen installieren müssen:
 
 ```sh
 --8<-- "docs/assets/serving-tiles/ubuntu-18-04-osm2pgsql-deps.txt"
 ```
 
-Again, say yes to install.
+Antworten Sie wieder mit yes zum installieren.
 
 ```sh
 mkdir build && cd build
 cmake ..
 ```
 
-(the output from that should end with "build files have been written to")
+(die Ausgabe davon sollte mit "build files have been written to" abschließen)
 
 ```sh
 make
 ```
 
-(the output from that should finish with "[100%] Built target osm2pgsql")
+(die Ausgabe davon sollte mit "[100%] Built target osm2pgsql" abschließen)
 
 ```sh
 sudo make install
@@ -155,13 +155,13 @@ sudo make install
 
 ## Mapnik
 
-Next, we'll install Mapnik. We'll use the default version in {{ dist }}:
+Als nächstes installieren wir Mapnik. Wir verwenden die Standard-Version von {{ dist }}:
 
 ```sh
 --8<-- "docs/assets/serving-tiles/ubuntu-18-04-mapnik-deps.txt"
 ```
 
-We'll check that Mapnik has been installed correctly:
+Wir überprüfen, dass Mapnik korrekt installiert wurde:
 
 ```py
 python
@@ -169,17 +169,17 @@ python
 >>>
 ```
 
-If python replies with the second chevron prompt `>>>` and without errors, then Mapnik library was found by Python. Congratulations! You can leave Python with this command:
+Wenn Python mit dem zweiten Chevron Prompt >>> und ohne Fehlermeldungen antwortet, dann wurde die Mapnik-Bibliothek von Python gefunden. Glückwunsch! Sie können Python mit diesem Kommando verlassen:
 
 ```py
 >>> quit()
 ```
 
-## Install mod_tile and renderd
+## mod_tile und renderd installieren
 
-Next, we'll install mod_tile and renderd. `mod_tile` is an Apache module that handles requests for tiles; `renderd` is a daemon that actually renders tiles when `mod_tile` requests them. We'll use the `switch2osm` branch of <https://github.com/SomeoneElseOSM/mod_tile>{: target=_blank}, which is itself forked from <https://github.com/openstreetmap/mod_tile>{: target=_blank}, but modified so that it supports {{ dist }}, and with a couple of other changes to work on a standard Ubuntu server rather than one of OSM's rendering servers.
+Als nächstes installieren wir mod_tile und renderd. `mod_tile` ist ein Apache-Modul, das Anfragen für Tiles verarbeitet; `renderd` ist ein Dienst, der Tiles tatsächlich rendert, wenn `mod_tile` sie anfragt. Wir werden den `switch2osm` Branch von <https://github.com/SomeoneElseOSM/mod_tile>{: target=_blank} verwenden, welcher wiederum von <https://github.com/openstreetmap/mod_tile>{: target=_blank} geforked ist, aber so modifiziert dass es {{ dist }} unterstützt und mit ein paar weiteren Veränderungen auch auf einem Standard Ubuntu Server läuft statt auf einem von OSM's Rendering-Servern.
 
-### Compile the mod_tile source code
+### Den mod_tile Quellcode kompilieren
 
 ```sh
 cd ~/src
@@ -188,47 +188,47 @@ cd mod_tile
 ./autogen.sh
 ```
 
-(that should finish with `autoreconf: Leaving directory '.'`.)
+(das sollte mit `autoreconf: Leaving directory '.'` beenden.)
 
 ```sh
 ./configure
 ```
 
-(that should finish with `config.status: executing libtool commands`)
+(das sollte mit `config.status: executing libtool commands` beenden)
 
 ```sh
 make
 ```
 
-Note that some "worrying" messages will scroll up the screen here. However it should finish with "make[1]: Leaving directory '/home/renderaccount/src/mod_tile'".
+Beachten Sie, dass hierbei einige "beunruhigende" Meldungen über den Schirm laufen werden. Es sollte jedoch mit "make[1]: Leaving directory '/home/renderaccount/src/mod_tile'" abschließen.
 
 ```sh
 sudo make install
 ```
 
-(that should finish with "make[1]: Leaving directory '/home/renderaccount/src/mod_tile'")
+(das sollte mit "make[1]: Leaving directory '/home/renderaccount/src/mod_tile'" beenden)
 
 ```sh
 sudo make install-mod_tile
 ```
 
-(that should finish with "chmod 644 /usr/lib/apache2/modules/mod_tile.so")
+(das sollte mit "chmod 644 /usr/lib/apache2/modules/mod_tile.so" beenden)
 
 ```sh
 sudo ldconfig
 ```
 
-(that shouldn't reply with anything)
+(das sollte gar nichts ausgeben)
 
-## Stylesheet configuration
+## Stylesheet-Konfiguration
 
-Now that all of the necessary software is installed, you will need to download and configure a stylesheet.
+Jetzt, da alle notwendige Software installiert ist, müssen sie ein Stylesheet (Formatvorlage) herunterladen und konfigurieren.
 
-The style we'll use here is the one that use by the "standard" map on the openstreetmap.org website. It's chosen because it's well documented, and should work anywhere in the world (including in places with non-latin placenames). There are a couple of downsides though - it's very much a compromise designed to work globally, and it's quite complicated to understand and modify, should you need to do that.
+Der Stil, den wir hier verwenden werden, ist derjenige, der auch von der "Standard"-Karte auf der openstreetmap.org Website verwendet wird. Er wird gewählt, da er gut dokumentiert ist und überall auf der Welt funktionieren sollte (inklusive an Orten mit nicht-lateinischen Ortsnamen). Es gibt jedoch auch einige Nachteile - es ist ein Kompromiss mit dem Ziel global zu funktionieren und es ist ziemlich kompliziert zu verstehen und zu modifizieren, sollten Sie den Bedarf haben dies zu tun.
 
-The home of "OpenStreetMap Carto" on the web is <https://github.com/gravitystorm/openstreetmap-carto/>{: target=_blank} and it has its own installation instructions at <https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md>{: target=_blank} although we'll cover everything that needs to be done here.
+Das Zuhause von "OpenStreetMap Carto" im Internet ist <https://github.com/gravitystorm/openstreetmap-carto/>{: target=_blank} und es hat seine eigene Installationsanleitung bei <https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md>{: target=_blank} obwohl wir alles notwendige hier behandeln werden.
 
-Here we're assuming that we're storing the stylesheet details in a directory below `~/src` below the home directory of the `renderaccount` user (or whichever other one you are using)
+Hier nehmen wir an, dass wir die Stylesheet-Details in einem Verzeichnis unterhalb von `~/src` unterhalb des Home-Verzeichnis des `renderaccount`-Benutzers speichern (oder welchen anderen Benutzher Sie verwenden)
 
 ```sh
 cd ~/src
@@ -236,13 +236,13 @@ git clone https://github.com/gravitystorm/openstreetmap-carto
 cd openstreetmap-carto
 ```
 
-Next, we'll install a suitable version of the `carto` compiler. This is later than the version that ships with Ubuntu, so we need to do:
+Als nächstes werden wir eine passende Version des `carto` Compilers installieren. Dieser ist neuer als die Version, die mit Ubuntu kommt, daher müssen wir dies ausführen:
 
 ```sh
 sudo apt-get install nodejs-dev node-gyp libssl1.0-dev
 ```
 
-Confusingly this will remove some things previously installed.  Then do:
+Verwirrenderweise wird dies einige zuvor installierte Dinge entfernen. Dann machen Sie:
 
 ```sh
 sudo apt install npm nodejs
@@ -250,25 +250,25 @@ sudo npm install -g carto
 carto -v
 ```
 
-That should respond with a number that is at least as high as:
+Dies sollte mit einer Nummer antworten, die mindestens so hoch ist wie:
 
 ```sh
 carto 1.2.0 (Carto map stylesheet compiler)
 ```
 
-Then we convert the carto project into something that Mapnik can understand:
+Dann konvertieren wir das carto-Projekt in etwas, das Mapnik verstehen kann:
 
 ```sh
 carto project.mml > mapnik.xml
 ```
 
-You now have a Mapnik XML stylesheet at `/home/renderaccount/src/openstreetmap-carto/mapnik.xml`.
+Sie haben jetzt ein Mapnik XML Stylesheet in `/home/renderaccount/src/openstreetmap-carto/mapnik.xml`.
 
-## Loading data
+## Daten laden
 
-Initially, we'll load only a small amount of test data. Other download locations are available, but `download.geofabrik.de` has a wide range of options. In this example we'll download the data for Azerbaijan, which is currently about 32Mb.
+Initial laden wir nur eine kleine Menge von Test-Daten. Andere Download-Quellen sind auch verfügbar, aber `download.geofabrik.de` hat eine große Auswahl an Optionen. In diesem Beispiel werden wir die Daten für Aserbaidschan herunterladen, was zur Zeit etwa 32Mb sind.
 
-Browse to <https://download.geofabrik.de/asia/azerbaijan.html>{: target=_blank} and note the "This file was last modified" date (e.g. "{{ dl_timestamp }}"). We'll need that later if we want to update the database with people's susbsequent changes to OpenStreetMap. Download it as follows:
+Navigieren Sie zu <https://download.geofabrik.de/asia/azerbaijan.html>{: target=_blank} und notieren sich das Datum von "This file was last modified" (z.B. "{{ dl_timestamp }}"). Wir werden es später benötigen, wenn wir die Datenbank mit Änderungen aktualisieren wollen, die Menschen später an OpenStreetMap vorgenommen haben. Laden Sie es folgendermaßen herunter:
 
 ```sh
 mkdir ~/data
@@ -276,7 +276,8 @@ cd ~/data
 wget https://download.geofabrik.de/asia/azerbaijan-latest.osm.pbf
 ```
 
-The following command will insert the OpenStreetMap data you downloaded earlier into the database. This step is very disk I/O intensive; importing the full planet might take many hours, days or weeks depending on the hardware. For smaller extracts the import time is much faster accordingly, and you may need to experiment with different `-C` values to fit within your machine's available memory.
+Das folgende Kommando wird die vorher heruntergeladenen OpenStreetMap-Daten zur Datenbank hinzufügen. Dieser Schritt ist sehr anspruchsvoll bei den Laufwerkszugriffen; Abhängig von der Hardware, könnte es mehrere Stunden, Tage oder Wochen dauern, den kompletten Planeten zu importieren. 
+Für kleinere Auszüge ist die Import-Zeit dementsprechend deutlich kürzer und Sie müssen möglicherweise mit verschiedenen Werten für `-C` experimentieren um es an den verfügbaren Speicher ihres Rechners anzupassen.
 
 ```sh
 osm2pgsql -d gis --create --slim  -G --hstore \
@@ -287,7 +288,7 @@ osm2pgsql -d gis --create --slim  -G --hstore \
     ~/data/azerbaijan-latest.osm.pbf
 ```
 
-It's worth explaining a little bit about what those options mean:
+Es lohnt sich ein wenig zu erklären, was diese Optionen bedeuten:
 
 `-d gis`
 : The database to work with (`gis` used to be the default; now it must be specified).
