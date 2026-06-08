@@ -291,36 +291,36 @@ osm2pgsql -d gis --create --slim  -G --hstore \
 Es lohnt sich ein wenig zu erklären, was diese Optionen bedeuten:
 
 `-d gis`
-: The database to work with (`gis` used to be the default; now it must be specified).
+: Die Datenbank, mit der gearbeitet werden soll (`gis` wurde in der Vergangenheit standardmäßig verwendet; jetzt muss es explizit spezifiziert werden).
 
 `--create`
-: Load data into an empty database rather than trying to append to an existing one.
+: Lade Daten in eine leere Datenbank anstatt zu versuchen sie an eine existierende anzuhängen.
 
 `--slim`
-: osm2pgsql can use different table layouts; "slim" tables works for rendering.
+: osm2pgsql kann verschiedene Tabellenformate verwenden; `slim` Tabellen sind für das Rendern geeignet.
 
 `-G`
-: Determines how multipolygons are processed.
+: Legt fest, wie Multipolygone verarbeitet werden.
 
 `--hstore`
-: Allows tags for which there are no explicit database columns to be used for rendering.
+: Erlaubt, dass Tags zum Rendern benutzt werden, für die keine expliziten Datenbank-Spalten bestehen.
 
 `--tag-transform-script ~/src/openstreetmap-carto/openstreetmap-carto.lua`
-: Defines the lua script used for tag processing. This an easy is a way to process OSM tags before the style itself processes them, making the style logic potentially much simpler.
+: Definiert das lua Script, das zur Tag-Verarbeitung verwendet wird. Dies ist ein einfacher Weg, um OSM-Tags zu verarbeiten, bevor sie der Stil selbst verarbeitet. Dadurch kann die Stil-Logik möglicherweise einfacher gehalten werden.
 
 `-C 2500`
-: Allocate 2.5 Gb of memory to osm2pgsql to the import process. If you have less memory you could try a smaller number, and if the import process is killed because it runs out of memory you'll need to try a smaller number or a smaller OSM extract.
+: Vergebe 2.5 Gb an Speicher zu osm2pgsql für den Import-Prozess. Wenn Sie weniger Speicher zur Verfügung haben, können Sie eine kleinere Zahl versuchen. Und wenn der Import-Prozess wegen zu wenig Speicher abgebrochen wird, müssen Sie eine kleinere Zahl probieren oder ein kleineres OSM-Extrakt verwendet.
 
 `--number-processes 1`
-: Use 1 CPU. If you have more cores available you can use more.
+: Benutze 1 CPU. Wenn Sie mehr Kerne zur Verfügung haben, können Sie mehr verwenden.
 
 `-S ~/src/openstreetmap-carto/openstreetmap-carto.style`
-: Create the database columns in this file (actually these are unchanged from "openstreetmap-carto")
+: Erzeuge die Datenbank-Spalten in dieser Datei (tatsächlich sind diese unverändert zu "openstreetmap-carto")
 
 `~/data/azerbaijan-latest.osm.pbf`
-: The final argument is the data file to load.
+: Das finale Argument ist die Datei mit den zu ladenden Daten.
 
-That command will complete with something like "Osm2pgsql took 238s overall".
+Dieses Kommando wird mit etwas wie "Osm2pgsql took 238s overall" abschließen.
 
 ### Shapefile download
 
