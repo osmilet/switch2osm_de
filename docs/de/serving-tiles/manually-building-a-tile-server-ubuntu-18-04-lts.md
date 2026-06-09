@@ -226,7 +226,7 @@ Jetzt, da alle notwendige Software installiert ist, müssen sie ein Stylesheet (
 
 Der Stil, den wir hier verwenden werden, ist derjenige, der auch von der "Standard"-Karte auf der openstreetmap.org Website verwendet wird. Er wird gewählt, da er gut dokumentiert ist und überall auf der Welt funktionieren sollte (inklusive an Orten mit nicht-lateinischen Ortsnamen). Es gibt jedoch auch einige Nachteile - es ist ein Kompromiss mit dem Ziel global zu funktionieren und es ist ziemlich kompliziert zu verstehen und zu modifizieren, sollten Sie den Bedarf haben dies zu tun.
 
-Das Zuhause von "OpenStreetMap Carto" im Internet ist <https://github.com/gravitystorm/openstreetmap-carto/>{: target=_blank} und es hat seine eigene Installationsanleitung bei <https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md>{: target=_blank} obwohl wir alles notwendige hier behandeln werden.
+Das Zuhause von "OpenStreetMap Carto" im Internet ist <https://github.com/gravitystorm/openstreetmap-carto/>{: target=_blank} und es hat seine eigene Installationsanleitung bei <https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md>{: target=_blank}, obwohl wir alles notwendige hier behandeln werden.
 
 Hier nehmen wir an, dass wir die Stylesheet-Details in einem Verzeichnis unterhalb von `~/src` unterhalb des Home-Verzeichnis des `renderaccount`-Benutzers speichern (oder welchen anderen Benutzher Sie verwenden)
 
@@ -322,7 +322,7 @@ Es lohnt sich ein wenig zu erklären, was diese Optionen bedeuten:
 
 Dieses Kommando wird mit etwas wie "Osm2pgsql took 238s overall" abschließen.
 
-### Shapefile download
+### Shapefile herunterladen
 
 Although most of the data used to create the map is directly from the OpenStreetMap data file that you downloaded above, some shapefiles for things like low-zoom country boundaries are still needed. To download and index these:
 
@@ -333,7 +333,7 @@ scripts/get-external-data.py
 
 This process involves a sizable download and may take some time – not much will appear on the screen when it is running.  It will actually populate a "data" directory below "openstreetmap-carto".
 
-### Fonts
+### Schriftarten
 
 In version v5.6.0 and above of Carto, fonts need to be installed manually:
 
@@ -346,7 +346,7 @@ Our test data area (Azerbaijan) was chosen both because it was a small area and 
 
 ## Setting up your webserver
 
-### Configure renderd
+### renderd konfigurieren
 
 The config file for `renderd` is `/usr/local/etc/renderd.conf`. Edit that with a text editor such as nano:
 
@@ -482,7 +482,7 @@ To make it start automatically every time:
 sudo systemctl enable renderd
 ```
 
-## Viewing tiles
+## Tiles anzeigen
 
 In order to see tiles, we’ll cheat and use an html file `sample_leaflet.html` in mod_tile’s “extras” folder. Just open that file in a web browser on the machine where you installed the tile server. If that isn’t possible because you’re installing on a server without a local web browser, you can edit it to replace `127.0.0.1` with the IP address of the server and copy it to below `/var/www/html`.
 
@@ -498,4 +498,4 @@ That will show a line every time a tile is requested, and one every time renderi
 
 When you load that page you should see some tile requests. Zoom out gradually. You’ll see requests for new tiles show up in the ssh connection. Some low-zoom tiles may take a long time (several minutes) to render for the first time, but once done they’ll be ready for the next time that they are needed.
 
-Congratulations. Head over to the [using tiles](/using-tiles/index.md) section to create a map that uses your new tile server.
+Glückwunsch! Schauen Sie in die [Tiles verwenden](/using-tiles/index.md)-Bereich um eine Karte zu erstellen, die Ihren neuen Tile-Server verwendet.
