@@ -324,57 +324,57 @@ Dieses Kommando wird mit etwas wie "Osm2pgsql took 238s overall" abschließen.
 
 ### Shapefile herunterladen
 
-Although most of the data used to create the map is directly from the OpenStreetMap data file that you downloaded above, some shapefiles for things like low-zoom country boundaries are still needed. To download and index these:
+Obwohl die meisten Daten, die zur Kartenerstellung benötigt werden, direkt aus der zuvor heruntergeladenen Datei mit OpenStreetMap-Daten kommen, sind noch einige Shapefiles nötig für Dinge wie Länder-Grenzen bei niedrigen Zoom-Stufen. Um diese herunterzuladen und zu indizieren:
 
 ```sh
 cd ~/src/openstreetmap-carto/
 scripts/get-external-data.py
 ```
 
-This process involves a sizable download and may take some time – not much will appear on the screen when it is running.  It will actually populate a "data" directory below "openstreetmap-carto".
+Dieser Prozess beinhaltet einen beträchtlich Download und könnte einige Zeit dauern – während es läuft, wird auf dem Bildschirm nicht viel erscheinen. Tatsächlich wird es aber ein "data"-Verzeichnis unterhalb von  "openstreetmap-carto" befüllen.
 
 ### Schriftarten
 
-In version v5.6.0 and above of Carto, fonts need to be installed manually:
+In Version v5.6.0 und höher von Carto müssen Schriftarten manuell installiert werden:
 
 ```sh
 cd ~/src/openstreetmap-carto/
 scripts/get-fonts.sh
 ```
 
-Our test data area (Azerbaijan) was chosen both because it was a small area and because some place names in that region have names containing non-latin characters.
+Unsere Test-Daten-Region (Aserbaidschan) wurde gewählt, weil es ein kleines Gebiet ist, und auch, weil einige Ortsbezeichnungen in dieser Region Namen mit nicht-lateinischen Schriftzeichen besitzen.
 
-## Setting up your webserver
+## Ihren Webserver einrichten
 
 ### renderd konfigurieren
 
-The config file for `renderd` is `/usr/local/etc/renderd.conf`. Edit that with a text editor such as nano:
+Die Konfigurations-Datei für `renderd` ist `/usr/local/etc/renderd.conf`. Editieren Sie diese mit einem Texteditor wie beispielsweise nano:
 
 ```sh
 sudo nano /usr/local/etc/renderd.conf
 ```
 
-A couple of lines in here may need changing. In the `renderd` section:
+Ein paar Zeilen müssen hier geändert werden. Im `renderd`-Abschnitt:
 
 ```ini
 num_threads=4
 ```
 
-If you've only got 2Gb or so of memory you'll want to reduce this to 2. The `ajt` section corresponds to a "named map style" called `ajt`. You can have more than one of these sections if you want, provided that the URI is different for each. The `XML` line will need changing to something like:
+Wenn Sie nur ungefähr 2Gb Speicher zur Verfügung haben, dann werden dies auf 2 reduzieren wollen. Der `ajt`-Abschnitt entspricht einem "benannten Karten-Stil" namens `ajt`. Wenn Sie wollen,können Sie mehr als einen dieser Abschnitte haben, vorausgesetzt, dass die URI für jeden unterschiedlich ist. Die `XML`-Zeile wird geändert werden müssen, zu etwas wie:
 
 ```ini
 XML=/home/renderaccount/src/openstreetmap-carto/mapnik.xml
 ```
 
-You'll want to change `renderaccount` to whatever non-root username you used above.
+Sie werden `renderaccount` in den nicht-root Benutzernamen ändern wollen, den Sie oben benutzt haben.
 
 ```ini
 URI=/hot/
 ```
 
-That was chosen so that the tiles generated here can more easily be used in place of the HOT tile layer at OpenStreetMap.org. You can use something else here, but `/hot/` is as good as anything.
+Das wurde gewählt, so dass die hier erzeugten Tiles einfacher an der Stelle der HOT Tile-Ebene auf OpenStreetMap.org verwendet werden können. Sie können hier etwas beliebiges anderes wählen, aber `/hot/` ist genauso gut wie alles andere.
 
-### Configuring Apache
+### Apache konfigurieren
 
 ```sh
 sudo mkdir /var/lib/mod_tile
@@ -386,33 +386,33 @@ sudo mkdir /var/run/renderd
 sudo chown renderaccount /var/run/renderd
 ```
 
-We now need to tell Apache about `mod_tile`, so with nano (or another editor):
+Jetzt müssen wir Apache mit `mod_tile` bekannt machen, also mit nano (oder einem anderen Editor):
 
 ```sh
 sudo nano /etc/apache2/conf-available/mod_tile.conf
 ```
 
-Add the following line to that file:
+Fügen Sie die folgende Zeile zu dieser Datei hinzu:
 
 ```ini
 LoadModule tile_module /usr/lib/apache2/modules/mod_tile.so
 ```
 
-and save it, and then run:
+Speichern Sie es und führen Sie dann aus:
 
 ```sh
 sudo a2enconf mod_tile
 ```
 
-That will say that you need to run `service apache2 reload` to activate the new configuration; we'll not do that just yet.
+Das wird ausgeben, dass Sie `service apache2 reload` ausführen sollen um die neue Konfiguration zu aktivieren; Wir werden das jetzt noch nicht tun.
 
-We now need to tell Apache about `renderd`. With nano (or another editor):
+Jetzt müssen wir Apache mit `renderd` bekannt machen. Mit nano (oder einem anderen Editor):
 
 ```sh
 sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
-And add the following between the `ServerAdmin` and `DocumentRoot` lines:
+Fügen Sie das folgenden zwischen den `ServerAdmin`- und `DocumentRoot`-Zeilen hinzu:
 
 ```ini
 LoadTileConfigFile /usr/local/etc/renderd.conf
@@ -423,16 +423,16 @@ ModTileRequestTimeout 0
 ModTileMissingRequestTimeout 30
 ```
 
-And reload apache twice:
+Und Apache zweimal neu laden:
 
 ```sh
 sudo service apache2 reload
 sudo service apache2 reload
 ```
 
-(I suspect that it needs doing twice because Apache gets "confused" when reconfigured when running)
+(Ich vermute es muss zwei mal gemacht werden, weil Apache "verwirrt" ist, wenn es im Betrieb neu konfiguriert wird)
 
-If you point a web browser at: `http://your.server.ip.address/index.html` you should get Ubuntu / apache's "It works!" page.
+Wenn Sie mit einem Webbrowser `http://your.server.ip.address/index.html` besuchen, sollten Sie... get Ubuntu / apache's "It works!" page.
 
 !!! tip
     if you don't know what IP address it will have been assigned you can likely use `ifconfig` to find out – if the network configuration is not too complicated it'll probably be the `inet addr` that is not `127.0.0.1`.
