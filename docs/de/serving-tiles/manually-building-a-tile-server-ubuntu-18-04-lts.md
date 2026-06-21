@@ -228,7 +228,7 @@ Der Stil, den wir hier verwenden werden, ist derjenige, der auch von der "Standa
 
 Das Zuhause von "OpenStreetMap Carto" im Internet ist <https://github.com/gravitystorm/openstreetmap-carto/>{: target=_blank} und es hat seine eigene Installationsanleitung bei <https://github.com/gravitystorm/openstreetmap-carto/blob/master/INSTALL.md>{: target=_blank}, obwohl wir alles notwendige hier behandeln werden.
 
-Hier nehmen wir an, dass wir die Stylesheet-Details in einem Verzeichnis unterhalb von `~/src` unterhalb des Home-Verzeichnis des `renderaccount`-Benutzers speichern (oder welchen anderen Benutzher Sie verwenden)
+Hier nehmen wir an, dass wir die Stylesheet-Details in einem Verzeichnis unterhalb von `~/src` unterhalb des Home-Verzeichnis des `renderaccount`-Benutzers speichern (oder welchen anderen Benutzer Sie verwenden)
 
 ```sh
 cd ~/src
@@ -432,34 +432,34 @@ sudo service apache2 reload
 
 (Ich vermute es muss zwei mal gemacht werden, weil Apache "verwirrt" ist, wenn es im Betrieb neu konfiguriert wird)
 
-Wenn Sie mit einem Webbrowser `http://your.server.ip.address/index.html` besuchen, sollten Sie... get Ubuntu / apache's "It works!" page.
+Wenn Sie mit einem Webbrowser `http://your.server.ip.address/index.html` besuchen, sollten Sie die "It works!"-Seite Ubuntu / Apache bekommen.
 
 !!! tip
-    if you don't know what IP address it will have been assigned you can likely use `ifconfig` to find out – if the network configuration is not too complicated it'll probably be the `inet addr` that is not `127.0.0.1`.
+    Falls Sie nicht wissen, welcher IP-Adresse es zugewiesen wurde, dann können Sie voraussichtlich `ifconfig` benutzen, um es herauszufinden – wenn die Netzwerkkonfiguration nicht zu kompliziert ist, dann ist es wahrscheinlich die `inet addr`, die nicht `127.0.0.1` ist.
 
-If you're using a server at a hosting provider then it's likely that your server's internal address will be different to the external address that has been allocated to you, but that external IP address will have already been sent to you and it'll probably be the one that you're accessing the server on currently.
+Wenn Sie einen Server bei einem Hosting-Anbieter verwenden, dann ist es wahrscheinlich, dass die interne Adresse Ihres Servers sich von der externen Adresse unterscheidet, die Ihnen zugewiesen wurde. Aber diese externe Adresse wird Ihnen bereits übermittelt worden sein und wird vermutlich die sein, über die Sie bereits auf den Server zugreifen.
 
-Note that this is just the `http` (port 80) site - you'll need to do a little bit more Apache configuration if you want to enable `https`, but that's out of the scope of these instructions. However, if you use "Let's Encrypt" to issue certificates then the process of setting that up can also configure the Apache HTTPS site as well.
+Beachten Sie, dass dies nur die `http`-Seite (Port 80) ist – Sie werden etwas mehr Apache Konfiguration betreiben müssen, wenn sie `https` aktivieren wollen, aber das ist nicht mehr Teil dieser Anleitung. Wenn Sie jedoch "Let's Encrypt" zur Ausstellung von Zertifikaten benutzen, dann kann der Prozess dies einzurichten auch die Konfiguration der Apache HTTPS-Seite beinhalten.
 
-### Running renderd for the first time
+### renderd zum ersten mal ausführen
 
-Next, we'll run `renderd` to try and render some tiles. Initially we'll run it in the foreground so that we can see any errors as they occur:
+Als nächstes weden wir `renderd` ausführen, um zu versuchen ein paar Tiles zu rendern. Wir führen es zunächst im Vordergrund aus, damit wir alle Fehler sehen können, sobald sie auftreten:
 
 ```sh
 renderd -f -c /usr/local/etc/renderd.conf
 ```
 
-You may see some warnings here - don't worry about those for now. You shouldn't get any errors. If you do, save the full output in a Pastebin and ask a question about the problem somewhere like [`community.openstreetmap.org`](https://community.openstreetmap.org){: target=_blank} (linking to the Pastebin - don't include all the text in the question).
+Sie könnten hier einige Warnungen sehen - machen Sie sich deswegen zunächst keine Sorgen. Sie sollten keine Fehlermeldungen erhalten. Falls doch, speichern Sie die komplette Ausgabe in einen Pastebin und stellen eine Frage zu dem Problem an einem Ort wie [`community.openstreetmap.org`](https://community.openstreetmap.org){: target=_blank} (wenn Sie zum Pastebin verlinken, fügen Sie nicht den ganzen Text aus der Frage ein).
 
-Point a web browser at: `http://yourserveripaddress/hot/0/0/0.png`
+Besuchen Sie mit einem Webbrowser: `http://yourserveripaddress/hot/0/0/0.png`
 
-You should see a map of the world in your browser and some more debug on the command line, including "DEBUG: START TILE" and "DEBUG: DONE TILE". Ignore any "DEBUG: Failed to read cmd on fd" message - it is not an error. If you don't get a tile and get other errors again, save the full output in a Pastebin and ask a question about the problem somewhere like [`community.openstreetmap.org`](https://community.openstreetmap.org){: target=_blank}.
+Sie sollten in ihrem Browser eine Karte der Welt sehen und weitere Debug-Ausgaben auf der Komandozeile, inklusive "DEBUG: START TILE" und "DEBUG: DONE TILE". Ignorieren Sie alle "DEBUG: Failed to read cmd on fd"-Meldungen - das ist kein Fehler. Wenn Sie kein Tile erhalten und andere Fehler bekommen, speichern Sie die komplette Ausgabe in einen Pastebin und stellen eine Frage zu dem Problem an einem Ort wie [`community.openstreetmap.org`](https://community.openstreetmap.org){: target=_blank}.
 
-If that all works, press ++control+c++ to stop the foreground rendering process.
+Wenn dies alles funktioniert, drücken Sie ++strg+c++ um den Vordergrund-Render-Prozess zu stoppen.
 
-### Running renderd in the background
+### renderd im Hintergrund ausführen
 
-Next we'll set up `renderd` to run in the background. First, edit the `~/src/mod_tile/debian/renderd.init` file so that "RUNASUSER" is set to the non-root account that you have used before, such as `renderaccount`, then copy it to the system directory:
+Als nächstes richten wir `renderd` ein um im Hintergrund zu laufen. Editieren Sie zuerst die Datei `~/src/mod_tile/debian/renderd.init` so, dass "RUNASUSER" auf den nicht-Root-Benutzer gesetzt ist, den Sie zuvor benutzt haben, wie `renderaccount`, dann kopieren Sie die Datei in das system-Verzeichnis:
 
 ```sh
 nano ~/src/mod_tile/debian/renderd.init
@@ -468,15 +468,15 @@ sudo chmod u+x /etc/init.d/renderd
 sudo cp ~/src/mod_tile/debian/renderd.service /lib/systemd/system/
 ```
 
-The `renderd.service` file is a `systemd` service file. The version used here just calls old-style init commands. In order to test that the start command works:
+Die `renderd.service` Datei ist eine `systemd`-service Datei. Die hier verwendete Version ruft einfach klassische init-Kommandos auf. Um zu testen, dass das Start-Kommando funktioniert:
 
 ```sh
 sudo /etc/init.d/renderd start
 ```
 
-(that should reply with "[ ok ] Starting renderd (via systemctl): renderd.service".)
+(das sollte mit "[ ok ] Starting renderd (via systemctl): renderd.service" antworten.)
 
-To make it start automatically every time:
+Um es jedes mal automatisch starten zu lassen:
 
 ```sh
 sudo systemctl enable renderd
@@ -484,18 +484,18 @@ sudo systemctl enable renderd
 
 ## Tiles anzeigen
 
-In order to see tiles, we’ll cheat and use an html file `sample_leaflet.html` in mod_tile’s “extras” folder. Just open that file in a web browser on the machine where you installed the tile server. If that isn’t possible because you’re installing on a server without a local web browser, you can edit it to replace `127.0.0.1` with the IP address of the server and copy it to below `/var/www/html`.
+Um Tiles zu sehen werden wir schummeln und eine html-Datei `sample_leaflet.html` in mod_tile “extras”-Verzeichnis verwenden. Öffnen Sie die Datei einfach in einem Webbrowser auf dem auf dem System, auf dem Sie den Tile-Server installiert haben. Falls das nicht möglich ist, weil Sie auf einem Server ohne lokalen Webbrowser installiere, dann können Sie in der Datei `127.0.0.1` mit der IP-Adresse des Servers ersetzen und die Datei unterhalb von `/var/www/html` auf diesen Server kopieren.
 
-From an ssh connection do:
+Machen Sie von einer ssh-Verbindug aus:
 
 ```sh
 tail -f /var/log/syslog | grep " TILE "
 ```
 
-(note the spaces around `" TILE "` there)
+(beachten Sie die Leerzeichen um `" TILE "`)
 
-That will show a line every time a tile is requested, and one every time rendering of one is completed.
+Das wird eine jedes mal eine Zeile ausgeben wenn ein Tile angefordert wird und wenn das Rendering eines Tiles abgeschlossen ist.
 
-When you load that page you should see some tile requests. Zoom out gradually. You’ll see requests for new tiles show up in the ssh connection. Some low-zoom tiles may take a long time (several minutes) to render for the first time, but once done they’ll be ready for the next time that they are needed.
+Wenn Sie die Seite laden, sollten Sie einige Tile-Anfragen sehen. Zoomen Sie nach und nach raus. Sie werden in der ssh-Verbindung Anfragen für neue Tiles auftauchen sehen. Einige Tiles in niedriger Zoom-Stufe könnten eine längere Zeit (mehrere Minuten) zum erstmaligen Rendern benötigen, aber sobald sie fertig sind, werden sie für das nächsten mal, wenn sie benötigt werden, bereit sein.
 
 Glückwunsch! Schauen Sie in die [Tiles verwenden](/using-tiles/index.md)-Bereich um eine Karte zu erstellen, die Ihren neuen Tile-Server verwendet.
