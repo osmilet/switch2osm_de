@@ -331,7 +331,7 @@ Beachten Sie, dass dies nur die `http`-Seite (Port 80) ist – Sie werden etwas 
 
 Als nächstes besuchen Sie mit einem Webbrowser: `http://your.server.ip.address/hot/0/0/0.png`
 
-Falls Sie oben `URI=/hot/` geändert haben, müssen Sie dies hier natürlich ebenfalls anpassen. Sie sollten eine kleine Karte der Welt sehen. Falls nicht, untersuchen Sie die angezeigten Fehlermeldungen. Dies werden höchstwahrscheinlich Berechtigungsfehler sein oder vielleicht damit im Zusammenhang stehen, dass versehentlich Schritten aus der obigen Anleitung ausgelassenen wurden. Wenn Sie kein Tile erhalten und andere Fehler bekommen,speichern Sie die komplette Ausgabe in einen Pastebin und stellen eine Fragen zu den Problem an einem Ort wie [`community.openstreetmap.org`](https://community.openstreetmap.org){: target=_blank}.
+Falls Sie oben `URI=/hot/` geändert haben, müssen Sie dies hier natürlich ebenfalls anpassen. Sie sollten eine kleine Karte der Welt sehen. Falls nicht, untersuchen Sie die angezeigten Fehlermeldungen. Dies werden höchstwahrscheinlich Berechtigungsfehler sein oder vielleicht damit im Zusammenhang stehen, dass versehentlich Schritten aus der obigen Anleitung ausgelassenen wurden. Wenn Sie kein Tile erhalten und andere Fehler bekommen, speichern Sie die komplette Ausgabe in einen Pastebin und stellen eine Frage zu dem Problem an einem Ort wie [`community.openstreetmap.org`](https://community.openstreetmap.org){: target=_blank}.
 
 ## Tiles anzeigen
 
