@@ -70,31 +70,31 @@ psql
 \c gis
 ```
 
-(es wird ausgeben "You are now connected to database 'gis' as user 'postgres'".)
+(es wird "You are now connected to database 'gis' as user 'postgres'" ausgeben.)
 
 ```sql
 CREATE EXTENSION postgis;
 ```
 
-(es wird ausgeben CREATE EXTENSION)
+(es wird CREATE EXTENSION ausgeben)
 
 ```sql
 CREATE EXTENSION hstore;
 ```
 
-(es wird ausgeben CREATE EXTENSION)
+(es wird CREATE EXTENSION ausgeben)
 
 ```sql
 ALTER TABLE geometry_columns OWNER TO renderaccount;
 ```
 
-(es wird ausgeben ALTER TABLE)
+(es wird ALTER TABLE ausgeben)
 
 ```sql
 ALTER TABLE spatial_ref_sys OWNER TO renderaccount;
 ```
 
-(es wird ausgeben ALTER TABLE)
+(es wird ALTER TABLE ausgeben)
 
 ```sh
 \q
@@ -115,7 +115,7 @@ sudo useradd -m renderaccount
 sudo passwd renderaccount
 ```
 
-Ersetzen Sie obeb wieder `renderaccount` mit dem nicht-root Benutzer, den Sie gewählt haben.
+Ersetzen Sie oben wieder `renderaccount` mit dem nicht-root Benutzer, den Sie gewählt haben.
 
 ### osm2pgsql installieren
 
@@ -169,7 +169,7 @@ python
 >>>
 ```
 
-Wenn Python mit dem zweiten Chevron Prompt >>> und ohne Fehlermeldungen antwortet, dann wurde die Mapnik-Bibliothek von Python gefunden. Glückwunsch! Sie können Python mit diesem Kommando verlassen:
+Wenn Python mit dem zweiten Chevron Prompt `>>>` und ohne Fehlermeldungen antwortet, dann wurde die Mapnik-Bibliothek von Python gefunden. Glückwunsch! Sie können Python mit diesem Kommando verlassen:
 
 ```py
 >>> quit()
@@ -297,7 +297,7 @@ Es lohnt sich ein wenig zu erklären, was diese Optionen bedeuten:
 : Lade Daten in eine leere Datenbank anstatt zu versuchen sie an eine existierende anzuhängen.
 
 `--slim`
-: osm2pgsql kann verschiedene Tabellenformate verwenden; `slim` Tabellen sind für das Rendern geeignet.
+: osm2pgsql kann verschiedene Tabellenformate verwenden; "slim" Tabellen sind für das Rendern geeignet.
 
 `-G`
 : Legt fest, wie Multipolygone verarbeitet werden.
