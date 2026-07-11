@@ -9,7 +9,7 @@ lang: de
 # {{ title }}
 
 !!! info ""
-    Diese Seite beschreibt die Installation, Einrichtung und Konfiguration aller notwendigen Software, um einen eigenen Tile-Server zu betreiben. Diese Schritt-für-Schritt-Anleitungen wurden für [Ubuntu Linux](https://ubuntu.com/){: target=_blank} 20.04 LTS (Focal Fossa), geschrieben, und wurden im Mai 2020 getestet..
+    Diese Seite beschreibt die Installation, Einrichtung und Konfiguration aller notwendigen Software, um einen eigenen Tile-Server zu betreiben. Diese Schritt-für-Schritt-Anleitungen wurden für [Ubuntu Linux](https://ubuntu.com/){: target=_blank} 20.04 LTS (Focal Fossa), geschrieben, und wurden im Mai 2020 getestet.
 
 ## Software Installation
 
@@ -38,7 +38,7 @@ Antworten Sie yes zum installieren. Das wird eine Weile dauern, also holen Sie s
 
 ## postgresql / postgis installieren
 
-OAuf Ubuntu gibt es vor-gepackte Versionen von sowohl postgis als auch postgresql. Damit können sie einfach mit dem Ubuntu Paketmanager installiert werden.
+Auf Ubuntu gibt es vor-gepackte Versionen von sowohl postgis als auch postgresql. Damit können sie einfach mit dem Ubuntu Paketmanager installiert werden.
 
 ```sh
 sudo apt install \
