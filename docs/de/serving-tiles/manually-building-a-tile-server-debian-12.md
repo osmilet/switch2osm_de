@@ -391,7 +391,7 @@ sudo nano sample_leaflet.html
 
 Passen Sie es so an, dass die IP Adresse `your.server.address` entspricht, statt einfach nur `127.0.0.1`. Damit sollte es Ihnen möglich sein, diesen Server von anderen zu erreichen. Dann navigieren Sie zu `http://your.server.address/sample_leaflet.html`.
 
-Die erstmalige Kartendarstellung wird einen kleinen Moment dauern. Sie werden rein- und rauszoomen können, aber abhängig von der Server-Geschwindigkeit werden einige Tiles zuerst grau dargestellt, weil sie für den Browser nicht rechtzeitig gerendert werden können. obald sie jedoch fertig sind, werden sie für das nächsten mal, wenn sie benötigt werden, bereit sein. Wenn Sie in das System-Log schauen, sollten Sie Anfragen für Tiles sehen.
+Die erstmalige Kartendarstellung wird einen kleinen Moment dauern. Sie werden rein- und rauszoomen können, aber abhängig von der Server-Geschwindigkeit werden einige Tiles zuerst grau dargestellt, weil sie für den Browser nicht rechtzeitig gerendert werden können. Sobald sie jedoch fertig sind, werden sie für das nächsten mal, wenn sie benötigt werden, bereit sein. Wenn Sie in das System-Log schauen, sollten Sie Anfragen für Tiles sehen.
 
 Wenn gewünscht, können Sie die Einstellung `ModTileRequestTimeout` und `ModTileMissingRequestTimeout` in `/etc/apache2/conf-available/renderd.conf` von 3 und 10 Sekunden auf vielleicht 30 oder 60 erhöhen, um länger darauf zu warten, bis im Hintergrund Tiles gerendert werden, bevor eine graue Tile an den Benutzer gegeben wird. Stellen Sie sicher, dass Sie `#!sh sudo service renderd restart` und `#!sh sudo service apache2 restart` ausführen, nachdem Sie es geändert haben.
 
