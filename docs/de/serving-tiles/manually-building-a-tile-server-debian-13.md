@@ -317,7 +317,7 @@ Wenn dies falsch gesetzt ist oder ganz fehlt, dann wird unter den Fehlern, die S
 
 Andere Fehler könnten under anderem sein, dass Tiles nicht korrekt gerendert werden und dass `renderd` unerwartet große Mengen Speicher verwendet.
 
-etzt, da wir `renderd` gesagt haben, wie auf Tile-Rendering-Anfragen reagiert werden soll, müssen wir dem Apache-Webserver beibringen sie zu senden. Leider wurde die Konfiguration dafür aus der letzten Version von `mod_tile` entfernt. Sie kann jedoch derzeit von hier installiert werden
+Jetzt, da wir `renderd` gesagt haben, wie auf Tile-Rendering-Anfragen reagiert werden soll, müssen wir dem Apache-Webserver beibringen sie zu senden. Leider wurde die Konfiguration dafür aus der letzten Version von `mod_tile` entfernt. Sie kann jedoch derzeit von hier installiert werden
 
 ```sh
 cd /etc/apache2/conf-available/
@@ -406,8 +406,8 @@ sudo nano sample_leaflet.html
 
 Passen Sie es so an, dass die IP Adresse `your.server.address` entspricht, statt einfach nur `127.0.0.1`. Damit sollte es Ihnen möglich sein, diesen Server von anderen zu erreichen. Dann navigieren Sie zu `http://your.server.address/sample_leaflet.html`.
 
-Die erstmalige Kartendarstellung wird einen kleinen Moment dauern. Sie werden rein- und rauszoomen können, aber abhängig von der Server-Geschwindigkeit werden einige Tiles zuerst grau dargestellt, weil sie für den Browser nicht rechtzeitig gerendert werden können. obald sie jedoch fertig sind, werden sie für das nächsten mal, wenn sie benötigt werden, bereit sein. Wenn Sie in das System-Log schauen, sollten Sie Anfragen für Tiles sehen.
+Die erstmalige Kartendarstellung wird einen kleinen Moment dauern. Sie werden rein- und rauszoomen können, aber abhängig von der Server-Geschwindigkeit werden einige Tiles zuerst grau dargestellt, weil sie für den Browser nicht rechtzeitig gerendert werden können. Sobald sie jedoch fertig sind, werden sie für das nächsten mal, wenn sie benötigt werden, bereit sein. Wenn Sie in das System-Log schauen, sollten Sie Anfragen für Tiles sehen.
 
-enn gewünscht, können Sie die Einstellung `ModTileMissingRequestTimeout` in `/etc/apache2/conf-available/renderd.conf` von 10 Sekunden auf 60 oder vielleicht sogar mehr erhöhen, um länger zu warten, bis im Hintergrund Tiles gerendert werden (wenn es keine alten gibt) bevor eine graue Tile an den Benutzer gegeben wird. Stellen Sie sicher, dass Sie `#!sh sudo service renderd restart` und `#!sh sudo service apache2 restart` ausführen, nachdem Sie es geändert haben. Vielleicht möchten Sie sogar die Auswirkung von Änderungen an anderen Variablen dort messen.
+Wenn gewünscht, können Sie die Einstellung `ModTileMissingRequestTimeout` in `/etc/apache2/conf-available/renderd.conf` von 10 Sekunden auf 60 oder vielleicht sogar mehr erhöhen, um länger zu warten, bis im Hintergrund Tiles gerendert werden (wenn es keine alten gibt) bevor eine graue Tile an den Benutzer gegeben wird. Stellen Sie sicher, dass Sie `#!sh sudo service renderd restart` und `#!sh sudo service apache2 restart` ausführen, nachdem Sie es geändert haben. Vielleicht möchten Sie sogar die Auswirkung von Änderungen an anderen Variablen dort messen.
 
 Glückwunsch! Schauen Sie in die [Tiles verwenden](/using-tiles/index.md)-Bereich um eine Karte zu erstellen, die Ihren neuen Tile-Server verwendet.
